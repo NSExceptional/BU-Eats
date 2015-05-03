@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>973B1E6B-33A1-422B-8653-DA30096EE067</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BU Eats</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26A321E0152ADF51C8FC2D7FA0897D756E50EF1A</key>
+		<string>https://github.com/ThePantsThief/BU-Eats.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BU Eats.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26A321E0152ADF51C8FC2D7FA0897D756E50EF1A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ThePantsThief/BU-Eats.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26A321E0152ADF51C8FC2D7FA0897D756E50EF1A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26A321E0152ADF51C8FC2D7FA0897D756E50EF1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BU-Eats</string>
+		</dict>
+	</array>
+</dict>
+</plist>

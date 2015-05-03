@@ -39,6 +39,8 @@
     [self applyTheme];
     
     self.title = @"Locations";
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(updateHours) forControlEvents:UIControlEventValueChanged];
     self.navigationController.navigationBar.translucent = NO;
     [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
     self.tableView.rowHeight = 112.f;
@@ -74,6 +76,11 @@
     nav.navigationBar.tintColor    = [UIColor globalTint];
     nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
     [self.navigationController presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)updateHours {
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark UITableViewDataSource
