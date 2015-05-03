@@ -1,0 +1,18 @@
+//
+//  Eats-Prefix.pch
+//  BU Eats
+//
+//  Created by Tanner on 4/25/15.
+//  Copyright (c) 2015 Tanner Bennett. All rights reserved.
+//
+
+#ifndef BU_Eats_Eats_Prefix_pch
+#define BU_Eats_Eats_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import "NSDate-Utilities.h"
+#import "BUDiningMenu.h"
+#import "TBAlertController.h"
+#import "UIColor+BU.h"
+
+#endif

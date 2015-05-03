@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-DIDatepicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NSDate-Extensions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ObjectiveGumbo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TBAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3121A1279C59C08D113DB0B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>611089F002E62CD9DB7FA8F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9AF51391BB10ECB5FB4C3BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9E275EF0BEE2861646A8F32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EAD1191322C05656AFD89592</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,1006 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0161A978A2C499F51DB3FF38 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7547B84514E36124AC6F3AB /* Pods-dummy.m */; };
+		075F5DFAABDA040BDBE73291 /* string_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 028322CB831463ACD94604A8 /* string_buffer.h */; };
+		08B57C34D12586547439D2C9 /* char_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = F44A1843C4C5EB59CB2DC06E /* char_ref.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A5FCF1211A75AD6CBD29C06 /* token_type.h in Headers */ = {isa = PBXBuildFile; fileRef = A392FB9957AD8A875E43A624 /* token_type.h */; };
+		0BAC1CCAD96971C733D57198 /* DIDatepicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AAC6198A1BB1D4C6CD5A74E /* DIDatepicker.h */; };
+		0C46C78B05BB031021D8E0DB /* ObjectiveGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FD6BD0A63067C07B3CDDD /* ObjectiveGumbo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		126D9FCA89537FA225AFAA7E /* OGDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = A76097AF8EDC982AAB4FD3F9 /* OGDocument.h */; };
+		1775BED4019CDE1802EBBB82 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 336476950DBE0BDD3F1B8C7B /* util.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		18F3056A52F1DC2C21E481E5 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F58278DBC630EB933CA801A /* parser.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		223F69BD15B54F07EA614F47 /* OGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F95399C519BACAE6ACFB74EB /* OGNode.h */; };
+		29FC1C0E6BD6576F7961B3D1 /* OGUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04693FAF63056E96A52FA386 /* OGUtility.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		30C1CDA5DAF7B7B424AC8074 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = DC49DC55EDE3FCBC912D874A /* util.h */; };
+		364B73C3CED4B6B437A335B8 /* DIDatepickerDateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 303702779EF3185C97E2587D /* DIDatepickerDateView.h */; };
+		3DAA2ABF775E82D13ABC00BD /* attribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 68676A02EE795DE440B7C14F /* attribute.h */; };
+		3DC19A5C232665B7E060991C /* tag.c in Sources */ = {isa = PBXBuildFile; fileRef = EC9C57280F0CE05A9B5EDC79 /* tag.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3F7D37C90587E7BB3D15E117 /* NSDate-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A459423D815262D529EADF /* NSDate-Utilities.h */; };
+		425AFF90A18B32355B20A4B7 /* tokenizer_states.h in Headers */ = {isa = PBXBuildFile; fileRef = 4931B3A29CD3A2302B3A40C2 /* tokenizer_states.h */; };
+		426DA0CC46278C9B41B8453F /* OGElement.h in Headers */ = {isa = PBXBuildFile; fileRef = B74B40EC04787A152461311E /* OGElement.h */; };
+		43650673E8F9C4958FAB28F9 /* OGDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F618B9437F1F490704EE6 /* OGDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4F0ED27F22BB22CC765DAEB5 /* NSString+OGString.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D55ED373E553FA9E5FEE68 /* NSString+OGString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		51215DC4EA6791C2ECE14F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */; };
+		5696C5653C62DAB21566833C /* OGText.m in Sources */ = {isa = PBXBuildFile; fileRef = 0881ACE1D7553D7CA679C919 /* OGText.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5705B0E5F90E4B19FBF360D8 /* TBAlertAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 367EADE2A892614782370615 /* TBAlertAction.h */; };
+		5CECF6BE930F1CD7634F5A3E /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5A39BB292FA8F0B20803CE /* vector.h */; };
+		5ED4112F640C9463D14D6A03 /* OGNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 738929E2DB766ED954CEDED1 /* OGNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5ED5E1364379F1330E2E3A46 /* TBAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5678242C7DE6AD4137EF29FF /* TBAlertController.h */; };
+		60EE247C73B7EC0928F89551 /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD89FA91D83B343E168D0E /* NSDate-Utilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		62A976214535595A430A72C6 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB9279B27BC9E29482DED2C /* tokenizer.h */; };
+		63F4EB40C944934B4B7BEC5E /* tokenizer.c in Sources */ = {isa = PBXBuildFile; fileRef = CC24504C6408C8224483991A /* tokenizer.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		658C1C647E2564441B290686 /* OGElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1C4C021B5B32305CBE0F26 /* OGElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		669F1AF23EF7259054EB74D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070AE3DF78B1AB67D0CCFFE3 /* UIKit.framework */; };
+		6A5C9D08AD1FC429BEB449F3 /* NSString+OGString.h in Headers */ = {isa = PBXBuildFile; fileRef = 52178DF85C86B27075B5C934 /* NSString+OGString.h */; };
+		6AD13AC5D7A8A63CC6E9AFFF /* Pods-ObjectiveGumbo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40884C978A2DCECA5D6E3CE0 /* Pods-ObjectiveGumbo-dummy.m */; };
+		6FEA16F9386BD8A282DC3B84 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F474A7A441F7D1FA66E3F28 /* utf8.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		76A1C1A09B9ED932B925D90D /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BB1C9142929F6BC00BED5 /* DIDatepicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7CF8CC3F6EF6071D8FF8670B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */; };
+		7D9C2325EBA535B1A761519A /* Pods-TBAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 154C5A7F6901CD55A2682994 /* Pods-TBAlertController-dummy.m */; };
+		7DCD32EEB363D96267BE3D8F /* insertion_mode.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1101BD65226290CCE7B8A4 /* insertion_mode.h */; };
+		84F6534B41CB1C27AD73EB47 /* gumbo.h in Headers */ = {isa = PBXBuildFile; fileRef = 759D1DF4CFF64A2BCA8E85DA /* gumbo.h */; };
+		864496562EEFE192CD4EF784 /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B47E0E974862438041DB9FF /* DIDatepickerDateView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		884E040275D5754410760433 /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = B1D03A82C834C64851BD3526 /* error.h */; };
+		88B69EDBD581F776B19283A4 /* TBAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97484FA0E0F166488AB0A2DC /* TBAlertController.m */; };
+		954473A45199530D9A7CC3E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */; };
+		9919FB808D4B5A71F2A6E6AB /* attribute.c in Sources */ = {isa = PBXBuildFile; fileRef = 673D72115CECD004EFF55FCD /* attribute.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9D130EFFE8EB14ACB1673599 /* Pods-DIDatepicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C992B81091A621208E7D4838 /* Pods-DIDatepicker-dummy.m */; };
+		A33F940B26F80139D0AEFF07 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 5015E65E5C3FE60F10221ECF /* error.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B078E3DA3AD46201B043BE48 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C87F7B5AEFB272017AD47CB /* utf8.h */; };
+		B21FF67B3A1AAACE902E3F20 /* char_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAD56FE92C37F5589770E5C /* char_ref.h */; };
+		BE62459D424EB5730BA72833 /* TimeFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F0862A58E8A7900D73AB29 /* TimeFormatters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CDC77A4C48EE3F210B449238 /* TimeFormatters.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF3C8722860002612BBBD6A /* TimeFormatters.h */; };
+		D03AE8BD14C42C0000B0AD8C /* string_piece.h in Headers */ = {isa = PBXBuildFile; fileRef = B7A24646A8F8668160A035CD /* string_piece.h */; };
+		D6AF8F35D19F98F4B8DBAA87 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = F286D8A4ED2DCC4BEB23E7FA /* vector.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D9A4CB5BB5D435494709D61F /* OGUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBA16296924F0148B43E92C /* OGUtility.h */; };
+		DA346DF07A99BFD6F9DDF790 /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = 1232C0E9DDBD0A29A30C88BD /* string_piece.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DF25D070B847C3A496259454 /* ObjectiveGumbo.h in Headers */ = {isa = PBXBuildFile; fileRef = 13011B7FB2B576AF8999F56C /* ObjectiveGumbo.h */; };
+		E0DC8A881C45B4899B86FF1A /* string_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = BB39B8DF74E126873BDBCE6E /* string_buffer.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE94BCA9FC3F6D1D52364A1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */; };
+		F1CF0E504D1B7B6D4C753ADD /* Pods-NSDate-Extensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA64273EDBF81A50F400336 /* Pods-NSDate-Extensions-dummy.m */; };
+		F2C1628CFCCA65403FBF131D /* TBAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA2A3D4B2AE4D3611F49078 /* TBAlertAction.m */; };
+		F52F173FA43694D017BDD66B /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9FB1EA306646FB7CFB6519 /* parser.h */; };
+		F59390F7A64AFBB5D50CCE4D /* OGText.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E8B176AD2266F37CBCBB2C /* OGText.h */; };
+		FD8A6CD085C985EEDC6464FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B74DBFD12343512C4C1CAD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23DB84333E23BCA9197EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3121A1279C59C08D113DB0B4;
+			remoteInfo = "Pods-TBAlertController";
+		};
+		964004D591162CFA1F814C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23DB84333E23BCA9197EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD1191322C05656AFD89592;
+			remoteInfo = "Pods-DIDatepicker";
+		};
+		DC948648912C63E6BA361E9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23DB84333E23BCA9197EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9E275EF0BEE2861646A8F32;
+			remoteInfo = "Pods-ObjectiveGumbo";
+		};
+		FE6BBE2E07BA8F5519D60069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23DB84333E23BCA9197EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9AF51391BB10ECB5FB4C3BB;
+			remoteInfo = "Pods-NSDate-Extensions";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		028322CB831463ACD94604A8 /* string_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string_buffer.h; path = ObjectiveGumbo/Gumbo/string_buffer.h; sourceTree = "<group>"; };
+		04693FAF63056E96A52FA386 /* OGUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGUtility.m; path = ObjectiveGumbo/OGUtility.m; sourceTree = "<group>"; };
+		070AE3DF78B1AB67D0CCFFE3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0881ACE1D7553D7CA679C919 /* OGText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGText.m; path = ObjectiveGumbo/OGText.m; sourceTree = "<group>"; };
+		0B1FD6BD0A63067C07B3CDDD /* ObjectiveGumbo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectiveGumbo.m; path = ObjectiveGumbo/ObjectiveGumbo.m; sourceTree = "<group>"; };
+		0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0EAD56FE92C37F5589770E5C /* char_ref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = char_ref.h; path = ObjectiveGumbo/Gumbo/char_ref.h; sourceTree = "<group>"; };
+		104390D013C78B68F3372EAC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		1232C0E9DDBD0A29A30C88BD /* string_piece.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = string_piece.c; path = ObjectiveGumbo/Gumbo/string_piece.c; sourceTree = "<group>"; };
+		13011B7FB2B576AF8999F56C /* ObjectiveGumbo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectiveGumbo.h; path = ObjectiveGumbo/ObjectiveGumbo.h; sourceTree = "<group>"; };
+		154C5A7F6901CD55A2682994 /* Pods-TBAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TBAlertController-dummy.m"; sourceTree = "<group>"; };
+		1AAF6CD73E7819CA07140CF6 /* Pods-NSDate-Extensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSDate-Extensions-prefix.pch"; sourceTree = "<group>"; };
+		1DBA16296924F0148B43E92C /* OGUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGUtility.h; path = ObjectiveGumbo/OGUtility.h; sourceTree = "<group>"; };
+		1F0EE4B32B6509622ECC654D /* Pods-ObjectiveGumbo-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjectiveGumbo-Private.xcconfig"; sourceTree = "<group>"; };
+		1F5A39BB292FA8F0B20803CE /* vector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vector.h; path = ObjectiveGumbo/Gumbo/vector.h; sourceTree = "<group>"; };
+		228E02EE9A22A9C08625915E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		239E083B21E7BD82A0B2B8E7 /* Pods-TBAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TBAlertController-prefix.pch"; sourceTree = "<group>"; };
+		27D09380C7B32EA59CA265E4 /* Pods-NSDate-Extensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSDate-Extensions.xcconfig"; sourceTree = "<group>"; };
+		2AAC6198A1BB1D4C6CD5A74E /* DIDatepicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DIDatepicker.h; path = Sources/DIDatepicker.h; sourceTree = "<group>"; };
+		2E6F31FD20A8760A1BAC4DDA /* libPods-TBAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBAlertController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303702779EF3185C97E2587D /* DIDatepickerDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DIDatepickerDateView.h; path = Sources/DIDatepickerDateView.h; sourceTree = "<group>"; };
+		336476950DBE0BDD3F1B8C7B /* util.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = util.c; path = ObjectiveGumbo/Gumbo/util.c; sourceTree = "<group>"; };
+		336F064CB938AA6D417EDE4D /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		34E8B176AD2266F37CBCBB2C /* OGText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGText.h; path = ObjectiveGumbo/OGText.h; sourceTree = "<group>"; };
+		367EADE2A892614782370615 /* TBAlertAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBAlertAction.h; path = Classes/TBAlertAction.h; sourceTree = "<group>"; };
+		3F8BB1C9142929F6BC00BED5 /* DIDatepicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepicker.m; path = Sources/DIDatepicker.m; sourceTree = "<group>"; };
+		40884C978A2DCECA5D6E3CE0 /* Pods-ObjectiveGumbo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjectiveGumbo-dummy.m"; sourceTree = "<group>"; };
+		40A459423D815262D529EADF /* NSDate-Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate-Utilities.h"; sourceTree = "<group>"; };
+		43E147A99D6243431ED2DAFD /* Pods-NSDate-Extensions-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSDate-Extensions-Private.xcconfig"; sourceTree = "<group>"; };
+		4824D1AB812D53132CD4A8C4 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		4931B3A29CD3A2302B3A40C2 /* tokenizer_states.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tokenizer_states.h; path = ObjectiveGumbo/Gumbo/tokenizer_states.h; sourceTree = "<group>"; };
+		4D738F4D537C349509026537 /* Pods-ObjectiveGumbo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjectiveGumbo-prefix.pch"; sourceTree = "<group>"; };
+		5015E65E5C3FE60F10221ECF /* error.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = error.c; path = ObjectiveGumbo/Gumbo/error.c; sourceTree = "<group>"; };
+		52178DF85C86B27075B5C934 /* NSString+OGString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+OGString.h"; path = "ObjectiveGumbo/NSString+OGString.h"; sourceTree = "<group>"; };
+		5678242C7DE6AD4137EF29FF /* TBAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBAlertController.h; path = Classes/TBAlertController.h; sourceTree = "<group>"; };
+		5F3F618B9437F1F490704EE6 /* OGDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGDocument.m; path = ObjectiveGumbo/OGDocument.m; sourceTree = "<group>"; };
+		673D72115CECD004EFF55FCD /* attribute.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = attribute.c; path = ObjectiveGumbo/Gumbo/attribute.c; sourceTree = "<group>"; };
+		68676A02EE795DE440B7C14F /* attribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = attribute.h; path = ObjectiveGumbo/Gumbo/attribute.h; sourceTree = "<group>"; };
+		738929E2DB766ED954CEDED1 /* OGNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGNode.m; path = ObjectiveGumbo/OGNode.m; sourceTree = "<group>"; };
+		759D1DF4CFF64A2BCA8E85DA /* gumbo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = gumbo.h; path = ObjectiveGumbo/Gumbo/gumbo.h; sourceTree = "<group>"; };
+		79F0862A58E8A7900D73AB29 /* TimeFormatters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TimeFormatters.m; sourceTree = "<group>"; };
+		80433692DF6700A5300E419C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		832A1E8F11B89D47C987A5AF /* libPods-DIDatepicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DIDatepicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B47E0E974862438041DB9FF /* DIDatepickerDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepickerDateView.m; path = Sources/DIDatepickerDateView.m; sourceTree = "<group>"; };
+		8EB9279B27BC9E29482DED2C /* tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tokenizer.h; path = ObjectiveGumbo/Gumbo/tokenizer.h; sourceTree = "<group>"; };
+		9510401902CC070124CDE3CB /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		95D116EE539A8DFA4A9880DA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		97484FA0E0F166488AB0A2DC /* TBAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBAlertController.m; path = Classes/TBAlertController.m; sourceTree = "<group>"; };
+		9C87F7B5AEFB272017AD47CB /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = ObjectiveGumbo/Gumbo/utf8.h; sourceTree = "<group>"; };
+		9DA2A3D4B2AE4D3611F49078 /* TBAlertAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBAlertAction.m; path = Classes/TBAlertAction.m; sourceTree = "<group>"; };
+		9F474A7A441F7D1FA66E3F28 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = ObjectiveGumbo/Gumbo/utf8.c; sourceTree = "<group>"; };
+		9F58278DBC630EB933CA801A /* parser.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = parser.c; path = ObjectiveGumbo/Gumbo/parser.c; sourceTree = "<group>"; };
+		A392FB9957AD8A875E43A624 /* token_type.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = token_type.h; path = ObjectiveGumbo/Gumbo/token_type.h; sourceTree = "<group>"; };
+		A7547B84514E36124AC6F3AB /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		A76097AF8EDC982AAB4FD3F9 /* OGDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGDocument.h; path = ObjectiveGumbo/OGDocument.h; sourceTree = "<group>"; };
+		ACA64273EDBF81A50F400336 /* Pods-NSDate-Extensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSDate-Extensions-dummy.m"; sourceTree = "<group>"; };
+		B1D03A82C834C64851BD3526 /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error.h; path = ObjectiveGumbo/Gumbo/error.h; sourceTree = "<group>"; };
+		B5D55ED373E553FA9E5FEE68 /* NSString+OGString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+OGString.m"; path = "ObjectiveGumbo/NSString+OGString.m"; sourceTree = "<group>"; };
+		B74B40EC04787A152461311E /* OGElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGElement.h; path = ObjectiveGumbo/OGElement.h; sourceTree = "<group>"; };
+		B7A24646A8F8668160A035CD /* string_piece.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string_piece.h; path = ObjectiveGumbo/Gumbo/string_piece.h; sourceTree = "<group>"; };
+		BB39B8DF74E126873BDBCE6E /* string_buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = string_buffer.c; path = ObjectiveGumbo/Gumbo/string_buffer.c; sourceTree = "<group>"; };
+		BF1C4C021B5B32305CBE0F26 /* OGElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGElement.m; path = ObjectiveGumbo/OGElement.m; sourceTree = "<group>"; };
+		BFAD89FA91D83B343E168D0E /* NSDate-Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
+		C2875514DE37AB60A4D4EED0 /* libPods-ObjectiveGumbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveGumbo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C824B391584CABE3895AC92B /* Pods-TBAlertController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBAlertController-Private.xcconfig"; sourceTree = "<group>"; };
+		C992B81091A621208E7D4838 /* Pods-DIDatepicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DIDatepicker-dummy.m"; sourceTree = "<group>"; };
+		CC24504C6408C8224483991A /* tokenizer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tokenizer.c; path = ObjectiveGumbo/Gumbo/tokenizer.c; sourceTree = "<group>"; };
+		CE1101BD65226290CCE7B8A4 /* insertion_mode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = insertion_mode.h; path = ObjectiveGumbo/Gumbo/insertion_mode.h; sourceTree = "<group>"; };
+		DA0F1D6A3C79E3CB5E58CA74 /* Pods-DIDatepicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DIDatepicker.xcconfig"; sourceTree = "<group>"; };
+		DA9FB1EA306646FB7CFB6519 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ObjectiveGumbo/Gumbo/parser.h; sourceTree = "<group>"; };
+		DC49DC55EDE3FCBC912D874A /* util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = util.h; path = ObjectiveGumbo/Gumbo/util.h; sourceTree = "<group>"; };
+		DE95E33F35DB240127DE99B5 /* libPods-NSDate-Extensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSDate-Extensions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E199100F1170719E14BEBCC0 /* Pods-DIDatepicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DIDatepicker-prefix.pch"; sourceTree = "<group>"; };
+		E2B5787169AF11C39B3BD172 /* Pods-TBAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBAlertController.xcconfig"; sourceTree = "<group>"; };
+		EC9C57280F0CE05A9B5EDC79 /* tag.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tag.c; path = ObjectiveGumbo/Gumbo/tag.c; sourceTree = "<group>"; };
+		EEA752FD68B3DCAC45B4156D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F286D8A4ED2DCC4BEB23E7FA /* vector.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = vector.c; path = ObjectiveGumbo/Gumbo/vector.c; sourceTree = "<group>"; };
+		F2913C56DA78F7429929F4C0 /* Pods-DIDatepicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DIDatepicker-Private.xcconfig"; sourceTree = "<group>"; };
+		F44A1843C4C5EB59CB2DC06E /* char_ref.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = char_ref.c; path = ObjectiveGumbo/Gumbo/char_ref.c; sourceTree = "<group>"; };
+		F95399C519BACAE6ACFB74EB /* OGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGNode.h; path = ObjectiveGumbo/OGNode.h; sourceTree = "<group>"; };
+		FDF3C8722860002612BBBD6A /* TimeFormatters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TimeFormatters.h; sourceTree = "<group>"; };
+		FF672C1602B7A614C5977BDB /* Pods-ObjectiveGumbo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjectiveGumbo.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13304354DA62AEB8B5BB2A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8A6CD085C985EEDC6464FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		612EC0BBA1B1C524C4326A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51215DC4EA6791C2ECE14F20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32BC139985693601905D3A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF8CC3F6EF6071D8FF8670B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B442C2B9114B5F83EEDF13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE94BCA9FC3F6D1D52364A1D /* Foundation.framework in Frameworks */,
+				669F1AF23EF7259054EB74D1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9125EA6A19DA9F130C06104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954473A45199530D9A7CC3E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12A688C403ADADA1300C4F3E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2B5787169AF11C39B3BD172 /* Pods-TBAlertController.xcconfig */,
+				C824B391584CABE3895AC92B /* Pods-TBAlertController-Private.xcconfig */,
+				154C5A7F6901CD55A2682994 /* Pods-TBAlertController-dummy.m */,
+				239E083B21E7BD82A0B2B8E7 /* Pods-TBAlertController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TBAlertController";
+			sourceTree = "<group>";
+		};
+		2394853C1E291794A1FACBCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF672C1602B7A614C5977BDB /* Pods-ObjectiveGumbo.xcconfig */,
+				1F0EE4B32B6509622ECC654D /* Pods-ObjectiveGumbo-Private.xcconfig */,
+				40884C978A2DCECA5D6E3CE0 /* Pods-ObjectiveGumbo-dummy.m */,
+				4D738F4D537C349509026537 /* Pods-ObjectiveGumbo-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ObjectiveGumbo";
+			sourceTree = "<group>";
+		};
+		25AB5433995F3F8ADE8D7CB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9510401902CC070124CDE3CB /* Pods-acknowledgements.markdown */,
+				80433692DF6700A5300E419C /* Pods-acknowledgements.plist */,
+				A7547B84514E36124AC6F3AB /* Pods-dummy.m */,
+				336F064CB938AA6D417EDE4D /* Pods-environment.h */,
+				4824D1AB812D53132CD4A8C4 /* Pods-resources.sh */,
+				104390D013C78B68F3372EAC /* Pods.debug.xcconfig */,
+				95D116EE539A8DFA4A9880DA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		34246F06A7A2A483FFD5D383 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C90D7B01EFEBA37C72D73364 /* DIDatepicker */,
+				B69FE15204BD3CE5809F5723 /* NSDate-Extensions */,
+				3F445103956B922EEEBFAC11 /* ObjectiveGumbo */,
+				C5F7EDE2318967AFBAEF1129 /* TBAlertController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F445103956B922EEEBFAC11 /* ObjectiveGumbo */ = {
+			isa = PBXGroup;
+			children = (
+				52178DF85C86B27075B5C934 /* NSString+OGString.h */,
+				B5D55ED373E553FA9E5FEE68 /* NSString+OGString.m */,
+				A76097AF8EDC982AAB4FD3F9 /* OGDocument.h */,
+				5F3F618B9437F1F490704EE6 /* OGDocument.m */,
+				B74B40EC04787A152461311E /* OGElement.h */,
+				BF1C4C021B5B32305CBE0F26 /* OGElement.m */,
+				F95399C519BACAE6ACFB74EB /* OGNode.h */,
+				738929E2DB766ED954CEDED1 /* OGNode.m */,
+				34E8B176AD2266F37CBCBB2C /* OGText.h */,
+				0881ACE1D7553D7CA679C919 /* OGText.m */,
+				1DBA16296924F0148B43E92C /* OGUtility.h */,
+				04693FAF63056E96A52FA386 /* OGUtility.m */,
+				13011B7FB2B576AF8999F56C /* ObjectiveGumbo.h */,
+				0B1FD6BD0A63067C07B3CDDD /* ObjectiveGumbo.m */,
+				673D72115CECD004EFF55FCD /* attribute.c */,
+				68676A02EE795DE440B7C14F /* attribute.h */,
+				F44A1843C4C5EB59CB2DC06E /* char_ref.c */,
+				0EAD56FE92C37F5589770E5C /* char_ref.h */,
+				5015E65E5C3FE60F10221ECF /* error.c */,
+				B1D03A82C834C64851BD3526 /* error.h */,
+				759D1DF4CFF64A2BCA8E85DA /* gumbo.h */,
+				CE1101BD65226290CCE7B8A4 /* insertion_mode.h */,
+				9F58278DBC630EB933CA801A /* parser.c */,
+				DA9FB1EA306646FB7CFB6519 /* parser.h */,
+				BB39B8DF74E126873BDBCE6E /* string_buffer.c */,
+				028322CB831463ACD94604A8 /* string_buffer.h */,
+				1232C0E9DDBD0A29A30C88BD /* string_piece.c */,
+				B7A24646A8F8668160A035CD /* string_piece.h */,
+				EC9C57280F0CE05A9B5EDC79 /* tag.c */,
+				A392FB9957AD8A875E43A624 /* token_type.h */,
+				CC24504C6408C8224483991A /* tokenizer.c */,
+				8EB9279B27BC9E29482DED2C /* tokenizer.h */,
+				4931B3A29CD3A2302B3A40C2 /* tokenizer_states.h */,
+				9F474A7A441F7D1FA66E3F28 /* utf8.c */,
+				9C87F7B5AEFB272017AD47CB /* utf8.h */,
+				336476950DBE0BDD3F1B8C7B /* util.c */,
+				DC49DC55EDE3FCBC912D874A /* util.h */,
+				F286D8A4ED2DCC4BEB23E7FA /* vector.c */,
+				1F5A39BB292FA8F0B20803CE /* vector.h */,
+				2394853C1E291794A1FACBCB /* Support Files */,
+			);
+			path = ObjectiveGumbo;
+			sourceTree = "<group>";
+		};
+		7E59BCB719051485F5F2F852 = {
+			isa = PBXGroup;
+			children = (
+				228E02EE9A22A9C08625915E /* Podfile */,
+				EAE8801F7BC8645945C5E4FA /* Frameworks */,
+				34246F06A7A2A483FFD5D383 /* Pods */,
+				A18FA6EF3A87AE5D12F118BA /* Products */,
+				7FF69C5382FDA2B6C9B12FF5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FF69C5382FDA2B6C9B12FF5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25AB5433995F3F8ADE8D7CB3 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A18FA6EF3A87AE5D12F118BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEA752FD68B3DCAC45B4156D /* libPods.a */,
+				832A1E8F11B89D47C987A5AF /* libPods-DIDatepicker.a */,
+				DE95E33F35DB240127DE99B5 /* libPods-NSDate-Extensions.a */,
+				C2875514DE37AB60A4D4EED0 /* libPods-ObjectiveGumbo.a */,
+				2E6F31FD20A8760A1BAC4DDA /* libPods-TBAlertController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7425748808A267CE9EF152F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				27D09380C7B32EA59CA265E4 /* Pods-NSDate-Extensions.xcconfig */,
+				43E147A99D6243431ED2DAFD /* Pods-NSDate-Extensions-Private.xcconfig */,
+				ACA64273EDBF81A50F400336 /* Pods-NSDate-Extensions-dummy.m */,
+				1AAF6CD73E7819CA07140CF6 /* Pods-NSDate-Extensions-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-NSDate-Extensions";
+			sourceTree = "<group>";
+		};
+		ABA3C1E1AB07A2BE40DC9A31 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0C9D34CD7AC9D470A8CC0A84 /* Foundation.framework */,
+				070AE3DF78B1AB67D0CCFFE3 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B69FE15204BD3CE5809F5723 /* NSDate-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40A459423D815262D529EADF /* NSDate-Utilities.h */,
+				BFAD89FA91D83B343E168D0E /* NSDate-Utilities.m */,
+				FDF3C8722860002612BBBD6A /* TimeFormatters.h */,
+				79F0862A58E8A7900D73AB29 /* TimeFormatters.m */,
+				A7425748808A267CE9EF152F /* Support Files */,
+			);
+			path = "NSDate-Extensions";
+			sourceTree = "<group>";
+		};
+		C313F776D97F8F99C2C374B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA0F1D6A3C79E3CB5E58CA74 /* Pods-DIDatepicker.xcconfig */,
+				F2913C56DA78F7429929F4C0 /* Pods-DIDatepicker-Private.xcconfig */,
+				C992B81091A621208E7D4838 /* Pods-DIDatepicker-dummy.m */,
+				E199100F1170719E14BEBCC0 /* Pods-DIDatepicker-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-DIDatepicker";
+			sourceTree = "<group>";
+		};
+		C5F7EDE2318967AFBAEF1129 /* TBAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				367EADE2A892614782370615 /* TBAlertAction.h */,
+				9DA2A3D4B2AE4D3611F49078 /* TBAlertAction.m */,
+				5678242C7DE6AD4137EF29FF /* TBAlertController.h */,
+				97484FA0E0F166488AB0A2DC /* TBAlertController.m */,
+				12A688C403ADADA1300C4F3E /* Support Files */,
+			);
+			path = TBAlertController;
+			sourceTree = "<group>";
+		};
+		C90D7B01EFEBA37C72D73364 /* DIDatepicker */ = {
+			isa = PBXGroup;
+			children = (
+				2AAC6198A1BB1D4C6CD5A74E /* DIDatepicker.h */,
+				3F8BB1C9142929F6BC00BED5 /* DIDatepicker.m */,
+				303702779EF3185C97E2587D /* DIDatepickerDateView.h */,
+				8B47E0E974862438041DB9FF /* DIDatepickerDateView.m */,
+				C313F776D97F8F99C2C374B7 /* Support Files */,
+			);
+			path = DIDatepicker;
+			sourceTree = "<group>";
+		};
+		EAE8801F7BC8645945C5E4FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABA3C1E1AB07A2BE40DC9A31 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4A955A36C2060BA8720C817D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5705B0E5F90E4B19FBF360D8 /* TBAlertAction.h in Headers */,
+				5ED5E1364379F1330E2E3A46 /* TBAlertController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C967D2FD8FA644775FC61A62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A5C9D08AD1FC429BEB449F3 /* NSString+OGString.h in Headers */,
+				126D9FCA89537FA225AFAA7E /* OGDocument.h in Headers */,
+				426DA0CC46278C9B41B8453F /* OGElement.h in Headers */,
+				223F69BD15B54F07EA614F47 /* OGNode.h in Headers */,
+				F59390F7A64AFBB5D50CCE4D /* OGText.h in Headers */,
+				D9A4CB5BB5D435494709D61F /* OGUtility.h in Headers */,
+				DF25D070B847C3A496259454 /* ObjectiveGumbo.h in Headers */,
+				3DAA2ABF775E82D13ABC00BD /* attribute.h in Headers */,
+				B21FF67B3A1AAACE902E3F20 /* char_ref.h in Headers */,
+				884E040275D5754410760433 /* error.h in Headers */,
+				84F6534B41CB1C27AD73EB47 /* gumbo.h in Headers */,
+				7DCD32EEB363D96267BE3D8F /* insertion_mode.h in Headers */,
+				F52F173FA43694D017BDD66B /* parser.h in Headers */,
+				075F5DFAABDA040BDBE73291 /* string_buffer.h in Headers */,
+				D03AE8BD14C42C0000B0AD8C /* string_piece.h in Headers */,
+				0A5FCF1211A75AD6CBD29C06 /* token_type.h in Headers */,
+				62A976214535595A430A72C6 /* tokenizer.h in Headers */,
+				425AFF90A18B32355B20A4B7 /* tokenizer_states.h in Headers */,
+				B078E3DA3AD46201B043BE48 /* utf8.h in Headers */,
+				30C1CDA5DAF7B7B424AC8074 /* util.h in Headers */,
+				5CECF6BE930F1CD7634F5A3E /* vector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D964395DDDCCD4796A8EE2CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAC1CCAD96971C733D57198 /* DIDatepicker.h in Headers */,
+				364B73C3CED4B6B437A335B8 /* DIDatepickerDateView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC225755C2F1AF312306E77F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7D37C90587E7BB3D15E117 /* NSDate-Utilities.h in Headers */,
+				CDC77A4C48EE3F210B449238 /* TimeFormatters.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3121A1279C59C08D113DB0B4 /* Pods-TBAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECD0DC3968AA7C7DBA86421 /* Build configuration list for PBXNativeTarget "Pods-TBAlertController" */;
+			buildPhases = (
+				B017407B41704C04B8207219 /* Sources */,
+				C4B442C2B9114B5F83EEDF13 /* Frameworks */,
+				4A955A36C2060BA8720C817D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TBAlertController";
+			productName = "Pods-TBAlertController";
+			productReference = 2E6F31FD20A8760A1BAC4DDA /* libPods-TBAlertController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		611089F002E62CD9DB7FA8F6 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D0A9B285C52B53D0ECAFC83 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				2834D22AB24E2174BA49AF5C /* Sources */,
+				E9125EA6A19DA9F130C06104 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F8A88A48F2FA8B1BA37C50D /* PBXTargetDependency */,
+				954B911B4AF2B5F1C3E596CD /* PBXTargetDependency */,
+				92BD3992CFA477EB69D00EBF /* PBXTargetDependency */,
+				8D3E7AB27DEE1B6ACE47416C /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = EEA752FD68B3DCAC45B4156D /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A9AF51391BB10ECB5FB4C3BB /* Pods-NSDate-Extensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C49D7EA38B2782956D7447A2 /* Build configuration list for PBXNativeTarget "Pods-NSDate-Extensions" */;
+			buildPhases = (
+				12C1A2B2F171E516D37BFA43 /* Sources */,
+				A32BC139985693601905D3A8 /* Frameworks */,
+				FC225755C2F1AF312306E77F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NSDate-Extensions";
+			productName = "Pods-NSDate-Extensions";
+			productReference = DE95E33F35DB240127DE99B5 /* libPods-NSDate-Extensions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B9E275EF0BEE2861646A8F32 /* Pods-ObjectiveGumbo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEA6277AA901C63B9156737 /* Build configuration list for PBXNativeTarget "Pods-ObjectiveGumbo" */;
+			buildPhases = (
+				871A1E4FA37985D31E0A1D7C /* Sources */,
+				612EC0BBA1B1C524C4326A91 /* Frameworks */,
+				C967D2FD8FA644775FC61A62 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ObjectiveGumbo";
+			productName = "Pods-ObjectiveGumbo";
+			productReference = C2875514DE37AB60A4D4EED0 /* libPods-ObjectiveGumbo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EAD1191322C05656AFD89592 /* Pods-DIDatepicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C2C7AC0072B52E8094D361 /* Build configuration list for PBXNativeTarget "Pods-DIDatepicker" */;
+			buildPhases = (
+				5FAFF08088760C82347D59D7 /* Sources */,
+				13304354DA62AEB8B5BB2A55 /* Frameworks */,
+				D964395DDDCCD4796A8EE2CB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-DIDatepicker";
+			productName = "Pods-DIDatepicker";
+			productReference = 832A1E8F11B89D47C987A5AF /* libPods-DIDatepicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF23DB84333E23BCA9197EA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = C5E3AFCB71D2BD4CB2CB4D8C /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7E59BCB719051485F5F2F852;
+			productRefGroup = A18FA6EF3A87AE5D12F118BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				611089F002E62CD9DB7FA8F6 /* Pods */,
+				EAD1191322C05656AFD89592 /* Pods-DIDatepicker */,
+				A9AF51391BB10ECB5FB4C3BB /* Pods-NSDate-Extensions */,
+				B9E275EF0BEE2861646A8F32 /* Pods-ObjectiveGumbo */,
+				3121A1279C59C08D113DB0B4 /* Pods-TBAlertController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12C1A2B2F171E516D37BFA43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EE247C73B7EC0928F89551 /* NSDate-Utilities.m in Sources */,
+				F1CF0E504D1B7B6D4C753ADD /* Pods-NSDate-Extensions-dummy.m in Sources */,
+				BE62459D424EB5730BA72833 /* TimeFormatters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2834D22AB24E2174BA49AF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0161A978A2C499F51DB3FF38 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FAFF08088760C82347D59D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A1C1A09B9ED932B925D90D /* DIDatepicker.m in Sources */,
+				864496562EEFE192CD4EF784 /* DIDatepickerDateView.m in Sources */,
+				9D130EFFE8EB14ACB1673599 /* Pods-DIDatepicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		871A1E4FA37985D31E0A1D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0ED27F22BB22CC765DAEB5 /* NSString+OGString.m in Sources */,
+				43650673E8F9C4958FAB28F9 /* OGDocument.m in Sources */,
+				658C1C647E2564441B290686 /* OGElement.m in Sources */,
+				5ED4112F640C9463D14D6A03 /* OGNode.m in Sources */,
+				5696C5653C62DAB21566833C /* OGText.m in Sources */,
+				29FC1C0E6BD6576F7961B3D1 /* OGUtility.m in Sources */,
+				0C46C78B05BB031021D8E0DB /* ObjectiveGumbo.m in Sources */,
+				6AD13AC5D7A8A63CC6E9AFFF /* Pods-ObjectiveGumbo-dummy.m in Sources */,
+				9919FB808D4B5A71F2A6E6AB /* attribute.c in Sources */,
+				08B57C34D12586547439D2C9 /* char_ref.c in Sources */,
+				A33F940B26F80139D0AEFF07 /* error.c in Sources */,
+				18F3056A52F1DC2C21E481E5 /* parser.c in Sources */,
+				E0DC8A881C45B4899B86FF1A /* string_buffer.c in Sources */,
+				DA346DF07A99BFD6F9DDF790 /* string_piece.c in Sources */,
+				3DC19A5C232665B7E060991C /* tag.c in Sources */,
+				63F4EB40C944934B4B7BEC5E /* tokenizer.c in Sources */,
+				6FEA16F9386BD8A282DC3B84 /* utf8.c in Sources */,
+				1775BED4019CDE1802EBBB82 /* util.c in Sources */,
+				D6AF8F35D19F98F4B8DBAA87 /* vector.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B017407B41704C04B8207219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D9C2325EBA535B1A761519A /* Pods-TBAlertController-dummy.m in Sources */,
+				F2C1628CFCCA65403FBF131D /* TBAlertAction.m in Sources */,
+				88B69EDBD581F776B19283A4 /* TBAlertController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F8A88A48F2FA8B1BA37C50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DIDatepicker";
+			target = EAD1191322C05656AFD89592 /* Pods-DIDatepicker */;
+			targetProxy = 964004D591162CFA1F814C0C /* PBXContainerItemProxy */;
+		};
+		8D3E7AB27DEE1B6ACE47416C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TBAlertController";
+			target = 3121A1279C59C08D113DB0B4 /* Pods-TBAlertController */;
+			targetProxy = 1B74DBFD12343512C4C1CAD6 /* PBXContainerItemProxy */;
+		};
+		92BD3992CFA477EB69D00EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ObjectiveGumbo";
+			target = B9E275EF0BEE2861646A8F32 /* Pods-ObjectiveGumbo */;
+			targetProxy = DC948648912C63E6BA361E9A /* PBXContainerItemProxy */;
+		};
+		954B911B4AF2B5F1C3E596CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NSDate-Extensions";
+			target = A9AF51391BB10ECB5FB4C3BB /* Pods-NSDate-Extensions */;
+			targetProxy = FE6BBE2E07BA8F5519D60069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1050A0E5C964D7A8BCDD4C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104390D013C78B68F3372EAC /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2EF04D9F14376F8CC6EB5DDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0EE4B32B6509622ECC654D /* Pods-ObjectiveGumbo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ObjectiveGumbo/Pods-ObjectiveGumbo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		31142D45DA5449B9661F8757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2913C56DA78F7429929F4C0 /* Pods-DIDatepicker-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DIDatepicker/Pods-DIDatepicker-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4593DFC70B15074D0BA669F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C824B391584CABE3895AC92B /* Pods-TBAlertController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TBAlertController/Pods-TBAlertController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5C34AB8A44497F6752F366D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95D116EE539A8DFA4A9880DA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		718E17CCC3A9D975EAF5966C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0EE4B32B6509622ECC654D /* Pods-ObjectiveGumbo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ObjectiveGumbo/Pods-ObjectiveGumbo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7321ECA7020F1985EC4058B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		83FFA18A693C24A8DF70ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E147A99D6243431ED2DAFD /* Pods-NSDate-Extensions-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSDate-Extensions/Pods-NSDate-Extensions-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		85A8D163EFA3C762813E7D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2913C56DA78F7429929F4C0 /* Pods-DIDatepicker-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DIDatepicker/Pods-DIDatepicker-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AB5216AB21ACF131C7F4F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C824B391584CABE3895AC92B /* Pods-TBAlertController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TBAlertController/Pods-TBAlertController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9EB3B891FEB55D4411AE6E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E147A99D6243431ED2DAFD /* Pods-NSDate-Extensions-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSDate-Extensions/Pods-NSDate-Extensions-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F01609B36131F1ECADDB6C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D0A9B285C52B53D0ECAFC83 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1050A0E5C964D7A8BCDD4C38 /* Debug */,
+				5C34AB8A44497F6752F366D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C2C7AC0072B52E8094D361 /* Build configuration list for PBXNativeTarget "Pods-DIDatepicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85A8D163EFA3C762813E7D9F /* Debug */,
+				31142D45DA5449B9661F8757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEA6277AA901C63B9156737 /* Build configuration list for PBXNativeTarget "Pods-ObjectiveGumbo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EF04D9F14376F8CC6EB5DDA /* Debug */,
+				718E17CCC3A9D975EAF5966C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C49D7EA38B2782956D7447A2 /* Build configuration list for PBXNativeTarget "Pods-NSDate-Extensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB3B891FEB55D4411AE6E85 /* Debug */,
+				83FFA18A693C24A8DF70ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5E3AFCB71D2BD4CB2CB4D8C /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7321ECA7020F1985EC4058B9 /* Debug */,
+				F01609B36131F1ECADDB6C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECD0DC3968AA7C7DBA86421 /* Build configuration list for PBXNativeTarget "Pods-TBAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB5216AB21ACF131C7F4F7C /* Debug */,
+				4593DFC70B15074D0BA669F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF23DB84333E23BCA9197EA6 /* Project object */;
+}

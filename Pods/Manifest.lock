@@ -1,0 +1,19 @@
+PODS:
+  - DIDatepicker (0.1)
+  - NSDate-Extensions (0.0.1)
+  - ObjectiveGumbo (0.1)
+  - TBAlertController (2.0.1)
+
+DEPENDENCIES:
+  - DIDatePicker
+  - NSDate-Extensions
+  - ObjectiveGumbo
+  - TBAlertController
+
+SPEC CHECKSUMS:
+  DIDatepicker: c990ce1cdc8a6169cf7eb6369cd97604864eed27
+  NSDate-Extensions: cbd68ecf5cf8a150644e184b4521d7734fea5ace
+  ObjectiveGumbo: 0704c4930688132abb3d5df2000334f30504856f
+  TBAlertController: 92579eba6b24ae3c29380de47d207b5b79b3d754
+
+COCOAPODS: 0.36.0

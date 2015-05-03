@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="JwI-Tx-KQF" customClass="ETLocationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JwI-Tx-KQF" id="1cq-bk-8eq">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-uK-BNO">
+                        <rect key="frame" x="119" y="29" width="168" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="175" id="QVK-MO-R23"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QVK-MO-R23"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IB-ee-6IE">
+                        <rect key="frame" x="119" y="58" width="168" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="BW9-Pi-u0n"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BW9-Pi-u0n"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3T-dE-Ok5">
+                        <rect key="frame" x="8" y="8" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="96" id="jU8-a5-TyB"/>
+                            <constraint firstAttribute="width" constant="96" id="t5J-O9-R03"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="6SU-uK-BNO" secondAttribute="centerX" constant="14.5" id="9WM-yt-nGT"/>
+                    <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="V3T-dE-Ok5" secondAttribute="trailing" constant="15" id="IPV-ft-fMS"/>
+                    <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="0IB-ee-6IE" secondAttribute="leading" id="Tpk-wh-jCL"/>
+                    <constraint firstAttribute="centerY" secondItem="6SU-uK-BNO" secondAttribute="centerY" constant="16" id="cwm-QI-pR8"/>
+                    <constraint firstItem="V3T-dE-Ok5" firstAttribute="leading" secondItem="1cq-bk-8eq" secondAttribute="leading" constant="8" id="cy6-ep-GgO"/>
+                    <constraint firstAttribute="trailing" secondItem="0IB-ee-6IE" secondAttribute="trailing" id="iD0-oJ-as3"/>
+                    <constraint firstItem="0IB-ee-6IE" firstAttribute="top" secondItem="6SU-uK-BNO" secondAttribute="bottom" constant="8" id="kEf-vp-G7e"/>
+                    <constraint firstItem="V3T-dE-Ok5" firstAttribute="top" secondItem="1cq-bk-8eq" secondAttribute="top" constant="8" id="owD-5a-ewF"/>
+                    <constraint firstAttribute="trailing" secondItem="6SU-uK-BNO" secondAttribute="trailing" id="qMh-e9-xdC"/>
+                    <constraint firstItem="6SU-uK-BNO" firstAttribute="top" secondItem="1cq-bk-8eq" secondAttribute="top" constant="15" id="qdV-zm-zDP"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="9WM-yt-nGT"/>
+                        <exclude reference="qdV-zm-zDP"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationIcon" destination="V3T-dE-Ok5" id="hbe-qc-ei3"/>
+                <outlet property="locationNameLabel" destination="6SU-uK-BNO" id="OHt-VQ-F8e"/>
+                <outlet property="statusLabel" destination="0IB-ee-6IE" id="Si1-16-UY8"/>
+            </connections>
+            <point key="canvasLocation" x="1218" y="791"/>
+        </tableViewCell>
+    </objects>
+</document>
