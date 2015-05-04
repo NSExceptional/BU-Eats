@@ -490,8 +490,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BU",
-					Eats,
+					"$(PROJECT_DIR)/BU\\ Eats",
+					"$(SRCROOT)",
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
@@ -509,8 +509,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BU",
-					Eats,
+					"$(PROJECT_DIR)/BU\\ Eats",
+					"$(SRCROOT)",
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
