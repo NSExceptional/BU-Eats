@@ -22,6 +22,7 @@
 		B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1321AEB3142001F2B96 /* ETLocationsViewController.m */; };
 		B4C0B1371AEB38AB001F2B96 /* ETTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */; };
 		B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B13A1AEB4255001F2B96 /* ETLocation.m */; };
+		B4D45A441AF6F22500D0B448 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D45A431AF6F22500D0B448 /* Crashlytics.framework */; };
 		CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20B0A016F7AD62F7FEB13D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETTimeInterval.m; path = Model/ETTimeInterval.m; sourceTree = "<group>"; };
 		B4C0B1391AEB4255001F2B96 /* ETLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocation.h; path = Model/ETLocation.h; sourceTree = "<group>"; };
 		B4C0B13A1AEB4255001F2B96 /* ETLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocation.m; path = Model/ETLocation.m; sourceTree = "<group>"; };
+		B4D45A431AF6F22500D0B448 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CD20B0A016F7AD62F7FEB13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D45A441AF6F22500D0B448 /* Crashlytics.framework in Frameworks */,
 				CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +152,7 @@
 				B419BB631AEC3BB900C7A75D /* Eats-Prefix.pch */,
 				B419BB641AEC3C7A00C7A75D /* UIColor+BU.h */,
 				B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */,
+				B4D45A431AF6F22500D0B448 /* Crashlytics.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -211,6 +215,7 @@
 				B4C0B1021AEB2F5C001F2B96 /* Frameworks */,
 				B4C0B1031AEB2F5C001F2B96 /* Resources */,
 				25379283E546AA870FEC71D9 /* Copy Pods Resources */,
+				B4D45A421AF6F20B00D0B448 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -329,6 +334,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		B4D45A421AF6F20B00D0B448 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run f5649e3f1b043e69f3fc32b03f4f06c80277c955 55c3d0a66d3eb85706bda75019950534f07f92863c88b5dca707ba483ea735aa";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -470,6 +488,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BU",
+					Eats,
+				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -484,6 +507,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BU",
+					Eats,
+				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

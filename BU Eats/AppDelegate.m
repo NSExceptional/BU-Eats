@@ -9,13 +9,13 @@
 #import "AppDelegate.h"
 #import "ETLocationsViewController.h"
 
-@interface AppDelegate ()
-
-@end
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Crashlytics startWithAPIKey:@"f5649e3f1b043e69f3fc32b03f4f06c80277c955"];
+    
     UINavigationController *root = (UINavigationController *)self.window.rootViewController;
     [root pushViewController:[ETLocationsViewController new] animated:NO];
     return YES;
