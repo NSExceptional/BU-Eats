@@ -34,7 +34,6 @@
         _startTime = start;
         _endTime   = end;
     }
-    
     return self;
 }
 

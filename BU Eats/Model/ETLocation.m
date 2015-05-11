@@ -71,7 +71,7 @@
 
 + (NSArray *)hoursOfOperationForLocation:(Eatery)location {
     NSDate *today = [NSDate date];
-    NSArray *penlandWeekday = @[[ETTimeInterval between:[NSDate dateTodayAtHour:7] and:[NSDate dateTodayAtHour:10]],
+    NSArray *penlandFriday  = @[[ETTimeInterval between:[NSDate dateTodayAtHour:7] and:[NSDate dateTodayAtHour:10]],
                                 [ETTimeInterval between:[[NSDate dateTodayAtHour:10] dateByAddingMinutes:45] and:[NSDate dateTodayAtHour:3+12]],
                                 [ETTimeInterval between:[[NSDate dateTodayAtHour:4+12] dateByAddingMinutes:30] and:[[NSDate dateTodayAtHour:7+12] dateByAddingMinutes:30]]];
     // Weekend times
@@ -122,10 +122,10 @@
     else {
         switch (location) {
             case EateryPenland:
-                if (today.day == 6) // friday
-                    return [penlandWeekday arrayByAddingObject:[ETTimeInterval between:[NSDate dateTodayAtHour:8+12]
-                                                                                   and:[[[NSDate date] dateByAddingHours:24] dateByAddingMinutes:30]]];
-                return penlandWeekday;
+                if (today.day != 6) // friday
+                    return [penlandFriday arrayByAddingObject:[ETTimeInterval between:[NSDate dateTodayAtHour:8+12]
+                                                                                  and:[[[NSDate date] dateByAddingHours:24] dateByAddingMinutes:30]]];
+                return penlandFriday;
             case EateryMemorial:
                 return @[[ETTimeInterval between:[NSDate dateTodayAtHour:7] and:[NSDate dateTodayAtHour:8+12]]];
             case EateryEastVillage:
