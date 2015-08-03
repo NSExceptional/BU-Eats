@@ -12,9 +12,10 @@
 
 @interface ETLocation : NSObject
 
-+ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals;
++ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals message:(NSString *)message;
 
 @property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *message;
 @property (nonatomic, readonly) NSArray  *intervalsOfOperation;
 
 - (BOOL)isOpen;

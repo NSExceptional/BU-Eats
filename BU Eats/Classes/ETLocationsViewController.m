@@ -12,6 +12,7 @@
 
 #import "ETLocation.h"
 #import "ETTimeInterval.h"
+#import "ETHOOP.h"
 
 #pragma mark Dismiss view controller category
 @interface UIViewController (Dismiss)
@@ -53,7 +54,7 @@
     // Create all location objects
     NSMutableArray *locations = [NSMutableArray new];
     for (Eatery e = 1; e <= kEateryCount; e++)
-        [locations addObject:[ETLocation location:e openIntervals:[ETTimeInterval hoursOfOperationForLocation:e]]];
+        [locations addObject:[ETLocation location:e openIntervals:[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
     
     _locations = locations.copy;
 }
@@ -79,12 +80,40 @@
 }
 
 - (void)updateHours {
-    [self.tableView reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     [self.refreshControl endRefreshing];
 }
 
 - (void)loadHOOP {
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Load plist data
+        NSError *loadError = nil;
+        NSData *plistData = [NSData dataWithContentsOfURL:[NSURL URLWithString:kHOOPURL] options:0 error:&loadError];
+        
+        if (!loadError) {
+            NSError *plistError = nil;
+            ETHOOP *hoop = [ETHOOP fromData:plistData error:&plistError];
+            if (!plistError) {
+                
+                // Create all location objects
+                NSMutableArray *locations = [NSMutableArray new];
+                for (Eatery e = 1; e <= kEateryCount; e++) {
+                    NSArray *intervals = hoop.overridesByEatery[NSStringFromEatery(e)] ?: hoop.hoopByEatery[NSStringFromEatery(e)];
+                    [locations addObject:[ETLocation location:e openIntervals:intervals message:hoop.messagesByEatery[NSStringFromEatery(e)]]];
+                }
+                
+                // Update data source and refresh
+                _locations = locations.copy;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+                });
+            } else {
+                [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation" message:plistError.localizedDescription] showFromViewController:self];
+            }
+        } else {
+            [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation" message:loadError.localizedDescription] showFromViewController:self];
+        }
+    });
 }
 
 #pragma mark UITableViewDataSource

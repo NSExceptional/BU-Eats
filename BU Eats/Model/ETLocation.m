@@ -10,17 +10,18 @@
 
 @implementation ETLocation
 
-+ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals {
-    return [[ETLocation alloc] initWithName:NSStringFromEatery(location) andTimeOpenIntervals:openIntervals];
++ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals message:(NSString *)message {
+    return [[ETLocation alloc] initWithName:NSStringFromEatery(location) andTimeOpenIntervals:openIntervals message:message];
 }
 
-- (id)initWithName:(NSString *)name andTimeOpenIntervals:(NSArray *)openIntervals {
-    NSParameterAssert(name); NSParameterAssert(openIntervals.count > 0);
+- (id)initWithName:(NSString *)name andTimeOpenIntervals:(NSArray *)openIntervals message:(NSString *)message {
+    NSParameterAssert(name); NSParameterAssert(message || openIntervals.count > 0);
     
     self = [super init];
     if (self) {
         _name = name;
-        _intervalsOfOperation = openIntervals;
+        _message = message;
+        _intervalsOfOperation = openIntervals ?: @[];
     }
     
     return self;
@@ -34,6 +35,9 @@
 }
 
 - (NSString *)status {
+    if (self.message)
+        return self.message;
+    
     if ([self.name isEqualToString:@"Memorial"])
         return @"Under rennovation until further notice";
     NSDateFormatter *formatter = [NSDateFormatter new];

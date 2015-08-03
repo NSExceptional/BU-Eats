@@ -13,6 +13,8 @@
 		B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */; };
 		B419BB681AED792A00C7A75D /* ETLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B419BB671AED792A00C7A75D /* ETLocationCell.xib */; };
 		B419BB6B1AED7AF400C7A75D /* ETLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB6A1AED7AF400C7A75D /* ETLocationCell.m */; };
+		B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */; };
+		B41F8DD81B6F2AEB00FEB057 /* ETHOOP.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */; };
 		B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10A1AEB2F5C001F2B96 /* main.m */; };
 		B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */; };
 		B4C0B1171AEB2F5C001F2B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B1151AEB2F5C001F2B96 /* Main.storyboard */; };
@@ -51,6 +53,10 @@
 		B419BB671AED792A00C7A75D /* ETLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ETLocationCell.xib; path = Classes/ETLocationCell.xib; sourceTree = "<group>"; };
 		B419BB691AED7AF400C7A75D /* ETLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationCell.h; path = Classes/ETLocationCell.h; sourceTree = "<group>"; };
 		B419BB6A1AED7AF400C7A75D /* ETLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocationCell.m; path = Classes/ETLocationCell.m; sourceTree = "<group>"; };
+		B41F8DD31B6F271B00FEB057 /* BU-Eats-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BU-Eats-Constants.h"; sourceTree = "<group>"; };
+		B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BU-Eats-Constants.m"; sourceTree = "<group>"; };
+		B41F8DD61B6F2AEB00FEB057 /* ETHOOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETHOOP.h; path = Model/ETHOOP.h; sourceTree = "<group>"; };
+		B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETHOOP.m; path = Model/ETHOOP.m; sourceTree = "<group>"; };
 		B4C0B1051AEB2F5C001F2B96 /* BU Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BU Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C0B1091AEB2F5C001F2B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C0B10A1AEB2F5C001F2B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 				B4C0B1091AEB2F5C001F2B96 /* Info.plist */,
 				B4C0B10A1AEB2F5C001F2B96 /* main.m */,
 				B419BB631AEC3BB900C7A75D /* Eats-Prefix.pch */,
+				B41F8DD31B6F271B00FEB057 /* BU-Eats-Constants.h */,
+				B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */,
 				B419BB641AEC3C7A00C7A75D /* UIColor+BU.h */,
 				B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */,
 				B4D45A431AF6F22500D0B448 /* Crashlytics.framework */,
@@ -199,6 +207,8 @@
 				B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */,
 				B4C0B1391AEB4255001F2B96 /* ETLocation.h */,
 				B4C0B13A1AEB4255001F2B96 /* ETLocation.m */,
+				B41F8DD61B6F2AEB00FEB057 /* ETHOOP.h */,
+				B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,7 +373,9 @@
 				B419BB621AEB934C00C7A75D /* ETMealTabController.m in Sources */,
 				B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */,
 				B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */,
+				B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */,
 				B419BB5F1AEB907600C7A75D /* BUDiningMenu.m in Sources */,
+				B41F8DD81B6F2AEB00FEB057 /* ETHOOP.m in Sources */,
 				B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

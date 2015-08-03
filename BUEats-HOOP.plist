@@ -80,6 +80,11 @@
 			<date>2015-08-01T01:00:00Z</date>
 		</dict>
 	</array>
+	<key>messages</key>
+	<dict>
+		<key>Brooks</key>
+		<string>This is a message</string>
+	</dict>
 	<key>overrides</key>
 	<dict>
 		<key>Brooks</key>
@@ -90,8 +95,6 @@
 		<array/>
 		<key>Penland</key>
 		<array/>
-		<key>messages</key>
-		<dict/>
 	</dict>
 </dict>
 </plist>
