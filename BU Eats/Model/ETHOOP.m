@@ -52,4 +52,10 @@
              NSStringFromEatery(EateryMemorial): memorial};
 }
 
+- (NSArray *)hoopForEatery:(Eatery)eatery {
+    NSArray *hoop = self.overridesByEatery[NSStringFromEatery(eatery)];
+    if (hoop.count) return hoop;
+    return self.hoopByEatery[NSStringFromEatery(eatery)];
+}
+
 @end

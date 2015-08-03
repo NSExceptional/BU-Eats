@@ -12,8 +12,11 @@
 
 + (instancetype)fromData:(NSData *)plistData error:(out NSError **)error;
 
+- (NSArray *)hoopForEatery:(Eatery)eatery;
+
 @property (nonatomic, readonly) NSDictionary *hoopByEatery;
 @property (nonatomic, readonly) NSDictionary *overridesByEatery;
 @property (nonatomic, readonly) NSDictionary *messagesByEatery;
+
 
 @end

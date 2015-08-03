@@ -54,9 +54,11 @@
     // Create all location objects
     NSMutableArray *locations = [NSMutableArray new];
     for (Eatery e = 1; e <= kEateryCount; e++)
-        [locations addObject:[ETLocation location:e openIntervals:[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
+        [locations addObject:[ETLocation location:e openIntervals:@[] message:@"Loading…"]];
     
     _locations = locations.copy;
+    
+    [self loadHOOP];
 }
 
 - (void)applyTheme {
@@ -96,10 +98,9 @@
             if (!plistError) {
                 
                 // Create all location objects
-                NSMutableArray *locations = [NSMutableArray new];
+                NSMutableArray *locations = [NSMutableArray array];
                 for (Eatery e = 1; e <= kEateryCount; e++) {
-                    NSArray *intervals = hoop.overridesByEatery[NSStringFromEatery(e)] ?: hoop.hoopByEatery[NSStringFromEatery(e)];
-                    [locations addObject:[ETLocation location:e openIntervals:intervals message:hoop.messagesByEatery[NSStringFromEatery(e)]]];
+                    [locations addObject:[ETLocation location:e openIntervals:[hoop hoopForEatery:e] message:hoop.messagesByEatery[NSStringFromEatery(e)]]];
                 }
                 
                 // Update data source and refresh
@@ -108,11 +109,26 @@
                     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
                 });
             } else {
-                [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation" message:plistError.localizedDescription] showFromViewController:self];
+                [self handleLoadError:plistError];
             }
         } else {
-            [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation" message:loadError.localizedDescription] showFromViewController:self];
+            [self handleLoadError:loadError];
         }
+    });
+}
+
+- (void)handleLoadError:(NSError *)error {
+    [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation. Default times shown." message:error.localizedDescription] showFromViewController:self];
+    
+    // Create all location objects
+    NSMutableArray *locations = [NSMutableArray new];
+    for (Eatery e = 1; e <= kEateryCount; e++)
+        [locations addObject:[ETLocation location:e openIntervals:[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
+    
+    // Update data source and refresh
+    _locations = locations.copy;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     });
 }
 
