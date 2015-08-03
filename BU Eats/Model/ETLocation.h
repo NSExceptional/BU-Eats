@@ -24,5 +24,6 @@
 
 
 @interface ETTimeInterval (Eateries)
++ (NSDictionary *)allLocationsHoursOfOperationPropertyListValue;
 + (NSArray *)hoursOfOperationForLocation:(Eatery)location;
 @end

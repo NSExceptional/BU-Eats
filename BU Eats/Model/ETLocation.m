@@ -47,6 +47,7 @@
     
     // Closed - several intervals
     for (NSUInteger i = 1; i < self.intervalsOfOperation.count; i++)
+        // Checks to see if we're closed but in between two meals
         if ([ETTimeInterval between:[self.intervalsOfOperation[i-1] endTime] and:[self.intervalsOfOperation[i] startTime]].currentTimeIsInInterval) {
             if ([[self.intervalsOfOperation[i] startTime] isTomorrow])
                 return [NSString stringWithFormat:@"Closed — Opens tomorrow @\n%@", [formatter stringFromDate:[self.intervalsOfOperation[i] startTime]]];
@@ -68,6 +69,17 @@
 @end
 
 @implementation ETTimeInterval (Eateries)
+
++ (NSArray *)hoursOfOperationPropertyListValueForLocation:(Eatery)location {
+    return [[self hoursOfOperationForLocation:location] valueForKeyPath:@"@unionOfObjects.propertyListValue"];
+}
+
++ (NSDictionary *)allLocationsHoursOfOperationPropertyListValue {
+    NSMutableDictionary *values = [NSMutableDictionary dictionary];
+    for (Eatery e = EateryPenland; e <= kEateryCount; e++)
+        values[NSStringFromEatery(e)] = [self hoursOfOperationPropertyListValueForLocation:e];
+    return values;
+}
 
 + (NSArray *)hoursOfOperationForLocation:(Eatery)location {
     NSDate *today = [NSDate date];

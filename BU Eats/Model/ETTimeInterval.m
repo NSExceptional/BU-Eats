@@ -10,6 +10,10 @@
 
 @implementation ETTimeInterval
 
++ (instancetype)timeIntervalFromPropertyListValue:(NSDictionary *)value {
+    return [[ETTimeInterval alloc] initWithStartTime:value[@"start"] andEndTime:value[@"end"]];
+}
+
 + (instancetype)between:(NSDate *)start and:(NSDate *)end {
     return [[ETTimeInterval alloc] initWithStartTime:start andEndTime:end];
 }
@@ -33,6 +37,7 @@
     if (self) {
         _startTime = start;
         _endTime   = end;
+        _propertyListValue = @{@"start": self.startTime, @"end": self.endTime};
     }
     return self;
 }

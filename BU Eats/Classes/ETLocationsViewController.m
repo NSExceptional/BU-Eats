@@ -83,6 +83,10 @@
     [self.refreshControl endRefreshing];
 }
 
+- (void)loadHOOP {
+    
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

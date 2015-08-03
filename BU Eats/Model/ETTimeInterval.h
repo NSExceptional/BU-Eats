@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface ETTimeInterval : NSObject
+
++ (instancetype)timeIntervalFromPropertyListValue:(NSDictionary *)value;
 + (instancetype)between:(NSDate *)start and:(NSDate *)end;
 + (instancetype)distantPast;
 + (instancetype)distantFuture;
 + (instancetype)allTime;
+
 - (BOOL)currentTimeIsInInterval;
+
 @property (nonatomic, readonly) NSDate *startTime;
 @property (nonatomic, readonly) NSDate *endTime;
+@property (nonatomic, readonly) NSDictionary *propertyListValue;
+
 @end
 
 #pragma mark NSDate category
