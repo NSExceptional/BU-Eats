@@ -8,4 +8,4 @@
 
 #import "BU-Eats-Constants.h"
 
-NSString * const kHOOPURL = @"https://raw.githubusercontent.com/ThePantsThief/BU-Eats/master/BUEats-HOOP.plist";
+NSString * const kHOOPURL = @"https://cdn.rawgit.com/ThePantsThief/BU-Eats/master/BUEats-HOOP.plist";
