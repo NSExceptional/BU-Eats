@@ -16,7 +16,8 @@
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *message;
-@property (nonatomic, readonly) NSArray  *intervalsOfOperation;
+@property (nonatomic, readonly) NSDictionary *intervalsOfOperation;
+@property (nonatomic, readonly) NSArray *todaysIntervalsOfOperation;
 
 - (BOOL)isOpen;
 - (NSString *)status;
@@ -26,5 +27,5 @@
 
 @interface ETTimeInterval (Eateries)
 + (NSDictionary *)allLocationsHoursOfOperationPropertyListValue;
-+ (NSArray *)hoursOfOperationForLocation:(Eatery)location;
++ (NSDictionary *)hoursOfOperationForLocation:(Eatery)location;
 @end

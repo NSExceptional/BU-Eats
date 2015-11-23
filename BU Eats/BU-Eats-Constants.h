@@ -9,3 +9,8 @@
 #import <Foundation/Foundation.h>
 
 extern NSString * const kHOOPURL;
+
+extern NSString * const kHOOPWeekday;
+extern NSString * const kHOOPFriday;
+extern NSString * const kHOOPSaturday;
+extern NSString * const kHOOPSunday;

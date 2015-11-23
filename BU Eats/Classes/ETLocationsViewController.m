@@ -41,7 +41,7 @@
     
     self.title = @"Locations";
     self.refreshControl = [UIRefreshControl new];
-    [self.refreshControl addTarget:self action:@selector(updateHours) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl addTarget:self action:@selector(loadHOOP) forControlEvents:UIControlEventValueChanged];
     self.navigationController.navigationBar.translucent = NO;
     [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
     self.tableView.rowHeight = 112.f;
@@ -81,11 +81,6 @@
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
-- (void)updateHours {
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    [self.refreshControl endRefreshing];
-}
-
 - (void)loadHOOP {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // Load plist data
@@ -107,6 +102,7 @@
                 _locations = locations.copy;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+                    [self.refreshControl endRefreshing];
                 });
             } else {
                 [self handleLoadError:plistError];

@@ -24,6 +24,8 @@
 		B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1321AEB3142001F2B96 /* ETLocationsViewController.m */; };
 		B4C0B1371AEB38AB001F2B96 /* ETTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */; };
 		B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B13A1AEB4255001F2B96 /* ETLocation.m */; };
+		B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */; };
+		B4C4DD281B89406D00A9AFB5 /* ETSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */; };
 		B4D45A441AF6F22500D0B448 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D45A431AF6F22500D0B448 /* Crashlytics.framework */; };
 		CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20B0A016F7AD62F7FEB13D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,10 @@
 		B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETTimeInterval.m; path = Model/ETTimeInterval.m; sourceTree = "<group>"; };
 		B4C0B1391AEB4255001F2B96 /* ETLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocation.h; path = Model/ETLocation.h; sourceTree = "<group>"; };
 		B4C0B13A1AEB4255001F2B96 /* ETLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocation.m; path = Model/ETLocation.m; sourceTree = "<group>"; };
+		B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TBExtensions.h"; sourceTree = "<group>"; };
+		B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtensions.m"; sourceTree = "<group>"; };
+		B4C4DD261B89406D00A9AFB5 /* ETSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSimpleDate.h; path = Model/ETSimpleDate.h; sourceTree = "<group>"; };
+		B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETSimpleDate.m; path = Model/ETSimpleDate.m; sourceTree = "<group>"; };
 		B4D45A431AF6F22500D0B448 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CD20B0A016F7AD62F7FEB13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +166,8 @@
 				B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */,
 				B419BB641AEC3C7A00C7A75D /* UIColor+BU.h */,
 				B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */,
+				B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */,
+				B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */,
 				B4D45A431AF6F22500D0B448 /* Crashlytics.framework */,
 			);
 			name = "Supporting Files";
@@ -209,6 +217,8 @@
 				B4C0B13A1AEB4255001F2B96 /* ETLocation.m */,
 				B41F8DD61B6F2AEB00FEB057 /* ETHOOP.h */,
 				B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */,
+				B4C4DD261B89406D00A9AFB5 /* ETSimpleDate.h */,
+				B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -367,6 +377,7 @@
 			files = (
 				B419BB6B1AED7AF400C7A75D /* ETLocationCell.m in Sources */,
 				B419BB5C1AEB7BAD00C7A75D /* ETMenuViewController.m in Sources */,
+				B4C4DD281B89406D00A9AFB5 /* ETSimpleDate.m in Sources */,
 				B4C0B1371AEB38AB001F2B96 /* ETTimeInterval.m in Sources */,
 				B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */,
 				B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */,
@@ -375,6 +386,7 @@
 				B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */,
 				B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */,
 				B419BB5F1AEB907600C7A75D /* BUDiningMenu.m in Sources */,
+				B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */,
 				B41F8DD81B6F2AEB00FEB057 /* ETHOOP.m in Sources */,
 				B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */,
 			);

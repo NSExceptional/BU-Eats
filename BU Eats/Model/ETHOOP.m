@@ -33,23 +33,27 @@
 - (NSDictionary *)deserializedTimeIntervals:(NSDictionary *)plist {
     if (!plist) return @{};
     
-    NSMutableArray *brooks      = plist[NSStringFromEatery(EateryBrooks)];
-    NSMutableArray *eastvillage = plist[NSStringFromEatery(EateryEastVillage)];
-    NSMutableArray *penland     = plist[NSStringFromEatery(EateryPenland)];
-    NSMutableArray *memorial    = plist[NSStringFromEatery(EateryMemorial)];
-    
-    NSArray *locationsHOOPS = @[brooks, eastvillage, penland, memorial];
-    for (NSMutableArray *location in locationsHOOPS) {
-        for (NSInteger i = 0; i < location.count; i++) {
-            NSDictionary *plistValue = location[i];
-            location[i] = [ETTimeInterval timeIntervalFromPropertyListValue:plistValue];
+    [plist enumerateKeysAndObjectsUsingBlock:^(NSString *weekpart, NSMutableDictionary *values, BOOL *stop) {
+        NSMutableArray *brooks      = values[NSStringFromEatery(EateryBrooks)];
+        NSMutableArray *eastvillage = values[NSStringFromEatery(EateryEastVillage)];
+        NSMutableArray *penland     = values[NSStringFromEatery(EateryPenland)];
+        NSMutableArray *memorial    = values[NSStringFromEatery(EateryMemorial)];
+        
+        NSArray *locationsHOOPS = @[brooks, eastvillage, penland, memorial];
+        for (NSMutableArray *location in locationsHOOPS) {
+            for (NSInteger i = 0; i < location.count; i++) {
+                NSDictionary *plistValue = location[i];
+                location[i] = [ETTimeInterval timeIntervalFromPropertyListValue:plistValue];
+            }
         }
-    }
+        
+        values[NSStringFromEatery(EateryBrooks)]      = brooks;
+        values[NSStringFromEatery(EateryEastVillage)] = eastvillage;
+        values[NSStringFromEatery(EateryPenland)]     = penland;
+        values[NSStringFromEatery(EateryMemorial)]    = memorial;
+    }];
     
-    return @{NSStringFromEatery(EateryBrooks): brooks,
-             NSStringFromEatery(EateryEastVillage): eastvillage,
-             NSStringFromEatery(EateryPenland): penland,
-             NSStringFromEatery(EateryMemorial): memorial};
+    return plist;
 }
 
 - (NSArray *)hoopForEatery:(Eatery)eatery {

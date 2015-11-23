@@ -12,7 +12,7 @@
 #define stringByTrimmingWhitespace stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]
 #define kDayYearMonth (NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear)
 
-const NSUInteger kPenland     = 6522;
+const NSUInteger kPenland     = 1047;
 const NSUInteger kMemorial    = 1045;
 const NSUInteger kEastVillage = 6524;
 const NSUInteger kBrooks      = 6523;

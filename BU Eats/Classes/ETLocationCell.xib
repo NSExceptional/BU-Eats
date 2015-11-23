@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,7 +13,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-uK-BNO">
-                        <rect key="frame" x="119" y="29" width="168" height="21"/>
+                        <rect key="frame" x="126" y="29.5" width="161" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="175" id="QVK-MO-R23"/>
                         </constraints>
@@ -27,7 +27,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IB-ee-6IE">
-                        <rect key="frame" x="119" y="58" width="168" height="17"/>
+                        <rect key="frame" x="126" y="58" width="161" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="BW9-Pi-u0n"/>
                         </constraints>
@@ -41,7 +41,7 @@
                         </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3T-dE-Ok5">
-                        <rect key="frame" x="8" y="8" width="96" height="96"/>
+                        <rect key="frame" x="15" y="8" width="96" height="96"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="jU8-a5-TyB"/>
                             <constraint firstAttribute="width" constant="96" id="t5J-O9-R03"/>
@@ -53,7 +53,7 @@
                     <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="V3T-dE-Ok5" secondAttribute="trailing" constant="15" id="IPV-ft-fMS"/>
                     <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="0IB-ee-6IE" secondAttribute="leading" id="Tpk-wh-jCL"/>
                     <constraint firstAttribute="centerY" secondItem="6SU-uK-BNO" secondAttribute="centerY" constant="16" id="cwm-QI-pR8"/>
-                    <constraint firstItem="V3T-dE-Ok5" firstAttribute="leading" secondItem="1cq-bk-8eq" secondAttribute="leading" constant="8" id="cy6-ep-GgO"/>
+                    <constraint firstItem="V3T-dE-Ok5" firstAttribute="leading" secondItem="1cq-bk-8eq" secondAttribute="leading" constant="15" id="cy6-ep-GgO"/>
                     <constraint firstAttribute="trailing" secondItem="0IB-ee-6IE" secondAttribute="trailing" id="iD0-oJ-as3"/>
                     <constraint firstItem="0IB-ee-6IE" firstAttribute="top" secondItem="6SU-uK-BNO" secondAttribute="bottom" constant="8" id="kEf-vp-G7e"/>
                     <constraint firstItem="V3T-dE-Ok5" firstAttribute="top" secondItem="1cq-bk-8eq" secondAttribute="top" constant="8" id="owD-5a-ewF"/>
@@ -72,7 +72,7 @@
                 <outlet property="locationNameLabel" destination="6SU-uK-BNO" id="OHt-VQ-F8e"/>
                 <outlet property="statusLabel" destination="0IB-ee-6IE" id="Si1-16-UY8"/>
             </connections>
-            <point key="canvasLocation" x="1218" y="791"/>
+            <point key="canvasLocation" x="867" y="492"/>
         </tableViewCell>
     </objects>
 </document>

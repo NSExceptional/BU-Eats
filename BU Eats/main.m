@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "ETHOOP.h"
+#import "ETTimeInterval.h"
+#import "ETLocation.h"
+
+void generateHOOP();
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+}
+
+void generateHOOP() {
+    
 }

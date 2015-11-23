@@ -8,37 +8,66 @@
 
 #import "ETTimeInterval.h"
 
+NSDate * ETDateFromTimeOffset(ETTimeOffset offset, NSUInteger weekday) {
+    return [[[[[NSDate date] dateAtStartOfWeek] dateByAddingDays:weekday-1] dateByAddingHours:offset.hour] dateByAddingMinutes:offset.minutes];
+}
+
+ETTimeOffset ETTimeOffsetGet(NSDate *date) {
+    ETTimeOffset offset;
+    offset.hour    = date.hour;
+    offset.minutes = date.minute;
+    return offset;
+}
+
+ETTimeOffset ETTimeOffsetMake(NSUInteger hour, NSUInteger minutes) {
+    ETTimeOffset offset;
+    offset.hour    = hour;
+    offset.minutes = minutes;
+    return offset;
+}
+
+@interface ETTimeInterval ()
+@property (nonatomic, readonly) BOOL absolute;
+@end
+
 @implementation ETTimeInterval
 
 + (instancetype)timeIntervalFromPropertyListValue:(NSDictionary *)value {
-    return [[ETTimeInterval alloc] initWithStartTime:value[@"start"] andEndTime:value[@"end"]];
+    return [[self alloc] initWithStartTime:value[@"start"] andEndTime:value[@"end"] absolute:[value[@"absolute"] boolValue]];
 }
 
-+ (instancetype)between:(NSDate *)start and:(NSDate *)end {
-    return [[ETTimeInterval alloc] initWithStartTime:start andEndTime:end];
++ (NSArray *)between:(ETTimeOffset)start and:(ETTimeOffset)end onDays:(NSIndexSet *)days {
+    NSMutableArray *intervals = [NSMutableArray array];
+    [days enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        if (idx < 1 || idx > 7) return;
+        
+        [intervals addObject:[ETTimeInterval between:start and:end weekday:idx]];
+    }];
+    
+    return intervals.copy;
 }
 
-+ (instancetype)distantPast {
-    return [ETTimeInterval between:[NSDate distantPast] and:[[NSDate distantPast] dateByAddingMinutes:1]];
++ (instancetype)between:(ETTimeOffset)start and:(ETTimeOffset)end weekday:(NSUInteger)weekday {
+    NSDate *startDate = ETDateFromTimeOffset(start, weekday);
+    NSDate *endDate   = ETDateFromTimeOffset(end, weekday);
+    return [[self alloc] initWithStartTime:startDate andEndTime:endDate absolute:NO];
 }
 
-+ (instancetype)distantFuture {
-    return [ETTimeInterval between:[[NSDate distantFuture] dateBySubtractingMinutes:1] and:[NSDate distantFuture]];
++ (instancetype)absoluteBetween:(NSDate *)start and:(NSDate *)end {
+    return [[self alloc] initWithStartTime:start andEndTime:end absolute:YES];
 }
 
-+ (instancetype)allTime {
-    return [ETTimeInterval between:[NSDate distantPast] and:[NSDate distantFuture]];
-}
-
-- (id)initWithStartTime:(NSDate *)start andEndTime:(NSDate *)end {
+- (id)initWithStartTime:(NSDate *)start andEndTime:(NSDate *)end absolute:(BOOL)absolute {
     NSParameterAssert([start isKindOfClass:NSDate.class]); NSParameterAssert([end isKindOfClass:NSDate.class]);
     
     self = [super init];
     if (self) {
         _startTime = start;
         _endTime   = end;
-        _propertyListValue = @{@"start": self.startTime, @"end": self.endTime};
+        _absolute  = absolute;
+        _propertyListValue = @{@"start": self.startTime, @"end": self.endTime, @"absolute": @(self.absolute)};
     }
+    
     return self;
 }
 
