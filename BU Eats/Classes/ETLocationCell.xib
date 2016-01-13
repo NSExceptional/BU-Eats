@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,28 +12,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JwI-Tx-KQF" id="1cq-bk-8eq">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="111.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-uK-BNO">
-                        <rect key="frame" x="126" y="29.5" width="161" height="20.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="175" id="QVK-MO-R23"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="QVK-MO-R23"/>
-                            </mask>
-                        </variation>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IB-ee-6IE">
-                        <rect key="frame" x="126" y="58" width="161" height="17"/>
+                        <rect key="frame" x="126" y="44.5" width="161" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="BW9-Pi-u0n"/>
                         </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
@@ -47,8 +36,23 @@
                             <constraint firstAttribute="width" constant="96" id="t5J-O9-R03"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-uK-BNO">
+                        <rect key="frame" x="126" y="16" width="161" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="175" id="QVK-MO-R23"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QVK-MO-R23"/>
+                            </mask>
+                        </variation>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6SU-uK-BNO" firstAttribute="top" secondItem="V3T-dE-Ok5" secondAttribute="top" multiplier="2" id="8cy-RA-3eQ"/>
                     <constraint firstAttribute="centerX" secondItem="6SU-uK-BNO" secondAttribute="centerX" constant="14.5" id="9WM-yt-nGT"/>
                     <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="V3T-dE-Ok5" secondAttribute="trailing" constant="15" id="IPV-ft-fMS"/>
                     <constraint firstItem="6SU-uK-BNO" firstAttribute="leading" secondItem="0IB-ee-6IE" secondAttribute="leading" id="Tpk-wh-jCL"/>
@@ -63,6 +67,7 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="9WM-yt-nGT"/>
+                        <exclude reference="cwm-QI-pR8"/>
                         <exclude reference="qdV-zm-zDP"/>
                     </mask>
                 </variation>

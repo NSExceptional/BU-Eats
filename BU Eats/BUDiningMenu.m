@@ -37,7 +37,7 @@ NSString * NSStringFromEatery(Eatery e) {
 NSString * NSMessageFromEatery(Eatery e) {
     switch (e) {
         case EateryPenland:
-            return @"Open M-F from 7–10, 10:45–3, 4:30–7:30, and M-Th form 8 PM to 12:30 AM";
+            return @"Open M-F from 7–10, 10:45–3, 4:30–7:30, and M-Th from 8–12:30 AM";
         case EateryMemorial:
             return @"Open 7 AM to 8 PM, M–F";
         case EateryEastVillage:
