@@ -1,4 +1,6 @@
 pod 'NSDate-Extensions'
 pod 'ObjectiveGumbo'
 pod 'TBAlertController'
-pod 'DIDatePicker'
+pod 'DIDatepicker'
+pod 'Crashlytics'
+pod 'FLEX'

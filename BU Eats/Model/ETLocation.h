@@ -20,12 +20,12 @@
 @property (nonatomic, readonly) NSArray *todaysIntervalsOfOperation;
 
 - (BOOL)isOpen;
-- (NSString *)status;
+//- (NSString *)status;
 
 @end
 
 
 @interface ETTimeInterval (Eateries)
 + (NSDictionary *)allLocationsHoursOfOperationPropertyListValue;
-+ (NSDictionary *)hoursOfOperationForLocation:(Eatery)location;
+//+ (NSDictionary *)hoursOfOperationForLocation:(Eatery)location;
 @end

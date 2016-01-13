@@ -1,19 +1,28 @@
 PODS:
+  - Crashlytics (3.5.0):
+    - Fabric (~> 1.6.0)
   - DIDatepicker (0.1)
+  - Fabric (1.6.2)
+  - FLEX (2.2.0)
   - NSDate-Extensions (0.0.1)
   - ObjectiveGumbo (0.1)
   - TBAlertController (2.0.1)
 
 DEPENDENCIES:
-  - DIDatePicker
+  - Crashlytics
+  - DIDatepicker
+  - FLEX
   - NSDate-Extensions
   - ObjectiveGumbo
   - TBAlertController
 
 SPEC CHECKSUMS:
+  Crashlytics: fabfd45d0e8b8dc936c682b97e302b9a49a1c827
   DIDatepicker: c990ce1cdc8a6169cf7eb6369cd97604864eed27
+  Fabric: e8296d4a1abb3c5eed770cc86b311c862f51d340
+  FLEX: bc8a4fb887ed5d3cdf7c2f3bd665f7bb1647cc58
   NSDate-Extensions: cbd68ecf5cf8a150644e184b4521d7734fea5ace
   ObjectiveGumbo: 0704c4930688132abb3d5df2000334f30504856f
   TBAlertController: 92579eba6b24ae3c29380de47d207b5b79b3d754
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.38.0

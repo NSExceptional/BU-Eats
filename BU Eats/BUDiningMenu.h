@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, Eatery)
 };
 
 extern NSString * NSStringFromEatery(Eatery e);
+extern NSString * NSMessageFromEatery(Eatery e);
 
 typedef NS_ENUM(NSUInteger, Meal)
 {

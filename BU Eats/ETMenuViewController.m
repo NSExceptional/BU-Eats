@@ -12,6 +12,9 @@
 @property (nonatomic) Eatery       location;
 @property (nonatomic) NSArray      *sectionTitles;
 @property (nonatomic) NSDictionary *itemsBySectionTitle;
+
+@property (nonatomic) NSString *placeholderText;
+@property (nonatomic) UILabel *placeholderLabel;
 @end
 
 @implementation ETMenuViewController
@@ -41,19 +44,24 @@
 }
 
 - (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items {
-    NSParameterAssert(sections.count > 0); NSParameterAssert(items.count > 0);
     NSParameterAssert(sections.count == items.count);
     
-    [self.tableView beginUpdates];
-    NSUInteger previousSections = _sectionTitles.count;
-    _sectionTitles = sections;
-    _itemsBySectionTitle = items;
-    NSUInteger numSectionsToInsert = _sectionTitles.count > previousSections ? _sectionTitles.count - previousSections : 0;
-    NSUInteger numSectionsToRemove = previousSections > _sectionTitles.count ? previousSections - _sectionTitles.count : 0;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, previousSections)] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView insertSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections, numSectionsToInsert)] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView deleteSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections - numSectionsToRemove, numSectionsToRemove)] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView endUpdates];
+    if (sections.count == 0) {
+        self.placeholderText = @"This meal is not being served right now.";
+    } else {
+        self.placeholderText = nil;
+        
+        [self.tableView beginUpdates];
+        NSUInteger previousSections = _sectionTitles.count;
+        _sectionTitles = sections;
+        _itemsBySectionTitle = items;
+        NSUInteger numSectionsToInsert = _sectionTitles.count > previousSections ? _sectionTitles.count - previousSections : 0;
+        NSUInteger numSectionsToRemove = previousSections > _sectionTitles.count ? previousSections - _sectionTitles.count : 0;
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, previousSections)] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView insertSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections, numSectionsToInsert)] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView deleteSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections - numSectionsToRemove, numSectionsToRemove)] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+    }
 }
 
 - (void)viewDidLoad {
@@ -61,8 +69,49 @@
     [self applyTheme];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_placeholderLabel)
+        _placeholderLabel.center = self.view.center;
+}
+
 - (void)applyTheme {
     self.tableView.backgroundColor = [UIColor viewBackgroundColor];
+}
+
+- (void)setPlaceholderText:(NSString *)placeholderText {
+    _placeholderText = placeholderText;
+    
+    if (placeholderText) {
+        if (!_placeholderLabel) {
+            _placeholderLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+            _placeholderLabel.text = placeholderText;
+            _placeholderLabel.font = [UIFont systemFontOfSize:25];
+            _placeholderLabel.textColor = [UIColor colorWithWhite:0.400 alpha:1.000];
+            _placeholderLabel.numberOfLines = 2;
+            _placeholderLabel.textAlignment = NSTextAlignmentCenter;
+            
+            self.tableView.backgroundView = ({UIView *view = [UIView new]; view.backgroundColor = self.tableView.backgroundColor; view;});
+            [self.tableView.backgroundView addSubview:_placeholderLabel];
+            
+            CGSize size                  = [_placeholderLabel sizeThatFits:CGSizeMake([UIScreen mainScreen].bounds.size.width-60, CGFLOAT_MAX)];
+            _placeholderLabel.frame  = (CGRect){0, 0, size};
+            _placeholderLabel.center = self.view.center;
+            
+        } else {
+            _placeholderLabel.hidden = NO;
+            _placeholderLabel.text = placeholderText;
+        }
+    } else {
+        _placeholderLabel.hidden = YES;
+    }
+}
+
+- (void)clear {
+    NSRange r = NSMakeRange(0, self.sectionTitles.count);
+    self.sectionTitles = @[];
+    self.itemsBySectionTitle = @{};
+    [self.tableView deleteSections:[NSIndexSet indexSetWithIndexesInRange:r] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark UITableView protocols

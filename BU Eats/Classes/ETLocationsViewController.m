@@ -40,11 +40,15 @@
     [self applyTheme];
     
     self.title = @"Locations";
-    self.refreshControl = [UIRefreshControl new];
-    [self.refreshControl addTarget:self action:@selector(loadHOOP) forControlEvents:UIControlEventValueChanged];
     self.navigationController.navigationBar.translucent = NO;
-    [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
+    
+    // Table view config
     self.tableView.rowHeight = 112.f;
+    [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
+    
+    // Refresh control
+    //    self.refreshControl = [UIRefreshControl new];
+    //    [self.refreshControl addTarget:self action:@selector(loadHOOP) forControlEvents:UIControlEventValueChanged];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [button addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
@@ -54,11 +58,12 @@
     // Create all location objects
     NSMutableArray *locations = [NSMutableArray new];
     for (Eatery e = 1; e <= kEateryCount; e++)
-        [locations addObject:[ETLocation location:e openIntervals:@[] message:@"Loading…"]];
+        [locations addObject:[ETLocation location:e openIntervals:@[] message:NSMessageFromEatery(e)]];
     
     _locations = locations.copy;
     
-    [self loadHOOP];
+    // TODO: fix this
+    //    [self loadHOOP];
 }
 
 - (void)applyTheme {
@@ -76,7 +81,6 @@
     UINavigationController *nav    = [[UINavigationController alloc] initWithRootViewController:about];
     nav.navigationBar.translucent  = NO;
     nav.navigationBar.barTintColor = [UIColor barBackgroundColors];
-    nav.navigationBar.tintColor    = [UIColor globalTint];
     nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
@@ -119,7 +123,8 @@
     // Create all location objects
     NSMutableArray *locations = [NSMutableArray new];
     for (Eatery e = 1; e <= kEateryCount; e++)
-        [locations addObject:[ETLocation location:e openIntervals:[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
+        // TODO: fix me
+        [locations addObject:[ETLocation location:e openIntervals:@[] message:@""]];//[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
     
     // Update data source and refresh
     _locations = locations.copy;
@@ -130,10 +135,6 @@
 
 #pragma mark UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.locations.count;
 }
@@ -142,7 +143,7 @@
     ETLocationCell *cell        = (ETLocationCell *)[self.tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
     ETLocation *location        = self.locations[indexPath.row];
     cell.locationNameLabel.text = location.name;
-    cell.statusLabel.text       = location.status;
+    cell.statusLabel.text       = location.message;
     cell.locationIcon.image     = [UIImage imageNamed:location.name];
     if (!location.isOpen)
         cell.statusLabel.textColor = [UIColor colorWithRed:1.000 green:0.200 blue:0.200 alpha:1.000];
@@ -155,6 +156,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     ETMealTabController *meals = [ETMealTabController mealsForLocation:indexPath.row+1];
     [self.navigationController pushViewController:meals animated:YES];
 }

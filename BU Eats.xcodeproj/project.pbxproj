@@ -26,7 +26,6 @@
 		B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B13A1AEB4255001F2B96 /* ETLocation.m */; };
 		B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */; };
 		B4C4DD281B89406D00A9AFB5 /* ETSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */; };
-		B4D45A441AF6F22500D0B448 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D45A431AF6F22500D0B448 /* Crashlytics.framework */; };
 		CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20B0A016F7AD62F7FEB13D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +79,6 @@
 		B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtensions.m"; sourceTree = "<group>"; };
 		B4C4DD261B89406D00A9AFB5 /* ETSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSimpleDate.h; path = Model/ETSimpleDate.h; sourceTree = "<group>"; };
 		B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETSimpleDate.m; path = Model/ETSimpleDate.m; sourceTree = "<group>"; };
-		B4D45A431AF6F22500D0B448 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CD20B0A016F7AD62F7FEB13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4D45A441AF6F22500D0B448 /* Crashlytics.framework in Frameworks */,
 				CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,7 +165,6 @@
 				B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */,
 				B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */,
 				B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */,
-				B4D45A431AF6F22500D0B448 /* Crashlytics.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,7 +231,6 @@
 				B4C0B1021AEB2F5C001F2B96 /* Frameworks */,
 				B4C0B1031AEB2F5C001F2B96 /* Resources */,
 				25379283E546AA870FEC71D9 /* Copy Pods Resources */,
-				B4D45A421AF6F20B00D0B448 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -271,7 +266,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ET;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Tanner Bennett";
 				TargetAttributes = {
 					B4C0B1041AEB2F5C001F2B96 = {
@@ -355,19 +350,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B4D45A421AF6F20B00D0B448 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run f5649e3f1b043e69f3fc32b03f4f06c80277c955 55c3d0a66d3eb85706bda75019950534f07f92863c88b5dca707ba483ea735aa";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -449,7 +431,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -464,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -490,6 +474,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -499,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -514,13 +499,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BU\\ Eats",
 					"$(SRCROOT)",
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -533,13 +518,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BU\\ Eats",
 					"$(SRCROOT)",
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -548,16 +533,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "BU EatsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BU Eats.app/BU Eats";
 			};
@@ -567,12 +550,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "BU EatsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BU Eats.app/BU Eats";
 			};

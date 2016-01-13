@@ -31,26 +31,19 @@ NSString * NSStringFromEatery(Eatery e) {
             return @"East Village";
         case EateryBrooks:
             return @"Brooks";
-            //        case EaterySUB:
-            //            return @"The SUB";
-            //        case EateryStarbucks:
-            //            return @"Starbucks Moody";
-            //        case EateryPodEV:
-            //            return @"POD (East Village)";
-            //        case EateryPodPenland:
-            //            return @"POD (Penland)";
-            //        case EateryPodSpeight:
-            //            return @"POD (Speight)";
-            //        case EateryBSB:
-            //            return @"BSB";
-            //        case EateryEastVillageBakery:
-            //            return @"East Village Bakery";
-            //        case EateryLawSchoolCafe:
-            //            return @"Law School Café";
-            //        case EateryFacultyCenter:
-            //            return @"Faculty Center";
-            //        case EateryTerraceCafe:
-            //            return @"Terrace Café";
+    }
+}
+
+NSString * NSMessageFromEatery(Eatery e) {
+    switch (e) {
+        case EateryPenland:
+            return @"Open M-F from 7–10, 10:45–3, 4:30–7:30, and M-Th form 8 PM to 12:30 AM";
+        case EateryMemorial:
+            return @"Open 7 AM to 8 PM, M–F";
+        case EateryEastVillage:
+            return @"Open M-F from 7–10, 10:45–3, 4:30–8:30, and Sunday from 5 to 9 PM";
+        case EateryBrooks:
+            return @"Open M-F from 7–10, 11–2, and 5–8 (except on Fridays, no dinner)";
     }
 }
 
@@ -75,6 +68,7 @@ Meal MealFromNSString(NSString *m) {
     
     return NSNotFound;
 }
+
 
 @implementation BUDiningMenu
 
@@ -128,10 +122,10 @@ Meal MealFromNSString(NSString *m) {
     
     // Data for request
     NSDateComponents *components = [[NSCalendar currentCalendar] components:kDayYearMonth fromDate:date];
-    NSUInteger day   = components.day;
-    NSUInteger month = components.month;
-    NSUInteger year  = components.year;
-    NSString *dateToSend = [NSString stringWithFormat:@"%lu/%lu/%lu", (unsigned long)month, (unsigned long)day, (unsigned long)year];
+    NSNumber *day   = @(components.day);
+    NSNumber *month = @(components.month);
+    NSNumber *year  = @(components.year);
+    NSString *dateToSend = [NSString stringWithFormat:@"%@-%@-%@", year, month, day];
     NSString *url = [NSString stringWithFormat:@"%@%lu%@%lu%@%@", kMenuURL, (unsigned long)locationToSend, @"&PeriodId=", (unsigned long)meal, @"&MenuDate=", dateToSend];
     
     // Send request

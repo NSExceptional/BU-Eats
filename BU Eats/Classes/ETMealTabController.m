@@ -91,6 +91,10 @@
 #pragma mark Data
 
 - (void)loadMeals {
+    // Clear sections
+    for (ETMenuViewController *menu in self.viewControllers)
+        [menu clear];
+    
     self.datePicker.enabled = NO;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [BUDiningMenu menuFor:self.location onDate:self.datePicker.selectedDate completion:^(NSDictionary *fullMenu) {
@@ -102,43 +106,34 @@
 
 - (void)setMeals:(NSDictionary *)meals {
     [meals enumerateKeysAndObjectsUsingBlock:^(id key, NSDictionary *obj, BOOL *stop) {
+        
         if ([obj isKindOfClass:[NSError class]]) {
-            // Remove tab or show error
+            [self updateTabForMeal:key menu:@{}];
+            
+            // Log show error
             if ([(NSError *)obj code] != 0) {
                 [self failedToLoadMeal:key];
                 NSLog(@"Failed to load meal: %@", key);
+            } else {
+                NSLog(@"Meal not being served: %@", key);
             }
-            else {
-                [self removeViewControllerForMealKey:key];
-                NSLog(@"Remove tab, meal not being served: %@", key);
-            }
-        }
-        else {
-            // Update / add tab
-            [self updateOrAddTabForMeal:key menu:obj];
+        } else {
+            [self updateTabForMeal:key menu:obj];
         }
     }];
+    
     NSLog(@"____________________________________________________\n");
 }
 
-- (void)updateOrAddTabForMeal:(NSString *)mealKey menu:(NSDictionary *)menu {
+- (void)updateTabForMeal:(NSString *)mealKey menu:(NSDictionary *)menu {
     NSUInteger idx = [self indexForMealKey:mealKey];
     ETMenuViewController *menuView;
     
-    // Add tab
-    if (idx == NSNotFound) {
-        NSLog(@"Add tab for meal: %@", mealKey);
-        menuView = [ETMenuViewController menuForLocation:self.location sections:menu.allKeys items:menu];
-        [self setViewControllers:[self.viewControllers arrayByAddingObject:menuView] animated:YES];
-        [self.tabBar.items[self.viewControllers.count-1] setTitle:mealKey];
-        [self.tabBar.items[self.viewControllers.count-1] setImage:[UIImage imageNamed:mealKey]];
-    }
-    // Update existing tab
-    else {
-        NSLog(@"Update tab for meal: %@", mealKey);
-        menuView = self.viewControllers[idx];
-        [menuView updateSections:menu.allKeys andItems:menu];
-    }
+    NSAssert(idx != NSNotFound, @"Missing view controller for meal key: %@", mealKey);
+    
+    NSLog(@"Update tab for meal: %@", mealKey);
+    menuView = self.viewControllers[idx];
+    [menuView updateSections:menu.allKeys andItems:menu];
 }
 
 - (NSUInteger)indexForMealKey:(NSString *)key {
@@ -149,28 +144,13 @@
     return [titles indexOfObject:key];
 }
 
-- (void)removeViewControllerForMealKey:(NSString *)key {
-    NSUInteger idx = [self indexForMealKey:key];
-    if (idx == NSNotFound)
-        return;
-    
-    NSMutableArray *views = self.viewControllers.mutableCopy;
-    [views removeObjectAtIndex:idx];
-    [self setViewControllers:views animated:YES];
-    
-    if (views.count > 0)
-        [self setSelectedIndex:0];
-    else
-        [self showNotOpenWarning];
-}
-
 - (void)showNotOpenWarning {
     TBAlertController *alert = [TBAlertController alertViewWithTitle:nil message:@"Looks like this dining hall isn't open today."];
     [alert addOtherButtonWithTitle:@"OK" buttonAction:^(NSArray *textFieldStrings) {
         [self.navigationController popViewControllerAnimated:YES];
     }];
     
-//    [alert showFromViewController:self];
+    //    [alert showFromViewController:self];
 }
 
 - (void)failedToLoadMeal:(NSString *)meal {

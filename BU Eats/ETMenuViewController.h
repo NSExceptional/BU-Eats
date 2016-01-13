@@ -16,4 +16,6 @@
 - (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items;
 - (void)applyTheme;
 
+- (void)clear;
+
 @end
