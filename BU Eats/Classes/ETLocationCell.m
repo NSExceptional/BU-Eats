@@ -10,4 +10,8 @@
 
 @implementation ETLocationCell
 
+- (void)awakeFromNib {
+    self.statusLabel.font = [UIFont systemFontOfSize:13];
+}
+
 @end
