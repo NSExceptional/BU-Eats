@@ -10,8 +10,7 @@
 
 @implementation TBAlertAction
 
-- (id)initWithTitle:(NSString *)title
-{
+- (id)initWithTitle:(NSString *)title {
     NSParameterAssert(title);
     
     self = [super init];
@@ -24,8 +23,8 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title block:(TBAlertActionBlock)block
-{
+- (id)initWithTitle:(NSString *)title block:(TBAlertActionBlock)block {
+    NSParameterAssert(block);
     self = [self initWithTitle:title];
     if (self) {
         _block = block;
@@ -35,9 +34,8 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action
-{
-    NSParameterAssert((target && action) || (!target && !action)); // All or none
+- (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action {
+    NSParameterAssert(target); NSParameterAssert(action);
     self = [self initWithTitle:title];
     
     if (self && target && action) {
@@ -49,13 +47,11 @@
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action object:(id)object
-{
-    NSParameterAssert(object);
+- (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action object:(id)object {
     self = [self initWithTitle:title target:target action:action];
     if (self) {
         _object = object;
-        _style = TBAlertActionStyleTargetObject;
+        _style  = TBAlertActionStyleTargetObject;
     }
     
     return self;
@@ -65,8 +61,7 @@
     [self perform:@[]];
 }
 
-- (void)perform:(NSArray *)textFieldInputStrings
-{
+- (void)perform:(NSArray *)textFieldInputStrings {
     if (!textFieldInputStrings)
         textFieldInputStrings = @[];
     
