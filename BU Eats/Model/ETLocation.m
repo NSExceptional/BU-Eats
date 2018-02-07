@@ -14,18 +14,27 @@
 
 @implementation ETLocation
 
-+ (instancetype)location:(Eatery)location openIntervals:(NSDictionary *)openIntervals message:(NSString *)message {
-    return [[ETLocation alloc] initWithName:NSStringFromEatery(location) andTimeOpenIntervals:openIntervals message:message];
++ (instancetype)location:(Eatery)location {
+    return [self location:location openIntervals:nil];
 }
 
-- (id)initWithName:(NSString *)name andTimeOpenIntervals:(NSDictionary *)openIntervals message:(NSString *)message {
++ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals {
+    NSString *name = ETStringFromEatery(location);
+    NSString *message = ETMessageForEatery(location);
+    NSString *hours = ETHoursForEatery(location);
+    return [[ETLocation alloc] initWithName:name andTimeOpenIntervals:openIntervals message:message hours:hours];
+}
+
+- (id)initWithName:(NSString *)name andTimeOpenIntervals:(NSArray *)openIntervals message:(NSString *)message hours:(NSString *)hours {
     NSParameterAssert(name); NSParameterAssert(message || openIntervals.count > 0);
+    NSParameterAssert(openIntervals == nil); // Needs work, types don't match up
     
     self = [super init];
     if (self) {
         _name = name;
         _message = message;
-        _intervalsOfOperation = openIntervals ?: @{};
+        _intervalsOfOperation = @{};
+        _fullHours = hours;
     }
     
     return self;
@@ -105,7 +114,7 @@
 + (NSDictionary *)allLocationsHoursOfOperationPropertyListValue {
     NSMutableDictionary *values = [NSMutableDictionary dictionary];
     for (Eatery e = EateryPenland; e <= kEateryCount; e++)
-        values[NSStringFromEatery(e)] = [self hoursOfOperationPropertyListValueForLocation:e];
+        values[ETStringFromEatery(e)] = [self hoursOfOperationPropertyListValueForLocation:e];
     return values;
 }
 

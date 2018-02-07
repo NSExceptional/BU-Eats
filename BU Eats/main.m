@@ -12,7 +12,7 @@
 #import "ETTimeInterval.h"
 #import "ETLocation.h"
 
-void generateHOOP();
+void generateHOOP(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

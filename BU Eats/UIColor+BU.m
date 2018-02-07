@@ -18,7 +18,6 @@
     return [UIColor colorWithRed:0.931 green:0.768 blue:0.000 alpha:1.000];
 }
 
-
 + (instancetype)viewBackgroundColor {
     return [UIColor colorWithWhite:0.955 alpha:1.000];
 }
@@ -39,13 +38,13 @@
     return [UIColor colorWithWhite:0.000 alpha:0.500];
 }
 
-
 + (instancetype)titleTextColor {
     return [UIColor whiteColor];
 }
 
 + (instancetype)barBackgroundColors {
-    return [UIColor colorWithRed:0.067 green:0.272 blue:0.191 alpha:1.000];
+//    return [UIColor colorWithRed:0.07 green:0.27 blue:0.19 alpha:1.000];
+    return [UIColor colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0];
 }
 
 + (instancetype)tabDeselectedColor {

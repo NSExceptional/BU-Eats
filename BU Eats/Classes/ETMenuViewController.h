@@ -13,7 +13,7 @@
 
 + (instancetype)emptyMenuForLocation:(Eatery)location;
 + (instancetype)menuForLocation:(Eatery)location sections:(NSArray *)sections items:(NSDictionary *)items;
-- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items;
+- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items animated:(BOOL)animated;
 - (void)applyTheme;
 
 - (void)clear;

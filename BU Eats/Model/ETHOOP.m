@@ -34,10 +34,10 @@
     if (!plist) return @{};
     
     [plist enumerateKeysAndObjectsUsingBlock:^(NSString *weekpart, NSMutableDictionary *values, BOOL *stop) {
-        NSMutableArray *brooks      = values[NSStringFromEatery(EateryBrooks)];
-        NSMutableArray *eastvillage = values[NSStringFromEatery(EateryEastVillage)];
-        NSMutableArray *penland     = values[NSStringFromEatery(EateryPenland)];
-        NSMutableArray *memorial    = values[NSStringFromEatery(EateryMemorial)];
+        NSMutableArray *brooks      = values[ETStringFromEatery(EateryBrooks)];
+        NSMutableArray *eastvillage = values[ETStringFromEatery(EateryEastVillage)];
+        NSMutableArray *penland     = values[ETStringFromEatery(EateryPenland)];
+        NSMutableArray *memorial    = values[ETStringFromEatery(EateryMemorial)];
         
         NSArray *locationsHOOPS = @[brooks, eastvillage, penland, memorial];
         for (NSMutableArray *location in locationsHOOPS) {
@@ -47,19 +47,19 @@
             }
         }
         
-        values[NSStringFromEatery(EateryBrooks)]      = brooks;
-        values[NSStringFromEatery(EateryEastVillage)] = eastvillage;
-        values[NSStringFromEatery(EateryPenland)]     = penland;
-        values[NSStringFromEatery(EateryMemorial)]    = memorial;
+        values[ETStringFromEatery(EateryBrooks)]      = brooks;
+        values[ETStringFromEatery(EateryEastVillage)] = eastvillage;
+        values[ETStringFromEatery(EateryPenland)]     = penland;
+        values[ETStringFromEatery(EateryMemorial)]    = memorial;
     }];
     
     return plist;
 }
 
 - (NSArray *)hoopForEatery:(Eatery)eatery {
-    NSArray *hoop = self.overridesByEatery[NSStringFromEatery(eatery)];
+    NSArray *hoop = self.overridesByEatery[ETStringFromEatery(eatery)];
     if (hoop.count) return hoop;
-    return self.hoopByEatery[NSStringFromEatery(eatery)];
+    return self.hoopByEatery[ETStringFromEatery(eatery)];
 }
 
 @end

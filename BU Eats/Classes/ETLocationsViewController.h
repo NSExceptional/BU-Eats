@@ -10,4 +10,6 @@
 
 @interface ETLocationsViewController : UITableViewController
 - (void)applyTheme;
+- (void)showHours;
+- (void)showLocation:(Eatery)eatery;
 @end

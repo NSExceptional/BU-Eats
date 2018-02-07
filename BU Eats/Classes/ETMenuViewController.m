@@ -36,31 +36,37 @@
         _sectionTitles = sections;
         _itemsBySectionTitle = items;
         self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.title = NSStringFromEatery(_location);
+        self.title = ETStringFromEatery(_location);
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MenuItemCell"];
     }
     
     return self;
 }
 
-- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items {
+- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items animated:(BOOL)animated {
     NSParameterAssert(sections.count == items.count);
     
     if (sections.count == 0) {
         self.placeholderText = @"This meal is not being served right now.";
     } else {
         self.placeholderText = nil;
-        
-        [self.tableView beginUpdates];
-        NSUInteger previousSections = _sectionTitles.count;
-        _sectionTitles = sections;
-        _itemsBySectionTitle = items;
-        NSUInteger numSectionsToInsert = _sectionTitles.count > previousSections ? _sectionTitles.count - previousSections : 0;
-        NSUInteger numSectionsToRemove = previousSections > _sectionTitles.count ? previousSections - _sectionTitles.count : 0;
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, previousSections)] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView insertSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections, numSectionsToInsert)] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView deleteSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(previousSections - numSectionsToRemove, numSectionsToRemove)] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView endUpdates];
+
+        if (animated) {
+            [self.tableView beginUpdates];
+            NSUInteger previousSections = _sectionTitles.count;
+            _sectionTitles = sections;
+            _itemsBySectionTitle = items;
+            NSUInteger numSectionsToInsert = _sectionTitles.count > previousSections ? _sectionTitles.count - previousSections : 0;
+            NSUInteger numSectionsToRemove = previousSections > _sectionTitles.count ? previousSections - _sectionTitles.count : 0;
+            [self.tableView reloadSections:NSIndexSetRanged(0, previousSections) withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertSections:NSIndexSetRanged(previousSections, numSectionsToInsert) withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView deleteSections:NSIndexSetRanged(previousSections - numSectionsToRemove, numSectionsToRemove) withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView endUpdates];
+        } else {
+            _sectionTitles = sections;
+            _itemsBySectionTitle = items;
+            [self.tableView reloadData];
+        }
     }
 }
 
@@ -108,10 +114,9 @@
 }
 
 - (void)clear {
-    NSRange r = NSMakeRange(0, self.sectionTitles.count);
     self.sectionTitles = @[];
     self.itemsBySectionTitle = @{};
-    [self.tableView deleteSections:[NSIndexSet indexSetWithIndexesInRange:r] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadData];
 }
 
 #pragma mark UITableView protocols

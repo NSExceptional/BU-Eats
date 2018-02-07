@@ -9,24 +9,19 @@
 #import "ETLocationsViewController.h"
 #import "ETLocationCell.h"
 #import "ETMealTabController.h"
+#import "ETCreatedByViewController.h"
+#import "ETHoursViewController.h"
+#import "UIViewController+Extensions.h"
 
 #import "ETLocation.h"
 #import "ETTimeInterval.h"
 #import "ETHOOP.h"
 
-#pragma mark Dismiss view controller category
-@interface UIViewController (Dismiss)
-- (void)dismissAnimated;
-@end
-@implementation UIViewController (Dismiss)
-- (void)dismissAnimated {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-@end
 
 #pragma mark ETLocationsViewController
 @interface ETLocationsViewController ()
-@property (nonatomic) NSArray *locations;
+@property (nonatomic) NSArray<ETLocation*> *locations;
+@property (nonatomic) BOOL showingHours;
 @end
 
 @implementation ETLocationsViewController
@@ -40,8 +35,9 @@
     [self applyTheme];
     
     self.title = @"Locations";
-    self.navigationController.navigationBar.translucent = NO;
-    
+    #warning TODO translucency
+//    self.navigationController.navigationBar.translucent = NO;
+
     // Table view config
     self.tableView.rowHeight = 112.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
@@ -50,36 +46,59 @@
     //    self.refreshControl = [UIRefreshControl new];
     //    [self.refreshControl addTarget:self action:@selector(loadHOOP) forControlEvents:UIControlEventValueChanged];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [button addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.navigationItem.rightBarButtonItem = about;
+    UIButton *info = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [info addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithCustomView:info];
+    self.navigationItem.leftBarButtonItem = about;
+    UIBarButtonItem *hours = [[UIBarButtonItem alloc]
+          initWithTitle:@"Hours"
+          style:UIBarButtonItemStylePlain
+          target:self
+          action:@selector(showHours)
+    ];
+    self.navigationItem.rightBarButtonItem = hours;
     
-    // Create all location objects
-    NSMutableArray *locations = [NSMutableArray new];
-    for (Eatery e = 1; e <= kEateryCount; e++)
-        [locations addObject:[ETLocation location:e openIntervals:@[] message:NSMessageFromEatery(e)]];
-    
-    _locations = locations.copy;
+    // Get location objects
+    _locations = ETEateries();
     
     // TODO: fix this
     //    [self loadHOOP];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    self.showingHours = NO;
+}
+
 - (void)applyTheme {
-    [UIApplication sharedApplication].statusBarStyle = [UIColor statusBarStyle];
-    self.navigationController.navigationBar.barTintColor = [UIColor barBackgroundColors];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
+    
 }
 
 - (void)showAboutPage {
-    UIViewController *about = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"about"];
-    UIBarButtonItem *dismiss = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:about action:@selector(dismissAnimated)];
-    about.navigationItem.rightBarButtonItem = dismiss;
-    about.title = @"About";
-    
-    UINavigationController *nav    = [[UINavigationController alloc] initWithRootViewController:about];
-    nav.navigationBar.translucent  = NO;
+    [self presentViewControllerModally:[ETCreatedByViewController new]];
+}
+
+- (void)showHours {
+    self.showingHours = YES;
+    [self presentViewControllerModally:[ETHoursViewController new]];
+}
+
+- (void)showLocation:(Eatery)eatery {
+    if (self.showingHours) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kETModalsShouldDismissNotification object:nil];
+    }
+
+    if (self.navigationController.viewControllers.count > 1) {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
+
+    ETMealTabController *meals = [ETMealTabController mealsForLocation:eatery];
+    [self.navigationController pushViewController:meals animated:YES];
+}
+
+- (void)presentViewControllerModally:(UIViewController *)vc {
+    UINavigationController *nav    = [[UINavigationController alloc] initWithRootViewController:vc];
     nav.navigationBar.barTintColor = [UIColor barBackgroundColors];
     nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
     [self.navigationController presentViewController:nav animated:YES completion:nil];
@@ -99,7 +118,7 @@
                 // Create all location objects
                 NSMutableArray *locations = [NSMutableArray array];
                 for (Eatery e = 1; e <= kEateryCount; e++) {
-                    [locations addObject:[ETLocation location:e openIntervals:[hoop hoopForEatery:e] message:hoop.messagesByEatery[NSStringFromEatery(e)]]];
+                    [locations addObject:[ETLocation location:e openIntervals:[hoop hoopForEatery:e]]];
                 }
                 
                 // Update data source and refresh
@@ -120,14 +139,8 @@
 - (void)handleLoadError:(NSError *)error {
     [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation. Default times shown." message:error.localizedDescription] showFromViewController:self];
     
-    // Create all location objects
-    NSMutableArray *locations = [NSMutableArray new];
-    for (Eatery e = 1; e <= kEateryCount; e++)
-        // TODO: fix me
-        [locations addObject:[ETLocation location:e openIntervals:@[] message:@""]];//[ETTimeInterval hoursOfOperationForLocation:e] message:nil]];
-    
     // Update data source and refresh
-    _locations = locations.copy;
+    _locations = ETEateries();
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     });

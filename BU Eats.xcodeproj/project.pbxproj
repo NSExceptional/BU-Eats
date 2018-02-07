@@ -7,26 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B419BB5C1AEB7BAD00C7A75D /* ETMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB5B1AEB7BAD00C7A75D /* ETMenuViewController.m */; };
-		B419BB5F1AEB907600C7A75D /* BUDiningMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB5E1AEB907600C7A75D /* BUDiningMenu.m */; };
-		B419BB621AEB934C00C7A75D /* ETMealTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB611AEB934C00C7A75D /* ETMealTabController.m */; };
+		867317D6F7D5EDAE56DCCBEB /* libPods-BU Eats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8D5852C823C6F7868137FE /* libPods-BU Eats.a */; };
 		B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */; };
-		B419BB681AED792A00C7A75D /* ETLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B419BB671AED792A00C7A75D /* ETLocationCell.xib */; };
-		B419BB6B1AED7AF400C7A75D /* ETLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B419BB6A1AED7AF400C7A75D /* ETLocationCell.m */; };
 		B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */; };
-		B41F8DD81B6F2AEB00FEB057 /* ETHOOP.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */; };
 		B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10A1AEB2F5C001F2B96 /* main.m */; };
 		B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */; };
 		B4C0B1171AEB2F5C001F2B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B1151AEB2F5C001F2B96 /* Main.storyboard */; };
 		B4C0B1191AEB2F5C001F2B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B1181AEB2F5C001F2B96 /* Images.xcassets */; };
 		B4C0B11C1AEB2F5C001F2B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */; };
 		B4C0B1281AEB2F5C001F2B96 /* BU_EatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */; };
-		B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1321AEB3142001F2B96 /* ETLocationsViewController.m */; };
-		B4C0B1371AEB38AB001F2B96 /* ETTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */; };
-		B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B13A1AEB4255001F2B96 /* ETLocation.m */; };
 		B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */; };
-		B4C4DD281B89406D00A9AFB5 /* ETSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */; };
-		CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20B0A016F7AD62F7FEB13D /* libPods.a */; };
+		C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F01FAEA50600D09043 /* ETLocationCell.m */; };
+		C349B7F71FAEA50700D09043 /* ETLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C349B7F21FAEA50700D09043 /* ETLocationCell.xib */; };
+		C349B7F81FAEA50700D09043 /* ETLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F31FAEA50700D09043 /* ETLocationsViewController.m */; };
+		C349B7F91FAEA50700D09043 /* ETCreatedByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F41FAEA50700D09043 /* ETCreatedByViewController.m */; };
+		C349B7FA1FAEA50700D09043 /* ETMealTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F51FAEA50700D09043 /* ETMealTabController.m */; };
+		C349B8031FAEA51900D09043 /* ETSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7FC1FAEA51800D09043 /* ETSimpleDate.m */; };
+		C349B8041FAEA51900D09043 /* ETLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7FD1FAEA51800D09043 /* ETLocation.m */; };
+		C349B8051FAEA51900D09043 /* ETHOOP.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7FF1FAEA51900D09043 /* ETHOOP.m */; };
+		C349B8061FAEA51900D09043 /* ETTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B8021FAEA51900D09043 /* ETTimeInterval.m */; };
+		C349B80A1FAEA76B00D09043 /* UIViewController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */; };
+		C349B80D1FAEA7F700D09043 /* BUDiningMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B80B1FAEA7F700D09043 /* BUDiningMenu.m */; };
+		C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B80E1FAEA80100D09043 /* ETMenuViewController.m */; };
+		C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418A20245D4900D546B9 /* ETHoursViewController.m */; };
+		C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418D20245DBF00D546B9 /* ETHoursCell.m */; };
+		D4C81E74162CB82026FC8F2C /* libPods-BU EatsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,24 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B8D5852C823C6F7868137FE /* libPods-BU Eats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BU Eats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DFF33644CBB533BD7DDD9A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		187EB9B4F41C2FBFD523DDD9 /* Pods-BU EatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BU EatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BU EatsTests/Pods-BU EatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		427AF4E5A601E031F69FABF1 /* Pods-BU Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BU Eats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BU Eats/Pods-BU Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1F3EDA6FFA1F53D0E5BE95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B419BB5A1AEB7BAD00C7A75D /* ETMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMenuViewController.h; sourceTree = "<group>"; };
-		B419BB5B1AEB7BAD00C7A75D /* ETMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMenuViewController.m; sourceTree = "<group>"; };
-		B419BB5D1AEB907600C7A75D /* BUDiningMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUDiningMenu.h; sourceTree = "<group>"; };
-		B419BB5E1AEB907600C7A75D /* BUDiningMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUDiningMenu.m; sourceTree = "<group>"; };
-		B419BB601AEB934C00C7A75D /* ETMealTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETMealTabController.h; path = Classes/ETMealTabController.h; sourceTree = "<group>"; };
-		B419BB611AEB934C00C7A75D /* ETMealTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETMealTabController.m; path = Classes/ETMealTabController.m; sourceTree = "<group>"; };
+		AD487FA783C8103D8482D6CD /* Pods-BU Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BU Eats.release.xcconfig"; path = "Pods/Target Support Files/Pods-BU Eats/Pods-BU Eats.release.xcconfig"; sourceTree = "<group>"; };
 		B419BB631AEC3BB900C7A75D /* Eats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eats-Prefix.pch"; sourceTree = "<group>"; };
 		B419BB641AEC3C7A00C7A75D /* UIColor+BU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BU.h"; sourceTree = "<group>"; };
 		B419BB651AEC3C7A00C7A75D /* UIColor+BU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BU.m"; sourceTree = "<group>"; };
-		B419BB671AED792A00C7A75D /* ETLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ETLocationCell.xib; path = Classes/ETLocationCell.xib; sourceTree = "<group>"; };
-		B419BB691AED7AF400C7A75D /* ETLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationCell.h; path = Classes/ETLocationCell.h; sourceTree = "<group>"; };
-		B419BB6A1AED7AF400C7A75D /* ETLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocationCell.m; path = Classes/ETLocationCell.m; sourceTree = "<group>"; };
 		B41F8DD31B6F271B00FEB057 /* BU-Eats-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BU-Eats-Constants.h"; sourceTree = "<group>"; };
 		B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BU-Eats-Constants.m"; sourceTree = "<group>"; };
-		B41F8DD61B6F2AEB00FEB057 /* ETHOOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETHOOP.h; path = Model/ETHOOP.h; sourceTree = "<group>"; };
-		B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETHOOP.m; path = Model/ETHOOP.m; sourceTree = "<group>"; };
 		B4C0B1051AEB2F5C001F2B96 /* BU Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BU Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C0B1091AEB2F5C001F2B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C0B10A1AEB2F5C001F2B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,17 +67,38 @@
 		B4C0B1211AEB2F5C001F2B96 /* BU EatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BU EatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C0B1261AEB2F5C001F2B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BU_EatsTests.m; sourceTree = "<group>"; };
-		B4C0B1311AEB3142001F2B96 /* ETLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationsViewController.h; path = Classes/ETLocationsViewController.h; sourceTree = "<group>"; };
-		B4C0B1321AEB3142001F2B96 /* ETLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocationsViewController.m; path = Classes/ETLocationsViewController.m; sourceTree = "<group>"; };
-		B4C0B1351AEB38AB001F2B96 /* ETTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETTimeInterval.h; path = Model/ETTimeInterval.h; sourceTree = "<group>"; };
-		B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETTimeInterval.m; path = Model/ETTimeInterval.m; sourceTree = "<group>"; };
-		B4C0B1391AEB4255001F2B96 /* ETLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocation.h; path = Model/ETLocation.h; sourceTree = "<group>"; };
-		B4C0B13A1AEB4255001F2B96 /* ETLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLocation.m; path = Model/ETLocation.m; sourceTree = "<group>"; };
 		B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TBExtensions.h"; sourceTree = "<group>"; };
 		B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtensions.m"; sourceTree = "<group>"; };
-		B4C4DD261B89406D00A9AFB5 /* ETSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSimpleDate.h; path = Model/ETSimpleDate.h; sourceTree = "<group>"; };
-		B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETSimpleDate.m; path = Model/ETSimpleDate.m; sourceTree = "<group>"; };
+		C349B7ED1FAEA50600D09043 /* ETLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationCell.h; sourceTree = "<group>"; };
+		C349B7EE1FAEA50600D09043 /* ETMealTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMealTabController.h; sourceTree = "<group>"; };
+		C349B7EF1FAEA50600D09043 /* ETLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationsViewController.h; sourceTree = "<group>"; };
+		C349B7F01FAEA50600D09043 /* ETLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETLocationCell.m; sourceTree = "<group>"; };
+		C349B7F11FAEA50600D09043 /* ETCreatedByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCreatedByViewController.h; sourceTree = "<group>"; };
+		C349B7F21FAEA50700D09043 /* ETLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ETLocationCell.xib; sourceTree = "<group>"; };
+		C349B7F31FAEA50700D09043 /* ETLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETLocationsViewController.m; sourceTree = "<group>"; };
+		C349B7F41FAEA50700D09043 /* ETCreatedByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETCreatedByViewController.m; sourceTree = "<group>"; };
+		C349B7F51FAEA50700D09043 /* ETMealTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMealTabController.m; sourceTree = "<group>"; };
+		C349B7FB1FAEA51800D09043 /* ETSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSimpleDate.h; sourceTree = "<group>"; };
+		C349B7FC1FAEA51800D09043 /* ETSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETSimpleDate.m; sourceTree = "<group>"; };
+		C349B7FD1FAEA51800D09043 /* ETLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETLocation.m; sourceTree = "<group>"; };
+		C349B7FE1FAEA51900D09043 /* ETHOOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETHOOP.h; sourceTree = "<group>"; };
+		C349B7FF1FAEA51900D09043 /* ETHOOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETHOOP.m; sourceTree = "<group>"; };
+		C349B8001FAEA51900D09043 /* ETTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTimeInterval.h; sourceTree = "<group>"; };
+		C349B8011FAEA51900D09043 /* ETLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocation.h; sourceTree = "<group>"; };
+		C349B8021FAEA51900D09043 /* ETTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTimeInterval.m; sourceTree = "<group>"; };
+		C349B8081FAEA76B00D09043 /* UIViewController+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extensions.h"; sourceTree = "<group>"; };
+		C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extensions.m"; sourceTree = "<group>"; };
+		C349B80B1FAEA7F700D09043 /* BUDiningMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUDiningMenu.m; sourceTree = "<group>"; };
+		C349B80C1FAEA7F700D09043 /* BUDiningMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUDiningMenu.h; sourceTree = "<group>"; };
+		C349B80E1FAEA80100D09043 /* ETMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMenuViewController.m; sourceTree = "<group>"; };
+		C349B80F1FAEA80100D09043 /* ETMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMenuViewController.h; sourceTree = "<group>"; };
+		C378418920245D4900D546B9 /* ETHoursViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursViewController.h; sourceTree = "<group>"; };
+		C378418A20245D4900D546B9 /* ETHoursViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHoursViewController.m; sourceTree = "<group>"; };
+		C378418C20245DBF00D546B9 /* ETHoursCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursCell.h; sourceTree = "<group>"; };
+		C378418D20245DBF00D546B9 /* ETHoursCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHoursCell.m; sourceTree = "<group>"; };
 		CD20B0A016F7AD62F7FEB13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BU EatsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE585FF937FEB34E73FAA1A3 /* Pods-BU EatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BU EatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BU EatsTests/Pods-BU EatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC729935ABB4A8F30608DC9C /* libPods.a in Frameworks */,
+				867317D6F7D5EDAE56DCCBEB /* libPods-BU Eats.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C81E74162CB82026FC8F2C /* libPods-BU EatsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +126,10 @@
 			children = (
 				17DFF33644CBB533BD7DDD9A /* Pods.debug.xcconfig */,
 				4C1F3EDA6FFA1F53D0E5BE95 /* Pods.release.xcconfig */,
+				427AF4E5A601E031F69FABF1 /* Pods-BU Eats.debug.xcconfig */,
+				AD487FA783C8103D8482D6CD /* Pods-BU Eats.release.xcconfig */,
+				FE585FF937FEB34E73FAA1A3 /* Pods-BU EatsTests.debug.xcconfig */,
+				187EB9B4F41C2FBFD523DDD9 /* Pods-BU EatsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -114,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				CD20B0A016F7AD62F7FEB13D /* libPods.a */,
+				0B8D5852C823C6F7868137FE /* libPods-BU Eats.a */,
+				F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +167,7 @@
 		B4C0B1071AEB2F5C001F2B96 /* BU Eats */ = {
 			isa = PBXGroup;
 			children = (
+				C349B8071FAEA75500D09043 /* Categories */,
 				B4C0B10C1AEB2F5C001F2B96 /* AppDelegate.h */,
 				B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */,
 				B4C0B1381AEB38B0001F2B96 /* Model */,
@@ -189,34 +216,49 @@
 		B4C0B1341AEB3149001F2B96 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B4C0B1311AEB3142001F2B96 /* ETLocationsViewController.h */,
-				B4C0B1321AEB3142001F2B96 /* ETLocationsViewController.m */,
-				B419BB601AEB934C00C7A75D /* ETMealTabController.h */,
-				B419BB611AEB934C00C7A75D /* ETMealTabController.m */,
-				B419BB5A1AEB7BAD00C7A75D /* ETMenuViewController.h */,
-				B419BB5B1AEB7BAD00C7A75D /* ETMenuViewController.m */,
-				B419BB691AED7AF400C7A75D /* ETLocationCell.h */,
-				B419BB6A1AED7AF400C7A75D /* ETLocationCell.m */,
-				B419BB671AED792A00C7A75D /* ETLocationCell.xib */,
+				C349B7EF1FAEA50600D09043 /* ETLocationsViewController.h */,
+				C349B7F31FAEA50700D09043 /* ETLocationsViewController.m */,
+				C349B7EE1FAEA50600D09043 /* ETMealTabController.h */,
+				C349B7F51FAEA50700D09043 /* ETMealTabController.m */,
+				C349B80F1FAEA80100D09043 /* ETMenuViewController.h */,
+				C349B80E1FAEA80100D09043 /* ETMenuViewController.m */,
+				C349B7F11FAEA50600D09043 /* ETCreatedByViewController.h */,
+				C349B7F41FAEA50700D09043 /* ETCreatedByViewController.m */,
+				C349B7ED1FAEA50600D09043 /* ETLocationCell.h */,
+				C349B7F01FAEA50600D09043 /* ETLocationCell.m */,
+				C349B7F21FAEA50700D09043 /* ETLocationCell.xib */,
+				C378418920245D4900D546B9 /* ETHoursViewController.h */,
+				C378418A20245D4900D546B9 /* ETHoursViewController.m */,
+				C378418C20245DBF00D546B9 /* ETHoursCell.h */,
+				C378418D20245DBF00D546B9 /* ETHoursCell.m */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B4C0B1381AEB38B0001F2B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B419BB5D1AEB907600C7A75D /* BUDiningMenu.h */,
-				B419BB5E1AEB907600C7A75D /* BUDiningMenu.m */,
-				B4C0B1351AEB38AB001F2B96 /* ETTimeInterval.h */,
-				B4C0B1361AEB38AB001F2B96 /* ETTimeInterval.m */,
-				B4C0B1391AEB4255001F2B96 /* ETLocation.h */,
-				B4C0B13A1AEB4255001F2B96 /* ETLocation.m */,
-				B41F8DD61B6F2AEB00FEB057 /* ETHOOP.h */,
-				B41F8DD71B6F2AEB00FEB057 /* ETHOOP.m */,
-				B4C4DD261B89406D00A9AFB5 /* ETSimpleDate.h */,
-				B4C4DD271B89406D00A9AFB5 /* ETSimpleDate.m */,
+				C349B80C1FAEA7F700D09043 /* BUDiningMenu.h */,
+				C349B80B1FAEA7F700D09043 /* BUDiningMenu.m */,
+				C349B7FE1FAEA51900D09043 /* ETHOOP.h */,
+				C349B7FF1FAEA51900D09043 /* ETHOOP.m */,
+				C349B8011FAEA51900D09043 /* ETLocation.h */,
+				C349B7FD1FAEA51800D09043 /* ETLocation.m */,
+				C349B7FB1FAEA51800D09043 /* ETSimpleDate.h */,
+				C349B7FC1FAEA51800D09043 /* ETSimpleDate.m */,
+				C349B8001FAEA51900D09043 /* ETTimeInterval.h */,
+				C349B8021FAEA51900D09043 /* ETTimeInterval.m */,
 			);
-			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C349B8071FAEA75500D09043 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C349B8081FAEA76B00D09043 /* UIViewController+Extensions.h */,
+				C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,11 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4C0B12B1AEB2F5C001F2B96 /* Build configuration list for PBXNativeTarget "BU Eats" */;
 			buildPhases = (
-				6F9714E49D31B2574151E5F3 /* Check Pods Manifest.lock */,
+				6F9714E49D31B2574151E5F3 /* [CP] Check Pods Manifest.lock */,
 				B4C0B1011AEB2F5C001F2B96 /* Sources */,
 				B4C0B1021AEB2F5C001F2B96 /* Frameworks */,
 				B4C0B1031AEB2F5C001F2B96 /* Resources */,
-				25379283E546AA870FEC71D9 /* Copy Pods Resources */,
+				25379283E546AA870FEC71D9 /* [CP] Copy Pods Resources */,
+				8B8CD29E0CBFBA36CB762847 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,9 +288,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4C0B12E1AEB2F5C001F2B96 /* Build configuration list for PBXNativeTarget "BU EatsTests" */;
 			buildPhases = (
+				D38EE0476F07059A3A7295A7 /* [CP] Check Pods Manifest.lock */,
 				B4C0B11D1AEB2F5C001F2B96 /* Sources */,
 				B4C0B11E1AEB2F5C001F2B96 /* Frameworks */,
 				B4C0B11F1AEB2F5C001F2B96 /* Resources */,
+				A8583D24E181083E6D9ABD7B /* [CP] Embed Pods Frameworks */,
+				86BE52169DE5DCA1ACB43FDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +312,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ET;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Tanner Bennett";
 				TargetAttributes = {
 					B4C0B1041AEB2F5C001F2B96 = {
@@ -304,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C0B1171AEB2F5C001F2B96 /* Main.storyboard in Resources */,
-				B419BB681AED792A00C7A75D /* ETLocationCell.xib in Resources */,
+				C349B7F71FAEA50700D09043 /* ETLocationCell.xib in Resources */,
 				B4C0B11C1AEB2F5C001F2B96 /* LaunchScreen.xib in Resources */,
 				B4C0B1191AEB2F5C001F2B96 /* Images.xcassets in Resources */,
 			);
@@ -320,34 +366,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25379283E546AA870FEC71D9 /* Copy Pods Resources */ = {
+		25379283E546AA870FEC71D9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BU Eats/Pods-BU Eats-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F9714E49D31B2574151E5F3 /* Check Pods Manifest.lock */ = {
+		6F9714E49D31B2574151E5F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86BE52169DE5DCA1ACB43FDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BU EatsTests/Pods-BU EatsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B8CD29E0CBFBA36CB762847 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BU Eats/Pods-BU Eats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8583D24E181083E6D9ABD7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BU EatsTests/Pods-BU EatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D38EE0476F07059A3A7295A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -357,19 +463,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B419BB6B1AED7AF400C7A75D /* ETLocationCell.m in Sources */,
-				B419BB5C1AEB7BAD00C7A75D /* ETMenuViewController.m in Sources */,
-				B4C4DD281B89406D00A9AFB5 /* ETSimpleDate.m in Sources */,
-				B4C0B1371AEB38AB001F2B96 /* ETTimeInterval.m in Sources */,
+				C349B7FA1FAEA50700D09043 /* ETMealTabController.m in Sources */,
 				B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */,
-				B4C0B13B1AEB4255001F2B96 /* ETLocation.m in Sources */,
-				B419BB621AEB934C00C7A75D /* ETMealTabController.m in Sources */,
 				B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */,
-				B4C0B1331AEB3142001F2B96 /* ETLocationsViewController.m in Sources */,
 				B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */,
-				B419BB5F1AEB907600C7A75D /* BUDiningMenu.m in Sources */,
+				C349B7F91FAEA50700D09043 /* ETCreatedByViewController.m in Sources */,
+				C349B8061FAEA51900D09043 /* ETTimeInterval.m in Sources */,
 				B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */,
-				B41F8DD81B6F2AEB00FEB057 /* ETHOOP.m in Sources */,
+				C349B8031FAEA51900D09043 /* ETSimpleDate.m in Sources */,
+				C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */,
+				C349B80D1FAEA7F700D09043 /* BUDiningMenu.m in Sources */,
+				C349B8041FAEA51900D09043 /* ETLocation.m in Sources */,
+				C349B80A1FAEA76B00D09043 /* UIViewController+Extensions.m in Sources */,
+				C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */,
+				C349B7F81FAEA50700D09043 /* ETLocationsViewController.m in Sources */,
+				C349B8051FAEA51900D09043 /* ETHOOP.m in Sources */,
+				C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */,
+				C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */,
 				B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,13 +530,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -436,6 +554,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -463,13 +582,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -478,6 +605,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -493,7 +621,7 @@
 		};
 		B4C0B12C1AEB2F5C001F2B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17DFF33644CBB533BD7DDD9A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 427AF4E5A601E031F69FABF1 /* Pods-BU Eats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -503,8 +631,30 @@
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"NSDate-Extensions\"",
+					"-l\"ObjectiveGumbo\"",
+					"-l\"TBAlertController\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -512,7 +662,7 @@
 		};
 		B4C0B12D1AEB2F5C001F2B96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C1F3EDA6FFA1F53D0E5BE95 /* Pods.release.xcconfig */;
+			baseConfigurationReference = AD487FA783C8103D8482D6CD /* Pods-BU Eats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -522,8 +672,30 @@
 				);
 				GCC_PREFIX_HEADER = "BU Eats/Eats-Prefix.pch";
 				INFOPLIST_FILE = "BU Eats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"NSDate-Extensions\"",
+					"-l\"ObjectiveGumbo\"",
+					"-l\"TBAlertController\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pantsthief.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -531,6 +703,7 @@
 		};
 		B4C0B12F1AEB2F5C001F2B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE585FF937FEB34E73FAA1A3 /* Pods-BU EatsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -548,6 +721,7 @@
 		};
 		B4C0B1301AEB2F5C001F2B96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187EB9B4F41C2FBFD523DDD9 /* Pods-BU EatsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
