@@ -29,6 +29,10 @@
 		C349B80A1FAEA76B00D09043 /* UIViewController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */; };
 		C349B80D1FAEA7F700D09043 /* BUDiningMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B80B1FAEA7F700D09043 /* BUDiningMenu.m */; };
 		C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B80E1FAEA80100D09043 /* ETMenuViewController.m */; };
+		C34CA915213F69F900C7A1A0 /* ETFoodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA911213F69F800C7A1A0 /* ETFoodItem.m */; };
+		C34CA916213F69F900C7A1A0 /* ETFoodStation.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA913213F69F900C7A1A0 /* ETFoodStation.m */; };
+		C34CA919213F6A0600C7A1A0 /* OGNode+Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA917213F6A0500C7A1A0 /* OGNode+Wrapper.m */; };
+		C34CA91C213F6A1500C7A1A0 /* ETFoodItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA91A213F6A1500C7A1A0 /* ETFoodItemCell.m */; };
 		C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418A20245D4900D546B9 /* ETHoursViewController.m */; };
 		C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418D20245DBF00D546B9 /* ETHoursCell.m */; };
 		D4C81E74162CB82026FC8F2C /* libPods-BU EatsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */; };
@@ -92,6 +96,14 @@
 		C349B80C1FAEA7F700D09043 /* BUDiningMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUDiningMenu.h; sourceTree = "<group>"; };
 		C349B80E1FAEA80100D09043 /* ETMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMenuViewController.m; sourceTree = "<group>"; };
 		C349B80F1FAEA80100D09043 /* ETMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMenuViewController.h; sourceTree = "<group>"; };
+		C34CA911213F69F800C7A1A0 /* ETFoodItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETFoodItem.m; sourceTree = "<group>"; };
+		C34CA912213F69F900C7A1A0 /* ETFoodItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFoodItem.h; sourceTree = "<group>"; };
+		C34CA913213F69F900C7A1A0 /* ETFoodStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETFoodStation.m; sourceTree = "<group>"; };
+		C34CA914213F69F900C7A1A0 /* ETFoodStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFoodStation.h; sourceTree = "<group>"; };
+		C34CA917213F6A0500C7A1A0 /* OGNode+Wrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OGNode+Wrapper.m"; sourceTree = "<group>"; };
+		C34CA918213F6A0500C7A1A0 /* OGNode+Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OGNode+Wrapper.h"; sourceTree = "<group>"; };
+		C34CA91A213F6A1500C7A1A0 /* ETFoodItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETFoodItemCell.m; sourceTree = "<group>"; };
+		C34CA91B213F6A1500C7A1A0 /* ETFoodItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFoodItemCell.h; sourceTree = "<group>"; };
 		C378418920245D4900D546B9 /* ETHoursViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursViewController.h; sourceTree = "<group>"; };
 		C378418A20245D4900D546B9 /* ETHoursViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHoursViewController.m; sourceTree = "<group>"; };
 		C378418C20245DBF00D546B9 /* ETHoursCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursCell.h; sourceTree = "<group>"; };
@@ -231,6 +243,8 @@
 				C378418A20245D4900D546B9 /* ETHoursViewController.m */,
 				C378418C20245DBF00D546B9 /* ETHoursCell.h */,
 				C378418D20245DBF00D546B9 /* ETHoursCell.m */,
+				C34CA91B213F6A1500C7A1A0 /* ETFoodItemCell.h */,
+				C34CA91A213F6A1500C7A1A0 /* ETFoodItemCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -248,6 +262,10 @@
 				C349B7FC1FAEA51800D09043 /* ETSimpleDate.m */,
 				C349B8001FAEA51900D09043 /* ETTimeInterval.h */,
 				C349B8021FAEA51900D09043 /* ETTimeInterval.m */,
+				C34CA912213F69F900C7A1A0 /* ETFoodItem.h */,
+				C34CA911213F69F800C7A1A0 /* ETFoodItem.m */,
+				C34CA914213F69F900C7A1A0 /* ETFoodStation.h */,
+				C34CA913213F69F900C7A1A0 /* ETFoodStation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +275,8 @@
 			children = (
 				C349B8081FAEA76B00D09043 /* UIViewController+Extensions.h */,
 				C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */,
+				C34CA918213F6A0500C7A1A0 /* OGNode+Wrapper.h */,
+				C34CA917213F6A0500C7A1A0 /* OGNode+Wrapper.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -408,17 +428,21 @@
 				C349B7FA1FAEA50700D09043 /* ETMealTabController.m in Sources */,
 				B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */,
 				B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */,
+				C34CA919213F6A0600C7A1A0 /* OGNode+Wrapper.m in Sources */,
 				B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */,
 				C349B7F91FAEA50700D09043 /* ETCreatedByViewController.m in Sources */,
+				C34CA916213F69F900C7A1A0 /* ETFoodStation.m in Sources */,
 				C349B8061FAEA51900D09043 /* ETTimeInterval.m in Sources */,
 				B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */,
 				C349B8031FAEA51900D09043 /* ETSimpleDate.m in Sources */,
 				C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */,
 				C349B80D1FAEA7F700D09043 /* BUDiningMenu.m in Sources */,
 				C349B8041FAEA51900D09043 /* ETLocation.m in Sources */,
+				C34CA915213F69F900C7A1A0 /* ETFoodItem.m in Sources */,
 				C349B80A1FAEA76B00D09043 /* UIViewController+Extensions.m in Sources */,
 				C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */,
 				C349B7F81FAEA50700D09043 /* ETLocationsViewController.m in Sources */,
+				C34CA91C213F6A1500C7A1A0 /* ETFoodItemCell.m in Sources */,
 				C349B8051FAEA51900D09043 /* ETHOOP.m in Sources */,
 				C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */,
 				C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */,
