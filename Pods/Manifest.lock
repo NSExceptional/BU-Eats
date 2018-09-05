@@ -1,4 +1,5 @@
 PODS:
+  - AutoCoding (2.2.3)
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
   - DIDatepicker (0.1)
@@ -9,6 +10,7 @@ PODS:
   - TBAlertController (3.0.1)
 
 DEPENDENCIES:
+  - AutoCoding
   - Crashlytics
   - DIDatepicker
   - Masonry
@@ -16,7 +18,19 @@ DEPENDENCIES:
   - ObjectiveGumbo
   - TBAlertController
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AutoCoding
+    - Crashlytics
+    - DIDatepicker
+    - Fabric
+    - Masonry
+    - NSDate-Extensions
+    - ObjectiveGumbo
+    - TBAlertController
+
 SPEC CHECKSUMS:
+  AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   DIDatepicker: c990ce1cdc8a6169cf7eb6369cd97604864eed27
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
@@ -25,6 +39,6 @@ SPEC CHECKSUMS:
   ObjectiveGumbo: 0704c4930688132abb3d5df2000334f30504856f
   TBAlertController: cadaec5909aa7af37f4a345fb260ce9b3b0ad0c6
 
-PODFILE CHECKSUM: 4b937afdd374aa0cdf086546db59ad8eb17fd1b5
+PODFILE CHECKSUM: 5272b91b315f3b055412c4846395abd3ccba42ea
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.2

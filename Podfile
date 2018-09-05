@@ -7,6 +7,7 @@ target 'BU Eats' do
   pod 'DIDatepicker'
   pod 'Crashlytics'
   pod 'Masonry'
+  pod 'AutoCoding'
 
   target 'BU EatsTests' do
     inherit! :search_paths
