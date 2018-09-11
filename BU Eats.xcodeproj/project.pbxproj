@@ -12,11 +12,11 @@
 		B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F8DD41B6F271B00FEB057 /* BU-Eats-Constants.m */; };
 		B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10A1AEB2F5C001F2B96 /* main.m */; };
 		B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */; };
-		B4C0B1171AEB2F5C001F2B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B1151AEB2F5C001F2B96 /* Main.storyboard */; };
 		B4C0B1191AEB2F5C001F2B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B1181AEB2F5C001F2B96 /* Images.xcassets */; };
 		B4C0B11C1AEB2F5C001F2B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */; };
 		B4C0B1281AEB2F5C001F2B96 /* BU_EatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */; };
 		B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */; };
+		C3374A4D2141BFB500C3286D /* OGElement+Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C3374A4C2141BFB500C3286D /* OGElement+Wrapper.m */; };
 		C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F01FAEA50600D09043 /* ETLocationCell.m */; };
 		C349B7F71FAEA50700D09043 /* ETLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C349B7F21FAEA50700D09043 /* ETLocationCell.xib */; };
 		C349B7F81FAEA50700D09043 /* ETLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F31FAEA50700D09043 /* ETLocationsViewController.m */; };
@@ -33,8 +33,14 @@
 		C34CA916213F69F900C7A1A0 /* ETFoodStation.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA913213F69F900C7A1A0 /* ETFoodStation.m */; };
 		C34CA919213F6A0600C7A1A0 /* OGNode+Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA917213F6A0500C7A1A0 /* OGNode+Wrapper.m */; };
 		C34CA91C213F6A1500C7A1A0 /* ETFoodItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA91A213F6A1500C7A1A0 /* ETFoodItemCell.m */; };
+		C34CA920213F8A0200C7A1A0 /* CDClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA91F213F8A0200C7A1A0 /* CDClient.m */; };
+		C34CA923213F8C7A00C7A1A0 /* CDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA922213F8C7A00C7A1A0 /* CDObject.m */; };
+		C34CA926213F8CB900C7A1A0 /* CDEatery.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA925213F8CB900C7A1A0 /* CDEatery.m */; };
+		C34CA92C213F8CE600C7A1A0 /* CDFoodStation.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA92B213F8CE600C7A1A0 /* CDFoodStation.m */; };
+		C34CA92F213F8CEF00C7A1A0 /* CDFoodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CA92E213F8CEF00C7A1A0 /* CDFoodItem.m */; };
 		C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418A20245D4900D546B9 /* ETHoursViewController.m */; };
 		C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C378418D20245DBF00D546B9 /* ETHoursCell.m */; };
+		C3BED8A8214842850025FC66 /* OGDocument+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BED8A7214842850025FC66 /* OGDocument+JSON.m */; };
 		D4C81E74162CB82026FC8F2C /* libPods-BU EatsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +71,6 @@
 		B4C0B10A1AEB2F5C001F2B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C0B10C1AEB2F5C001F2B96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4C0B1161AEB2F5C001F2B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4C0B1181AEB2F5C001F2B96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4C0B11B1AEB2F5C001F2B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B4C0B1211AEB2F5C001F2B96 /* BU EatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BU EatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +78,8 @@
 		B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BU_EatsTests.m; sourceTree = "<group>"; };
 		B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TBExtensions.h"; sourceTree = "<group>"; };
 		B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtensions.m"; sourceTree = "<group>"; };
+		C3374A4B2141BFB500C3286D /* OGElement+Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OGElement+Wrapper.h"; sourceTree = "<group>"; };
+		C3374A4C2141BFB500C3286D /* OGElement+Wrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OGElement+Wrapper.m"; sourceTree = "<group>"; };
 		C349B7ED1FAEA50600D09043 /* ETLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationCell.h; sourceTree = "<group>"; };
 		C349B7EE1FAEA50600D09043 /* ETMealTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMealTabController.h; sourceTree = "<group>"; };
 		C349B7EF1FAEA50600D09043 /* ETLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationsViewController.h; sourceTree = "<group>"; };
@@ -104,10 +111,22 @@
 		C34CA918213F6A0500C7A1A0 /* OGNode+Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OGNode+Wrapper.h"; sourceTree = "<group>"; };
 		C34CA91A213F6A1500C7A1A0 /* ETFoodItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETFoodItemCell.m; sourceTree = "<group>"; };
 		C34CA91B213F6A1500C7A1A0 /* ETFoodItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFoodItemCell.h; sourceTree = "<group>"; };
+		C34CA91E213F8A0200C7A1A0 /* CDClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDClient.h; sourceTree = "<group>"; };
+		C34CA91F213F8A0200C7A1A0 /* CDClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDClient.m; sourceTree = "<group>"; };
+		C34CA921213F8C7A00C7A1A0 /* CDObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDObject.h; sourceTree = "<group>"; };
+		C34CA922213F8C7A00C7A1A0 /* CDObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDObject.m; sourceTree = "<group>"; };
+		C34CA924213F8CB900C7A1A0 /* CDEatery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDEatery.h; sourceTree = "<group>"; };
+		C34CA925213F8CB900C7A1A0 /* CDEatery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDEatery.m; sourceTree = "<group>"; };
+		C34CA92A213F8CE600C7A1A0 /* CDFoodStation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDFoodStation.h; sourceTree = "<group>"; };
+		C34CA92B213F8CE600C7A1A0 /* CDFoodStation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDFoodStation.m; sourceTree = "<group>"; };
+		C34CA92D213F8CEF00C7A1A0 /* CDFoodItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDFoodItem.h; sourceTree = "<group>"; };
+		C34CA92E213F8CEF00C7A1A0 /* CDFoodItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDFoodItem.m; sourceTree = "<group>"; };
 		C378418920245D4900D546B9 /* ETHoursViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursViewController.h; sourceTree = "<group>"; };
 		C378418A20245D4900D546B9 /* ETHoursViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHoursViewController.m; sourceTree = "<group>"; };
 		C378418C20245DBF00D546B9 /* ETHoursCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHoursCell.h; sourceTree = "<group>"; };
 		C378418D20245DBF00D546B9 /* ETHoursCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHoursCell.m; sourceTree = "<group>"; };
+		C3BED8A6214842850025FC66 /* OGDocument+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OGDocument+JSON.h"; sourceTree = "<group>"; };
+		C3BED8A7214842850025FC66 /* OGDocument+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OGDocument+JSON.m"; sourceTree = "<group>"; };
 		CD20B0A016F7AD62F7FEB13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F484FD055B612D4201698BE2 /* libPods-BU EatsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BU EatsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE585FF937FEB34E73FAA1A3 /* Pods-BU EatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BU EatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BU EatsTests/Pods-BU EatsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,14 +198,13 @@
 		B4C0B1071AEB2F5C001F2B96 /* BU Eats */ = {
 			isa = PBXGroup;
 			children = (
-				C349B8071FAEA75500D09043 /* Categories */,
+				B4C0B1181AEB2F5C001F2B96 /* Images.xcassets */,
 				B4C0B10C1AEB2F5C001F2B96 /* AppDelegate.h */,
 				B4C0B10D1AEB2F5C001F2B96 /* AppDelegate.m */,
+				C34CA91D213F89E100C7A1A0 /* API */,
+				C349B8071FAEA75500D09043 /* Categories */,
 				B4C0B1381AEB38B0001F2B96 /* Model */,
 				B4C0B1341AEB3149001F2B96 /* Classes */,
-				B4C0B1151AEB2F5C001F2B96 /* Main.storyboard */,
-				B4C0B1181AEB2F5C001F2B96 /* Images.xcassets */,
-				B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */,
 				B4C0B1081AEB2F5C001F2B96 /* Supporting Files */,
 			);
 			path = "BU Eats";
@@ -195,6 +213,7 @@
 		B4C0B1081AEB2F5C001F2B96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */,
 				B4C0B1091AEB2F5C001F2B96 /* Info.plist */,
 				B4C0B10A1AEB2F5C001F2B96 /* main.m */,
 				B419BB631AEC3BB900C7A75D /* Eats-Prefix.pch */,
@@ -277,8 +296,29 @@
 				C349B8091FAEA76B00D09043 /* UIViewController+Extensions.m */,
 				C34CA918213F6A0500C7A1A0 /* OGNode+Wrapper.h */,
 				C34CA917213F6A0500C7A1A0 /* OGNode+Wrapper.m */,
+				C3374A4B2141BFB500C3286D /* OGElement+Wrapper.h */,
+				C3374A4C2141BFB500C3286D /* OGElement+Wrapper.m */,
+				C3BED8A6214842850025FC66 /* OGDocument+JSON.h */,
+				C3BED8A7214842850025FC66 /* OGDocument+JSON.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		C34CA91D213F89E100C7A1A0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C34CA91E213F8A0200C7A1A0 /* CDClient.h */,
+				C34CA91F213F8A0200C7A1A0 /* CDClient.m */,
+				C34CA921213F8C7A00C7A1A0 /* CDObject.h */,
+				C34CA922213F8C7A00C7A1A0 /* CDObject.m */,
+				C34CA924213F8CB900C7A1A0 /* CDEatery.h */,
+				C34CA925213F8CB900C7A1A0 /* CDEatery.m */,
+				C34CA92A213F8CE600C7A1A0 /* CDFoodStation.h */,
+				C34CA92B213F8CE600C7A1A0 /* CDFoodStation.m */,
+				C34CA92D213F8CEF00C7A1A0 /* CDFoodItem.h */,
+				C34CA92E213F8CEF00C7A1A0 /* CDFoodItem.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +405,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C0B1171AEB2F5C001F2B96 /* Main.storyboard in Resources */,
 				C349B7F71FAEA50700D09043 /* ETLocationCell.xib in Resources */,
 				B4C0B11C1AEB2F5C001F2B96 /* LaunchScreen.xib in Resources */,
 				B4C0B1191AEB2F5C001F2B96 /* Images.xcassets in Resources */,
@@ -425,14 +464,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34CA920213F8A0200C7A1A0 /* CDClient.m in Sources */,
+				C34CA92F213F8CEF00C7A1A0 /* CDFoodItem.m in Sources */,
 				C349B7FA1FAEA50700D09043 /* ETMealTabController.m in Sources */,
 				B419BB661AEC3C7A00C7A75D /* UIColor+BU.m in Sources */,
+				C34CA923213F8C7A00C7A1A0 /* CDObject.m in Sources */,
 				B4C0B10E1AEB2F5C001F2B96 /* AppDelegate.m in Sources */,
+				C34CA92C213F8CE600C7A1A0 /* CDFoodStation.m in Sources */,
 				C34CA919213F6A0600C7A1A0 /* OGNode+Wrapper.m in Sources */,
 				B41F8DD51B6F271B00FEB057 /* BU-Eats-Constants.m in Sources */,
 				C349B7F91FAEA50700D09043 /* ETCreatedByViewController.m in Sources */,
 				C34CA916213F69F900C7A1A0 /* ETFoodStation.m in Sources */,
+				C34CA926213F8CB900C7A1A0 /* CDEatery.m in Sources */,
 				C349B8061FAEA51900D09043 /* ETTimeInterval.m in Sources */,
+				C3BED8A8214842850025FC66 /* OGDocument+JSON.m in Sources */,
 				B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */,
 				C349B8031FAEA51900D09043 /* ETSimpleDate.m in Sources */,
 				C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */,
@@ -442,6 +487,7 @@
 				C349B80A1FAEA76B00D09043 /* UIViewController+Extensions.m in Sources */,
 				C378418E20245DBF00D546B9 /* ETHoursCell.m in Sources */,
 				C349B7F81FAEA50700D09043 /* ETLocationsViewController.m in Sources */,
+				C3374A4D2141BFB500C3286D /* OGElement+Wrapper.m in Sources */,
 				C34CA91C213F6A1500C7A1A0 /* ETFoodItemCell.m in Sources */,
 				C349B8051FAEA51900D09043 /* ETHOOP.m in Sources */,
 				C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */,
@@ -469,14 +515,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B4C0B1151AEB2F5C001F2B96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4C0B1161AEB2F5C001F2B96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
