@@ -8,6 +8,8 @@ target 'BU Eats' do
   pod 'Crashlytics'
   pod 'Masonry'
   pod 'AutoCoding'
+  pod 'Mantle'
+  pod 'TBURLRequestOptions'
 
   target 'BU EatsTests' do
     inherit! :search_paths
