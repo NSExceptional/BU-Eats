@@ -7,11 +7,12 @@
 //
 
 #import "ETMenuViewController.h"
+#import "ETFoodItemCell.h"
+#import "CDFoodStation.h"
 
 @interface ETMenuViewController ()
-@property (nonatomic) Eatery       location;
-@property (nonatomic) NSArray      *sectionTitles;
-@property (nonatomic) NSDictionary *itemsBySectionTitle;
+@property (nonatomic) CDEatery *location;
+@property (nonatomic) NSArray<CDFoodStation *> *foodStations;
 
 @property (nonatomic) NSString *placeholderText;
 @property (nonatomic) UILabel *placeholderLabel;
@@ -19,52 +20,42 @@
 
 @implementation ETMenuViewController
 
-+ (instancetype)emptyMenuForLocation:(Eatery)location {
-    return [[ETMenuViewController alloc] initWithLocation:location sections:nil items:nil];
++ (instancetype)emptyMenuForLocation:(CDEatery *)location {
+    return [[ETMenuViewController alloc] initWithLocation:location sections:nil];
 }
 
-+ (instancetype)menuForLocation:(Eatery)location sections:(NSArray *)sections items:(NSDictionary *)items {
-    NSParameterAssert(sections.count > 0); NSParameterAssert(items.count > 0);
-    NSParameterAssert(sections.count == items.count);
-    return [[ETMenuViewController alloc] initWithLocation:location sections:sections items:items];
-}
-
-- (id)initWithLocation:(Eatery)location sections:(NSArray *)sections items:(NSDictionary *)items {
+- (id)initWithLocation:(CDEatery *)location sections:(NSArray<CDFoodStation *> *)foodStations {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _location = location;
-        _sectionTitles = sections;
-        _itemsBySectionTitle = items;
+        _foodStations = foodStations;
         self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.title = ETStringFromEatery(_location);
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MenuItemCell"];
+        self.title = location.name;
+        [self.tableView registerClass:[ETFoodItemCell class] forCellReuseIdentifier:@"MenuItemCell"];
     }
     
     return self;
 }
 
-- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items animated:(BOOL)animated {
-    NSParameterAssert(sections.count == items.count);
-    
-    if (sections.count == 0) {
+
+- (void)updateSections:(NSArray<CDFoodStation *> *)foodStations animated:(BOOL)animated {
+    if (foodStations.count == 0) {
         self.placeholderText = @"This meal is not being served right now.";
     } else {
         self.placeholderText = nil;
 
         if (animated) {
             [self.tableView beginUpdates];
-            NSUInteger previousSections = _sectionTitles.count;
-            _sectionTitles = sections;
-            _itemsBySectionTitle = items;
-            NSUInteger numSectionsToInsert = _sectionTitles.count > previousSections ? _sectionTitles.count - previousSections : 0;
-            NSUInteger numSectionsToRemove = previousSections > _sectionTitles.count ? previousSections - _sectionTitles.count : 0;
+            NSUInteger previousSections = _foodStations.count;
+            _foodStations = foodStations;
+            NSUInteger numSectionsToInsert = foodStations.count > previousSections ? foodStations.count - previousSections : 0;
+            NSUInteger numSectionsToRemove = previousSections > foodStations.count ? previousSections - foodStations.count : 0;
             [self.tableView reloadSections:NSIndexSetRanged(0, previousSections) withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView insertSections:NSIndexSetRanged(previousSections, numSectionsToInsert) withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView deleteSections:NSIndexSetRanged(previousSections - numSectionsToRemove, numSectionsToRemove) withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView endUpdates];
         } else {
-            _sectionTitles = sections;
-            _itemsBySectionTitle = items;
+            foodStations = foodStations;
             [self.tableView reloadData];
         }
     }
@@ -77,8 +68,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (_placeholderLabel)
-        _placeholderLabel.center = self.view.center;
+    if (self.placeholderLabel) {
+        self.placeholderLabel.center = self.view.center;
+    }
 }
 
 - (void)applyTheme {
@@ -97,10 +89,16 @@
             _placeholderLabel.numberOfLines = 2;
             _placeholderLabel.textAlignment = NSTextAlignmentCenter;
             
-            self.tableView.backgroundView = ({UIView *view = [UIView new]; view.backgroundColor = self.tableView.backgroundColor; view;});
-            [self.tableView.backgroundView addSubview:_placeholderLabel];
+            self.tableView.backgroundView = ({
+                UIView *view = [UIView new];
+                view.backgroundColor = self.tableView.backgroundColor;
+                [view addSubview:_placeholderLabel];
+                view;
+            });
             
-            CGSize size                  = [_placeholderLabel sizeThatFits:CGSizeMake([UIScreen mainScreen].bounds.size.width-60, CGFLOAT_MAX)];
+            CGSize size = [_placeholderLabel sizeThatFits:
+                CGSizeMake([UIScreen mainScreen].bounds.size.width-60, CGFLOAT_MAX)
+            ];
             _placeholderLabel.frame  = (CGRect){0, 0, size};
             _placeholderLabel.center = self.view.center;
             
@@ -114,8 +112,7 @@
 }
 
 - (void)clear {
-    self.sectionTitles = @[];
-    self.itemsBySectionTitle = @{};
+    self.foodStations = @[];
     [self.tableView reloadData];
 }
 
@@ -123,13 +120,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell" forIndexPath:indexPath];
-    cell.textLabel.text   = self.itemsBySectionTitle[self.sectionTitles[indexPath.section]][indexPath.row];
-    
-    // Apply theme
-    // Apply theme
-    cell.backgroundColor = [UIColor cellBackgroundColor];
-    cell.textLabel.textColor = [UIColor cellTextColor];
-    cell.detailTextLabel.textColor = [UIColor cellDetailTextColor];
+
+    CDFoodStation *station = self.foodStations[indexPath.section];
+    if (indexPath.row == station.foodItems.count) {
+        // Case: additional items row
+        cell.detailTextLabel.text = station.additionalItems;
+    } else {
+        // Case: regular item row
+        CDFoodItem *item = station.foodItems[indexPath.row];
+        cell.textLabel.text = item.name;
+        cell.detailTextLabel.text = item.about;
+    }
     
     return cell;
 }
@@ -139,15 +140,16 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.sectionTitles.count;
+    return self.foodStations.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.itemsBySectionTitle[self.sectionTitles[section]] count];
+    CDFoodStation *station = self.foodStations[section];
+    return station.foodItems.count + (station.additionalItems.length ? 1 : 0);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.sectionTitles[section];
+    return self.foodStations[section].name;
 }
 
 @end

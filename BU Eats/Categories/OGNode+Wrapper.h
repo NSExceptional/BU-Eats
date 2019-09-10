@@ -15,4 +15,7 @@
 - (NSArray<OGElement*> *)objectForKeyedSubscript:(NSString *)key;
 - (NSArray<OGElement*> *)objectAtIndexedSubscript:(NSInteger)key;
 
+@property (nonatomic, readonly) OGElement *(^elementWithID)(NSString *);
+@property (nonatomic, readonly) NSArray<OGElement *> *(^allElementsWithID)(NSString *);
+
 @end

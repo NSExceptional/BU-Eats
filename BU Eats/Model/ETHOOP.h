@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BUDiningMenu.h"
 
 @interface ETHOOP : NSObject
 
 + (instancetype)fromData:(NSData *)plistData error:(out NSError **)error;
 
-- (NSArray *)hoopForEatery:(Eatery)eatery;
+- (NSArray *)hoopForEatery:(BaylorEatery)eatery;
 
 @property (nonatomic, readonly) NSDictionary *hoopByEatery;
 @property (nonatomic, readonly) NSDictionary *overridesByEatery;

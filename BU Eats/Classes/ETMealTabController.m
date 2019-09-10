@@ -8,30 +8,34 @@
 
 #import "ETMealTabController.h"
 #import "ETMenuViewController.h"
+#import "CDClient.h"
+#import "CDMenu.h"
+#import "ETTimeInterval.h"
 
 @interface ETMealTabController () <UITabBarControllerDelegate>
-@property (nonatomic) Eatery location;
-@property (nonatomic) NSDictionary *meals;
+@property (nonatomic) CDEatery *eatery;
 @property (nonatomic, readonly) UIActivityIndicatorView *spinner;
 @property (nonatomic) BOOL loadingMeals;
 @end
 
 @implementation ETMealTabController
 
-+ (instancetype)mealsForLocation:(Eatery)location {
++ (instancetype)mealsForLocation:(CDEatery *)location {
     return [[ETMealTabController alloc] initWithLocation:location];
 }
 
-- (id)initWithLocation:(Eatery)location {
-    _location = location;
-    
-    return [super init]; // calls viewDidLoad for some reason...
+- (id)initWithLocation:(CDEatery *)eatery {
+    _eatery = eatery;
+    // Calls viewDidLoad for some reason,
+    // so we need to assign location first
+    self = [super init];
+    return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = ETStringFromEatery(_location);
+    self.title = self.eatery.name;
 //    self.edgesForExtendedLayout = UIRectEdgeNone; // keeps views from going under nav bar
     self.tabBar.translucent = NO;
 
@@ -49,20 +53,21 @@
     [_datePicker setDates:[NSDate daysForTheNextMonth]];
     [_datePicker selectDateAtIndex:0];
     [_datePicker addTarget:self action:@selector(loadMeals) forControlEvents:UIControlEventValueChanged];
+
+    NSArray<ETMenuViewController *> *menuControllers = [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
+        return [ETMenuViewController emptyMenuForLocation:self.eatery];
+    }];
     
-    ETMenuViewController *breakfast = [ETMenuViewController emptyMenuForLocation:self.location]; breakfast.title = @"Breakfast";
-    ETMenuViewController *lunch     = [ETMenuViewController emptyMenuForLocation:self.location]; lunch.title     = @"Lunch";
-    ETMenuViewController *dinner    = [ETMenuViewController emptyMenuForLocation:self.location]; dinner.title    = @"Dinner";
-    
-    [self setViewControllers:@[breakfast, lunch, dinner]];
+    [self setViewControllers:menuControllers];
     self.selectedIndex = 0;
-    self.tabBar.items[0].title = @"Breakfast";
-    self.tabBar.items[1].title = @"Lunch";
-    self.tabBar.items[2].title = @"Dinner";
-    
-    self.tabBar.items[0].image = [UIImage imageNamed:@"Breakfast"];
-    self.tabBar.items[1].image = [UIImage imageNamed:@"Lunch"];
-    self.tabBar.items[2].image = [UIImage imageNamed:@"Dinner"];
+
+    // Just a for loop with an index
+    [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
+        UITabBarItem *item = self.tabBar.items[idx];
+        item.title = meal.name;
+        item.image = [CDMealPeriod iconForMeal:meal];
+        return nil;
+    }];
     
     [self applyTheme];
     [self loadMeals];
@@ -99,18 +104,21 @@
 
 - (void)loadMeals {
     self.loadingMeals = YES;
+
     // Clear sections
     for (ETMenuViewController *menu in self.viewControllers) {
         [menu clear];
     }
-    
-    self.datePicker.enabled = NO;
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [BUDiningMenu menuFor:self.location onDate:self.datePicker.selectedDate completion:^(NSDictionary *fullMenu, BOOL cacheHit) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        self.loadingMeals = NO;
 
-        [self setMeals:fullMenu animated:!cacheHit];
+    // Disable date picker, show activity indicator
+    self.datePicker.enabled = NO;
+
+    // Load meals
+    [[CDClient sharedClient] menuFor:self.eatery
+                              onDate:self.datePicker.selectedDate
+                          completion:^(CDMenu *menu, BOOL cacheHit, NSError *error) {
+        self.loadingMeals = NO;
+        [self setMenu:menu animated:!cacheHit];
         self.datePicker.enabled = YES;
     }];
 }
@@ -119,6 +127,7 @@
     if (_loadingMeals == loadingMeals) return;
 
     _loadingMeals = loadingMeals;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = loadingMeals;
 
     if (loadingMeals) {
         [self.spinner startAnimating];
@@ -129,35 +138,28 @@
     }
 }
 
-- (void)setMeals:(NSDictionary *)meals animated:(BOOL)animated {
-    [meals enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSDictionary *obj, BOOL *stop) {
-        
-        if ([obj isKindOfClass:[NSError class]]) {
-            [self updateTabForMeal:key menu:@{} animated:animated];
-            
-            // Log show error
-            if ([(NSError *)obj code] != 0) {
-                [self failedToLoadMeal:key];
-                NSLog(@"Failed to load meal: %@", key);
-            } else {
-                NSLog(@"Meal not being served: %@", key);
-            }
-        } else {
-            [self updateTabForMeal:key menu:obj animated:animated];
+- (void)setMenu:(CDMenu *)menu animated:(BOOL)animated {
+    for (CDMealPeriod *meal in menu.meals) {
+        // If there is an error, the meal period will have 0 stations
+        [self updateTabForMeal:meal animated:animated];
+        // Notify user on error
+        if (meal.error) {
+            [self failedToLoadMeal:meal.period.name];
         }
-    }];
+    }
 }
 
-- (void)updateTabForMeal:(NSString *)mealKey menu:(NSDictionary *)menu animated:(BOOL)animated {
-    NSUInteger idx = [self indexForMealKey:mealKey];
+- (void)updateTabForMeal:(CDMealPeriod *)meal animated:(BOOL)animated {
+    NSUInteger idx = [self indexForMealKey:meal.period.name];
     ETMenuViewController *menuView;
     
-    NSAssert(idx != NSNotFound, @"Missing view controller for meal key: %@", mealKey);
+    NSAssert(idx != NSNotFound, @"Missing view controller for meal key: %@", meal.period.name);
 
     menuView = self.viewControllers[idx];
-    [menuView updateSections:menu.allKeys andItems:menu animated:animated];
+    [menuView updateSections:meal.foodStations animated:YES];
 }
 
+/// TODO this could be reworked to just take a CDMeal object and return the index of itself
 - (NSUInteger)indexForMealKey:(NSString *)key {
     NSMutableArray *titles = [NSMutableArray new];
     for (UITabBarItem *item in self.tabBar.items) {

@@ -56,7 +56,7 @@
     return plist;
 }
 
-- (NSArray *)hoopForEatery:(Eatery)eatery {
+- (NSArray *)hoopForEatery:(BaylorEatery)eatery {
     NSArray *hoop = self.overridesByEatery[ETStringFromEatery(eatery)];
     if (hoop.count) return hoop;
     return self.hoopByEatery[ETStringFromEatery(eatery)];

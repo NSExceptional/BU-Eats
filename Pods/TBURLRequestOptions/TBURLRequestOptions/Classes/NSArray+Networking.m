@@ -12,14 +12,7 @@
 @implementation NSArray (Util)
 
 - (NSString *)join:(NSString *)separator {
-    NSMutableString *str = [NSMutableString string];
-    for (NSString *part in self) {
-        [str appendString:part];
-        [str appendString:separator];
-    }
-    
-    [str deleteCharactersInRange:NSMakeRange(str.length - separator.length, separator.length)];
-    return str.copy;
+    return [self componentsJoinedByString:separator];
 }
 
 

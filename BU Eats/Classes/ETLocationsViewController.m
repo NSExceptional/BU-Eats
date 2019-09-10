@@ -20,11 +20,17 @@
 
 #pragma mark ETLocationsViewController
 @interface ETLocationsViewController ()
-@property (nonatomic) NSArray<ETLocation*> *locations;
+@property (nonatomic) NSArray<CDEatery *> *locations;
 @property (nonatomic) BOOL showingHours;
 @end
 
 @implementation ETLocationsViewController
+
++ (instancetype)locations:(NSArray<CDEatery *> *)locations {
+    ETLocationsViewController *controller = [self new];
+    controller.locations = locations;
+    return controller;
+}
 
 - (id)init {
     return [super initWithStyle:UITableViewStyleGrouped];
@@ -35,8 +41,6 @@
     [self applyTheme];
     
     self.title = @"Locations";
-    #warning TODO translucency
-//    self.navigationController.navigationBar.translucent = NO;
 
     // Table view config
     self.tableView.rowHeight = 112.f;
@@ -57,9 +61,6 @@
           action:@selector(showHours)
     ];
     self.navigationItem.rightBarButtonItem = hours;
-    
-    // Get location objects
-    _locations = ETEateries();
     
     // TODO: fix this
     //    [self loadHOOP];
@@ -84,7 +85,7 @@
     [self presentViewControllerModally:[ETHoursViewController new]];
 }
 
-- (void)showLocation:(Eatery)eatery {
+- (void)showLocation:(BaylorEatery)eatery {
     if (self.showingHours) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kETModalsShouldDismissNotification object:nil];
     }
@@ -93,7 +94,11 @@
         [self.navigationController popViewControllerAnimated:NO];
     }
 
-    ETMealTabController *meals = [ETMealTabController mealsForLocation:eatery];
+    CDEatery *location = [self.locations filtered:^BOOL(CDEatery *loc, NSUInteger idx) {
+        return loc.identifier.integerValue == eatery;
+    }].firstObject;
+
+    ETMealTabController *meals = [ETMealTabController mealsForLocation:location];
     [self.navigationController pushViewController:meals animated:YES];
 }
 
@@ -104,48 +109,6 @@
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
-- (void)loadHOOP {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Load plist data
-        NSError *loadError = nil;
-        NSData *plistData = [NSData dataWithContentsOfURL:[NSURL URLWithString:kHOOPURL] options:0 error:&loadError];
-        
-        if (!loadError) {
-            NSError *plistError = nil;
-            ETHOOP *hoop = [ETHOOP fromData:plistData error:&plistError];
-            if (!plistError) {
-                
-                // Create all location objects
-                NSMutableArray *locations = [NSMutableArray array];
-                for (Eatery e = 1; e <= kEateryCount; e++) {
-                    [locations addObject:[ETLocation location:e openIntervals:[hoop hoopForEatery:e]]];
-                }
-                
-                // Update data source and refresh
-                _locations = locations.copy;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-                    [self.refreshControl endRefreshing];
-                });
-            } else {
-                [self handleLoadError:plistError];
-            }
-        } else {
-            [self handleLoadError:loadError];
-        }
-    });
-}
-
-- (void)handleLoadError:(NSError *)error {
-    [[TBAlertController simpleOKAlertWithTitle:@"Error loading locations' hours of operation. Default times shown." message:error.localizedDescription] showFromViewController:self];
-    
-    // Update data source and refresh
-    _locations = ETEateries();
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    });
-}
-
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -153,15 +116,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ETLocationCell *cell        = (ETLocationCell *)[self.tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
-    ETLocation *location        = self.locations[indexPath.row];
+    ETLocationCell *cell        = [self.tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
+    CDEatery *location          = self.locations[indexPath.row];
     cell.locationNameLabel.text = location.name;
-    cell.statusLabel.text       = location.message;
+    cell.statusLabel.text       = location.hours;
     cell.locationIcon.image     = [UIImage imageNamed:location.name];
-    if (!location.isOpen)
-        cell.statusLabel.textColor = [UIColor colorWithRed:1.000 green:0.200 blue:0.200 alpha:1.000];
-    else
-        cell.statusLabel.textColor = [UIColor darkGrayColor];
+    cell.statusLabel.textColor  = [UIColor darkGrayColor];
     return cell;
 }
 
@@ -169,8 +129,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ETMealTabController *meals = [ETMealTabController mealsForLocation:indexPath.row+1];
+
+    ETMealTabController *meals = [ETMealTabController mealsForLocation:self.locations[indexPath.row]];
     [self.navigationController pushViewController:meals animated:YES];
 }
 

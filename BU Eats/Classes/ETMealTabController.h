@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ETLocation.h"
+#import "CDEatery.h"
 #import "DIDatePicker.h"
 
 @interface ETMealTabController : UITabBarController
 
-+ (instancetype)mealsForLocation:(Eatery)location;
++ (instancetype)mealsForLocation:(CDEatery *)location;
 - (void)applyTheme;
 
 @property (nonatomic) DIDatepicker *datePicker;

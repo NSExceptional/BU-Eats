@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ETLocation.h"
+#import "CDEatery.h"
+#import "CDFoodStation.h"
 
 @interface ETMenuViewController : UITableViewController
 
-+ (instancetype)emptyMenuForLocation:(Eatery)location;
-+ (instancetype)menuForLocation:(Eatery)location sections:(NSArray *)sections items:(NSDictionary *)items;
-- (void)updateSections:(NSArray *)sections andItems:(NSDictionary *)items animated:(BOOL)animated;
++ (instancetype)emptyMenuForLocation:(CDEatery *)location;
+- (void)updateSections:(NSArray<CDFoodStation *> *)foodStations animated:(BOOL)animated;
 - (void)applyTheme;
 
 - (void)clear;

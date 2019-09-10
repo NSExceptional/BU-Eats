@@ -18,4 +18,16 @@
     return [self elementsWithTag:(GumboTag)key];
 }
 
+- (OGElement *(^)(NSString *))elementWithID {
+    return ^OGElement *(NSString *identifier) {
+        return [self elementsWithID:identifier].firstObject;
+    };
+}
+
+- (NSArray<OGElement *> *(^)(NSString *))allElementsWithID {
+    return ^NSArray<OGElement *> *(NSString *identifier) {
+        return [self elementsWithID:identifier];
+    };
+}
+
 @end

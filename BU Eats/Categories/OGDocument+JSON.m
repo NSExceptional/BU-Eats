@@ -12,57 +12,88 @@
 
 @implementation OGDocument (JSON)
 
-- (NSDictionary *)toJSON {
+- (NSDictionary *)toMealPeriodJSONWithMeal:(CDMeal *)meal {
     if (!self.children.count) {
-        return @{@"error": @"Empty document"};
+        return @{@"period": meal.dictionaryValue, @"error": @"Empty document"};
     }
-
-    NSMutableDictionary *json = [NSMutableDictionary new];
 
     // Check for error first
     NSString *error = self[OGElement.rootErrorClass].firstObject.text;
     if (error) {
-        json[@"error"] = error;
-        return json;
+        return @{@"period": meal.dictionaryValue, @"error": error};
     }
 
     // Gather stations
-    NSMutableArray *stations = [NSMutableArray new];
-    for (OGElement *station in self[OGElement.stationClass]) {
-        NSMutableArray *items = [NSMutableArray new];
-        NSMutableArray *addons = [NSMutableArray new];
+    NSArray *stations = [self[OGElement.stationClass] mapped:^id(OGElement *station, NSUInteger idx) {
         NSString *title = station[OGElement.stationNameClass].firstObject.text;
+        OGElement *itemContainer = station[OGElement.itemContainerClass].firstObject;
+        OGElement *addonItemContainer = station[OGElement.addonItemContainerClass].firstObject;
+        
+        // Gather items, if any
+        NSArray *items = [itemContainer[OGElement.itemClass] mapped:^id(OGElement *item, NSUInteger idx) {
+            NSArray<OGElement*> *images = item[OGElement.itemAllergensClass].firstObject[GUMBO_TAG_IMG];
 
-        // Gather items
-        OGElement *container = station[OGElement.itemContainerClass].firstObject;
-        for (OGElement *item in container[OGElement.itemClass]) {
+            // Name is usually an `a.viewItem` enclosed in a `span.item__name`
+            NSString *name = item[OGElement.itemNameClass].firstObject.text;
+            if (!name) {
+                // If it's not, it's just text inside a `span.item__name`
+                // with weird surrounding whitespace
+                name = [item[OGElement.itemNameClassPlain].firstObject.text stringByTrimmingWhitespace];
+                name = name ?: @"???";
+            }
+
+            // Must be mutable dictionary as calories, etc, may be nil
             NSMutableDictionary *itemDict = item.attributes.mutableCopy;
-            itemDict[@"name"] = item[OGElement.itemNameClass].firstObject.text;
+            itemDict[@"name"] = [name stringByTrimmingWhitespace];
             itemDict[@"calories"] = item[OGElement.itemCaloriesClass].firstObject.text;
             itemDict[@"about"] = item[OGElement.itemDescriptionClass].firstObject.text;
 
             // Could possibly remove this in favor of attributes (ie 'isvegetarian')
-            NSArray<OGElement*> *images = item[OGElement.itemAllergensClass].firstObject[GUMBO_TAG_IMG];
-            NSMutableArray *allergens = [NSMutableArray new];
-            for (OGElement *img in images) {
-                [allergens addObject:img.attributes[@"alt"]];
-            }
-            itemDict[@"allergens"] = allergens;//[allergens componentsJoinedByString:@", "];
+            itemDict[@"allergens"] = [images mapped:^id(OGElement *img, NSUInteger idx) {
+                return img.attributes[@"alt"];
+            }]; //[allergens componentsJoinedByString:@", "];
 
-            [items addObject:itemDict.copy];
-        }
+            return itemDict.copy;
+        }];
 
-        // Gather addon item names
-        container = station[OGElement.addonItemContainerClass].firstObject;
-        for (OGElement *addon in container[OGElement.addonItemClass]) {
-            [addons addObject:addon[OGElement.itemNameClass].firstObject.text];
-        }
+        // Gather addon item names, if any
+        NSArray *addons = [addonItemContainer[OGElement.addonItemClass] mapped:^id(OGElement *addon, NSUInteger idx) {
+            return addon[OGElement.itemNameClass].firstObject.text;
+        }];
 
-        // Create station
-        [stations addObject:@{@"name": title, @"foodItems": items, @"additionalItems": addons}];
+        return @{@"name": title, @"foodItems": items ?: @[], @"additionalItems": addons ?: @[]};
+    }];
+
+
+
+    return @{@"period": meal.dictionaryValue, @"foodStations": stations};
+}
+
+- (NSArray *)toJSONArrayOfLocations {
+    NSMutableArray *locations = [NSMutableArray new];
+
+    for (OGElement *eatery in self[OGElement.locationClass]) {
+        BOOL open = [eatery.classes containsObject:OGElement.locationClassOpen];
+        NSAssert(open || [eatery.classes containsObject:OGElement.locationClassClosed], @"Not open or closed");
+
+        NSString *identifier = eatery.attributes[OGElement.locationIDAttr];
+        NSString *name = eatery[OGElement.locationNameClass][0].text;
+        NSString *address = eatery[OGElement.locationAddressClass][0].text;
+        NSString *times = eatery[OGElement.locationTimesClass][0].text;
+        address = [address stringByTrimmingWhitespace];
+        NSString *endpoint = eatery.attributes[@"href"];
+
+        [locations addObject:@{
+            @"identifier": identifier,
+            @"name": name,
+            @"address": address,
+            @"note": times,
+            @"open": @(open),
+            @"endpoint": endpoint,
+        }];
     }
 
-    return json;
+    return locations;
 }
 
 @end

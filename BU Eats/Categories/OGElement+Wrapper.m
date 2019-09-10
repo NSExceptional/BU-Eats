@@ -9,7 +9,7 @@
 #import "OGElement+Wrapper.h"
 #import "OGNode+Wrapper.h"
 
-#define StaticPropertyIMP(type, name, setter, value) static type _##name = @"##value##"; \
+#define StaticPropertyIMP(type, name, setter, value) static type _##name = @ #value; \
 + (type)name { \
     return _##name; \
 } \
@@ -27,6 +27,7 @@ static NSDictionary *_keyPathMapping;
 + (void)setKeyPathMapping:(NSDictionary *)mapping {
     _keyPathMapping = mapping;
     [mapping enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+        // Should call the setters for any of the static properties listed as keys in `mapping`
         [self setValue:value forKey:key];
     }];
 }
@@ -40,9 +41,19 @@ StaticPropertyIMP(NSString *, itemContainerClass, setItemContainerClass, menu__c
 StaticPropertyIMP(NSString *, addonItemContainerClass, setAddonItemContainerClass, menu__addOns)
 
 StaticPropertyIMP(NSString *, itemNameClass, setItemNameClass, viewItem)
+StaticPropertyIMP(NSString *, itemNameClassPlain, setItemNameClassPlain, item__name)
 StaticPropertyIMP(NSString *, itemCaloriesClass, setItemCaloriesClass, item__calories)
 StaticPropertyIMP(NSString *, itemAllergensClass, setItemAllergensClass, item__allergens)
 StaticPropertyIMP(NSString *, itemDescriptionClass, setItemDescriptionClass, item__content)
 StaticPropertyIMP(NSString *, addonItemNameClass, setAddonItemNameClass, viewItem)
+
+StaticPropertyIMP(NSString *, locationClass, setLocationClass, location)
+StaticPropertyIMP(NSString *, locationClassOpen, setLocationClassOpen, op)
+StaticPropertyIMP(NSString *, locationClassClosed, setLocationClassClosed, cl)
+StaticPropertyIMP(NSString *, locationNameClass, setLocationNameClass, card-title)
+StaticPropertyIMP(NSString *, locationAddressClass, setLocationAddressClass, location__address)
+StaticPropertyIMP(NSString *, locationTimesClass, setLocationTimesClass, location__times)
+
+StaticPropertyIMP(NSString *, locationIDAttr, setLocationIDAttr, data-id)
 
 @end

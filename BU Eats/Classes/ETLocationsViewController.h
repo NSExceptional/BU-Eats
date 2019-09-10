@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BUDiningMenu.h"
+#import "CDEatery.h"
 
 @interface ETLocationsViewController : UITableViewController
+
++ (instancetype)locations:(NSArray<CDEatery *> *)locations;
+
 - (void)applyTheme;
 - (void)showHours;
-- (void)showLocation:(Eatery)eatery;
+- (void)showLocation:(BaylorEatery)eatery;
+
 @end

@@ -7,7 +7,12 @@
 //
 
 #import "CDObject.h"
+#import "CDFoodItem.h"
 
 @interface CDFoodStation : CDObject
+
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSArray<CDFoodItem*> *foodItems;
+@property (nonatomic, readonly) NSString *additionalItems;
 
 @end

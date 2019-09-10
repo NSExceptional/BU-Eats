@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TBAlertController.h"
 #import "ETLocationsViewController.h"
+#import "BUDiningMenu.h"
+#import "CDClient.h"
 
 #import <Crashlytics/Crashlytics.h>
 
@@ -25,13 +27,17 @@
 
     [self applyTheme];
     
+    CDClient.sharedClient.currentSchool = CDSchool.baylor;
+    CDClient.sharedClient.currentEateries = CDEatery.baylorEateries;
+    
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.locationsVC = [ETLocationsViewController new];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.tintColor = [UIColor globalTint];
+    
+    self.locationsVC = [ETLocationsViewController locations:CDClient.sharedClient.currentEateries];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.locationsVC];
     [self.window makeKeyAndVisible];
 

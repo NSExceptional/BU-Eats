@@ -190,7 +190,7 @@ BuilderOptionIMP(NSDictionary *, bodyJSONFormString, {
     
     NSString *urlString = builder->_URL ?: [builder->_baseURL stringByAppendingString:builder->_endpoint];
     if (builder->_queries) {
-        urlString = [NSString stringWithFormat:@"%@?%@", urlString, builder->_queries.queryString];
+        urlString = [NSString stringWithFormat:@"%@?%@", urlString, builder->_queries.URLEscapedQueryString];
     }
     
     NSURL *url = [NSURL URLWithString:urlString];

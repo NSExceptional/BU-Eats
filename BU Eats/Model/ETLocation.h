@@ -12,22 +12,12 @@
 
 @interface ETLocation : NSObject
 
-+ (instancetype)location:(Eatery)location;
-+ (instancetype)location:(Eatery)location openIntervals:(NSArray *)openIntervals;
++ (instancetype)location:(BaylorEatery)location;
++ (instancetype)location:(BaylorEatery)location openIntervals:(NSArray *)openIntervals;
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *message;
 @property (nonatomic, readonly) NSString *fullHours;
-@property (nonatomic, readonly) NSDictionary *intervalsOfOperation;
-@property (nonatomic, readonly) NSArray *todaysIntervalsOfOperation;
+@property (nonatomic, readonly) BaylorEatery identifier;
 
-- (BOOL)isOpen;
-//- (NSString *)status;
-
-@end
-
-
-@interface ETTimeInterval (Eateries)
-+ (NSDictionary *)allLocationsHoursOfOperationPropertyListValue;
-//+ (NSDictionary *)hoursOfOperationForLocation:(Eatery)location;
 @end

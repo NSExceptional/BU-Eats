@@ -22,9 +22,19 @@
 @property (nonatomic, class) NSString *addonItemContainerClass;
 
 @property (nonatomic, class) NSString *itemNameClass;
+@property (nonatomic, class) NSString *itemNameClassPlain;
 @property (nonatomic, class) NSString *itemCaloriesClass;
 @property (nonatomic, class) NSString *itemAllergensClass;
 @property (nonatomic, class) NSString *itemDescriptionClass;
 @property (nonatomic, class) NSString *addonItemNameClass;
+
+@property (nonatomic, class) NSString *locationClass;
+@property (nonatomic, class) NSString *locationClassOpen;
+@property (nonatomic, class) NSString *locationClassClosed;
+@property (nonatomic, class) NSString *locationNameClass;
+@property (nonatomic, class) NSString *locationAddressClass;
+@property (nonatomic, class) NSString *locationTimesClass;
+
+@property (nonatomic, class) NSString *locationIDAttr;
 
 @end

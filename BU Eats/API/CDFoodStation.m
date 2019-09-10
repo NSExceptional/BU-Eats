@@ -10,4 +10,22 @@
 
 @implementation CDFoodStation
 
+- (void)postInit {
+    if (!self.foodItems.count && !self.additionalItems.length) {
+        _name = [_name stringByAppendingString:@" (empty)"];
+    }
+}
+
++ (NSValueTransformer *)foodItemsJSONTransformer {
+    return [self JSONModelArrayTransformerForClass:[CDFoodItem class]];
+}
+
++ (NSValueTransformer *)additionalItemsJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSArray *addons, BOOL *success, NSError **error) {
+        return [addons componentsJoinedByString:@", "];
+    } reverseBlock:^id(NSString *addons, BOOL *success, NSError **error) {
+        return [addons componentsSeparatedByString:@", "];
+    }];
+}
+
 @end

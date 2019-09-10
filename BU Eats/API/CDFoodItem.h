@@ -10,4 +10,11 @@
 
 @interface CDFoodItem : CDObject
 
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *calories;
+@property (nonatomic, readonly) NSString *about;
+@property (nonatomic, readonly) NSArray<NSString *> *allergens;
+
+@property (nonatomic, readonly) NSString *fullInfo;
+
 @end

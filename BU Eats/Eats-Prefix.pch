@@ -6,16 +6,13 @@
 //  Copyright (c) 2015 Tanner Bennett. All rights reserved.
 //
 
-#ifndef BU_Eats_Eats_Prefix_pch
-#define BU_Eats_Eats_Prefix_pch
-
 #import <Foundation/Foundation.h>
 #import "NSDate-Utilities.h"
-#import "BUDiningMenu.h"
 #import "TBAlertController.h"
 #import "UIColor+BU.h"
 #import "NSDate+TBExtensions.h"
+#import "NSArray+Functional.h"
 
 #import "BU-Eats-Constants.h"
 
-#endif
+#define stringByTrimmingWhitespace stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]

@@ -14,6 +14,11 @@
     self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     if (self) {
         self.detailTextLabel.numberOfLines = 0;
+        
+        // Apply theme
+        self.backgroundColor = [UIColor cellBackgroundColor];
+        self.textLabel.textColor = [UIColor cellTextColor];
+        self.detailTextLabel.textColor = [UIColor cellDetailTextColor];
     }
 
     return self;

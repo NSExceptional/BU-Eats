@@ -9,17 +9,14 @@
 #import <Foundation/Foundation.h>
 @class ETLocation;
 
-/** FullMenuBlock takes a dictionary, where the keys for failed requests are NSErrors. */
-typedef void (^FullMenuBlock)(NSDictionary *fullMenu, BOOL cacheHit);
-typedef void (^MenuBlock)(NSError *error, NSDictionary *menu);
-
 extern NSUInteger const kEateryCount;
-typedef NS_ENUM(NSUInteger, Eatery)
+typedef NSUInteger Eatery;
+typedef NS_ENUM(NSUInteger, BaylorEatery)
 {
-    EateryPenland = 1,
-    EateryMemorial,
-    EateryEastVillage,
-    EateryBrooks
+    EateryPenland = 1047,
+    EateryMemorial = 1045,
+    EateryEastVillage = 6524,
+    EateryBrooks = 6523
 };
 
 extern NSArray<ETLocation*> * ETEateries(void);
@@ -37,10 +34,3 @@ typedef NS_ENUM(NSUInteger, Meal)
 
 extern NSString * NSStringFromMeal(Meal m);
 extern Meal MealFromNSString(NSString *m);
-
-@interface BUDiningMenu : NSObject
-
-+ (void)menuFor:(Eatery)location onDate:(NSDate *)date completion:(FullMenuBlock)completion;
-//+ (void)menuFor:(Eatery)location onDate:(NSDate *)date forMeal:(Meal)meal completion:(MenuBlock)completion;
-
-@end
