@@ -221,7 +221,7 @@
 		02008E1DE46043104C9A45EF2372210C /* NSDictionary+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Networking.h"; path = "TBURLRequestOptions/Classes/NSDictionary+Networking.h"; sourceTree = "<group>"; };
 		03F2B28946425490D6E19AB2F684971B /* NSValueTransformer+MTLInversionAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLInversionAdditions.m"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.m"; sourceTree = "<group>"; };
 		06E596C060CB203566BF8369087CD2FB /* AutoCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AutoCoding.m; path = AutoCoding/AutoCoding.m; sourceTree = "<group>"; };
-		06F9C883B3F41A81C1C508299B0CC46C /* tag.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tag.c; path = ObjectiveGumbo/Gumbo/tag.c; sourceTree = "<group>"; };
+		06F9C883B3F41A81C1C508299B0CC46C /* tag.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tag.c; path = ObjectiveGumbo/Gumbo/tag.c; sourceTree = "<group>"; };
 		070A429F5EC63723606A221DC349E895 /* Pods-BU Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BU Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		08CD862EA0D838065DF74A3E41D01A3E /* DIDatepickerDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DIDatepickerDateView.h; path = Sources/DIDatepickerDateView.h; sourceTree = "<group>"; };
 		094BEB91BE1AB46502B98E404C2B2AB3 /* EXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = Mantle/extobjc/EXTScope.h; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		0E23456F0774CF62AE74D0A1E559FAEA /* Mantle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mantle.h; path = Mantle/Mantle.h; sourceTree = "<group>"; };
 		0FA9D6ED06F9D4522C29EB8DA2CD00D4 /* tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tokenizer.h; path = ObjectiveGumbo/Gumbo/tokenizer.h; sourceTree = "<group>"; };
 		1075D7A888FEE17FF63FC09EBC7DE760 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		120F061022FC590C4DE31996D8B9AEF8 /* string_buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = string_buffer.c; path = ObjectiveGumbo/Gumbo/string_buffer.c; sourceTree = "<group>"; };
+		120F061022FC590C4DE31996D8B9AEF8 /* string_buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = string_buffer.c; path = ObjectiveGumbo/Gumbo/string_buffer.c; sourceTree = "<group>"; };
 		12EF143630FD072932068376A2C9A3CD /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		13544D2AE0ACED5D8DF75F6BE0CCDC2F /* NSDate-Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate-Utilities.h"; sourceTree = "<group>"; };
 		13790E91239A88E70A29C5D064CD8775 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		1D0AAA312B14E8604918E417BDD396B7 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		1E08DEBE61A8CC5CA058C5B14EA7B2AE /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		1F3F424B83E9554DAB7DEF3FDB3FB8B7 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		2031D65A07007A6E3A1B24D597567657 /* libTBURLRequestOptions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTBURLRequestOptions.a; path = libTBURLRequestOptions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2031D65A07007A6E3A1B24D597567657 /* libTBURLRequestOptions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTBURLRequestOptions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		229915ADA8CA29113CE02968F9DEA194 /* MTLModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLModel.m; path = Mantle/MTLModel.m; sourceTree = "<group>"; };
 		22A68B8B4902E0310A56C2CD6C384D8F /* Pods-BU EatsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BU EatsTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		247D64B4F0B2BDB982A67692FCFED541 /* Pods-BU Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BU Eats.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		37EE26CF4C30AAA1492AA15FF3B952A8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		3978B391488411DD4C98A5C3749DF788 /* attribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = attribute.h; path = ObjectiveGumbo/Gumbo/attribute.h; sourceTree = "<group>"; };
 		39FB32F5879E98AA934B344B48244ADB /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error.h; path = ObjectiveGumbo/Gumbo/error.h; sourceTree = "<group>"; };
-		3B58F7B6F78253E18960D6E8E6F10848 /* libPods-BU EatsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BU EatsTests.a"; path = "libPods-BU EatsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B58F7B6F78253E18960D6E8E6F10848 /* libPods-BU EatsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BU EatsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1B090553F5E1481B21DE4798DB35EA /* string_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string_buffer.h; path = ObjectiveGumbo/Gumbo/string_buffer.h; sourceTree = "<group>"; };
 		3F307455C5814011DDD8E662FD442DC2 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		3FB058D1DE02C6808D3F170AE6CC7E0E /* MTLModel+NSCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MTLModel+NSCoding.h"; path = "Mantle/MTLModel+NSCoding.h"; sourceTree = "<group>"; };
@@ -288,20 +288,20 @@
 		558A24804B5E5FD44DBC4EE105C58E5E /* char_ref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = char_ref.h; path = ObjectiveGumbo/Gumbo/char_ref.h; sourceTree = "<group>"; };
 		55E1CBF991DDBE889D844CDC3988067A /* ObjectiveGumbo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectiveGumbo.m; path = ObjectiveGumbo/ObjectiveGumbo.m; sourceTree = "<group>"; };
 		567EE3537802A106BA5F89F6B555F429 /* AutoCoding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoCoding.xcconfig; sourceTree = "<group>"; };
-		59EF11A92854F939E79AC3F876FDB568 /* libTBAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTBAlertController.a; path = libTBAlertController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EF11A92854F939E79AC3F876FDB568 /* libTBAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTBAlertController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD05AC1D329A02E192BCF848C6287E8 /* DIDatepicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepicker.m; path = Sources/DIDatepicker.m; sourceTree = "<group>"; };
 		5B4B0F2517FA96E842E4734FDBBC19CB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		5CBCF72AE938F1FD9764478DFC60AF2C /* MTLModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLModel.h; path = Mantle/MTLModel.h; sourceTree = "<group>"; };
 		5F265DAE00955A02ADE4BB83D1649864 /* TBURLRequestOptions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBURLRequestOptions-dummy.m"; sourceTree = "<group>"; };
 		5F5FE997993B73E419CF73F0F8AA338F /* NSDate-Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
-		5FC2561057002FD794C4E7643369B709 /* attribute.c */ = {isa = PBXFileReference; includeInIndex = 1; name = attribute.c; path = ObjectiveGumbo/Gumbo/attribute.c; sourceTree = "<group>"; };
+		5FC2561057002FD794C4E7643369B709 /* attribute.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = attribute.c; path = ObjectiveGumbo/Gumbo/attribute.c; sourceTree = "<group>"; };
 		60F7B6E926F45B63EBB1E9447C8DC41B /* OGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OGNode.h; path = ObjectiveGumbo/OGNode.h; sourceTree = "<group>"; };
-		6230CB989671924F8CCFBDEE6D7F9FAB /* string_piece.c */ = {isa = PBXFileReference; includeInIndex = 1; name = string_piece.c; path = ObjectiveGumbo/Gumbo/string_piece.c; sourceTree = "<group>"; };
+		6230CB989671924F8CCFBDEE6D7F9FAB /* string_piece.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = string_piece.c; path = ObjectiveGumbo/Gumbo/string_piece.c; sourceTree = "<group>"; };
 		626CF1283A555955DBD4D5808AFC8A67 /* TBURLRequestOptions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBURLRequestOptions-prefix.pch"; sourceTree = "<group>"; };
 		63219728A6EAC397DB5F7AFF620A6D32 /* string_piece.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string_piece.h; path = ObjectiveGumbo/Gumbo/string_piece.h; sourceTree = "<group>"; };
 		63AA3D76580BC70A7A28B021B62D4C4B /* DIDatepicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DIDatepicker-prefix.pch"; sourceTree = "<group>"; };
 		63BC71254AA8451F7C385475B665D1DD /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		63E032BC9CDE8310AAAF91ABBEDFC0DB /* tokenizer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tokenizer.c; path = ObjectiveGumbo/Gumbo/tokenizer.c; sourceTree = "<group>"; };
+		63E032BC9CDE8310AAAF91ABBEDFC0DB /* tokenizer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tokenizer.c; path = ObjectiveGumbo/Gumbo/tokenizer.c; sourceTree = "<group>"; };
 		6916C12BE3597A31922766AFD734476B /* NSDate-Extensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSDate-Extensions.xcconfig"; sourceTree = "<group>"; };
 		6ABA89E2090F43A913C15F6211BE212E /* NSDate-Extensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Extensions-dummy.m"; sourceTree = "<group>"; };
 		6E3389FE2CD4FC17B18EB7D8CC30C14B /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
@@ -311,10 +311,10 @@
 		75B653A133A2C965C32BAD9C1595AD91 /* NSDictionary+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLManipulationAdditions.m"; path = "Mantle/NSDictionary+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
 		7655F57A9ADF1ECF20F8966F7123C339 /* OGElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGElement.m; path = ObjectiveGumbo/OGElement.m; sourceTree = "<group>"; };
 		767766E3612E47C19C4237048C4D1E2E /* DIDatepickerDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepickerDateView.m; path = Sources/DIDatepickerDateView.m; sourceTree = "<group>"; };
-		79BA9416F6C5BFC2E3094D1DFCE9F344 /* util.c */ = {isa = PBXFileReference; includeInIndex = 1; name = util.c; path = ObjectiveGumbo/Gumbo/util.c; sourceTree = "<group>"; };
+		79BA9416F6C5BFC2E3094D1DFCE9F344 /* util.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = util.c; path = ObjectiveGumbo/Gumbo/util.c; sourceTree = "<group>"; };
 		7B1B89B41290C4FDE7721C41B358CA15 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = Mantle/extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		7CD6803A269384C77D592344030CC464 /* insertion_mode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = insertion_mode.h; path = ObjectiveGumbo/Gumbo/insertion_mode.h; sourceTree = "<group>"; };
-		7D8BCBB4A44817CBE4A6271301C03A58 /* libDIDatepicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDIDatepicker.a; path = libDIDatepicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8BCBB4A44817CBE4A6271301C03A58 /* libDIDatepicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDIDatepicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0ACC9A476BD8840CD48B6C6D491D32 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		7E3A8A2CBAF7B0D2909546DB4F68197C /* MTLValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLValueTransformer.h; path = Mantle/MTLValueTransformer.h; sourceTree = "<group>"; };
 		7EB90BD861F8430542FC0560D6907F01 /* tokenizer_states.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tokenizer_states.h; path = ObjectiveGumbo/Gumbo/tokenizer_states.h; sourceTree = "<group>"; };
@@ -327,13 +327,13 @@
 		8A86A416B5CC10CA2729345B92FB7A4D /* MTLReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLReflection.m; path = Mantle/MTLReflection.m; sourceTree = "<group>"; };
 		8B92A235E4578AF00543A7F3255E5CA6 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.m"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
 		8B9CE22B150298916F5FF2AFC755F4FD /* AutoCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AutoCoding.h; path = AutoCoding/AutoCoding.h; sourceTree = "<group>"; };
-		8F99C69CDF677A1CE0A03D54E39387E1 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utf8.c; path = ObjectiveGumbo/Gumbo/utf8.c; sourceTree = "<group>"; };
+		8F99C69CDF677A1CE0A03D54E39387E1 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = ObjectiveGumbo/Gumbo/utf8.c; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		92E67BA3345B17ABDA4F8DBA7ED49F94 /* TBAlertAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBAlertAction.h; path = Classes/TBAlertAction.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95604344453412E80B6086F979262011 /* Mantle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mantle-dummy.m"; sourceTree = "<group>"; };
 		992E46E38C008A7175B6AA9AE84D265B /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		9B264519BBFC2EA97DC473ADE38D6604 /* error.c */ = {isa = PBXFileReference; includeInIndex = 1; name = error.c; path = ObjectiveGumbo/Gumbo/error.c; sourceTree = "<group>"; };
+		9B264519BBFC2EA97DC473ADE38D6604 /* error.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = error.c; path = ObjectiveGumbo/Gumbo/error.c; sourceTree = "<group>"; };
 		9C424AF9F289238B883B1CDB496577A1 /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
 		9E6155C480D52B6300A17AD4DF5FDA88 /* TBAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBAlertController-prefix.pch"; sourceTree = "<group>"; };
 		9ED61BBF6D91FA18D96BBBD2414AE412 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
@@ -341,17 +341,17 @@
 		A3E573EAC9100FAE2F0A7BCD97E8E56C /* TBURLRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBURLRequestBuilder.h; path = TBURLRequestOptions/Classes/TBURLRequestBuilder.h; sourceTree = "<group>"; };
 		A46AD43EC71BD70D3C5388D0F26F369C /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = ObjectiveGumbo/Gumbo/utf8.h; sourceTree = "<group>"; };
 		A46CAB75217190949534056A1C8EEE5B /* OGNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGNode.m; path = ObjectiveGumbo/OGNode.m; sourceTree = "<group>"; };
-		A561BBA6E15B8BBAD4CBC24B6A99456E /* parser.c */ = {isa = PBXFileReference; includeInIndex = 1; name = parser.c; path = ObjectiveGumbo/Gumbo/parser.c; sourceTree = "<group>"; };
+		A561BBA6E15B8BBAD4CBC24B6A99456E /* parser.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = parser.c; path = ObjectiveGumbo/Gumbo/parser.c; sourceTree = "<group>"; };
 		A6670011021697074D078C79AB27C8E8 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		A76FB9B7DB74FE0F511D9B2A7504312C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		A839430B6BD927C77648CE3334B20080 /* libObjectiveGumbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libObjectiveGumbo.a; path = libObjectiveGumbo.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A85BB54DF59B9AB956925DE9B772F2CB /* char_ref.c */ = {isa = PBXFileReference; includeInIndex = 1; name = char_ref.c; path = ObjectiveGumbo/Gumbo/char_ref.c; sourceTree = "<group>"; };
+		A839430B6BD927C77648CE3334B20080 /* libObjectiveGumbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveGumbo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85BB54DF59B9AB956925DE9B772F2CB /* char_ref.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = char_ref.c; path = ObjectiveGumbo/Gumbo/char_ref.c; sourceTree = "<group>"; };
 		A86D12BBCF4430AFFAAAD6415D23E0C7 /* NSArray+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MTLManipulationAdditions.h"; path = "Mantle/NSArray+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
 		A8A0623946A77DC7DB5AF63C996E45C4 /* NSError+MTLModelException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+MTLModelException.h"; path = "Mantle/NSError+MTLModelException.h"; sourceTree = "<group>"; };
 		A8AEE609C7FC8BB58BF2C841E5F709C7 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		A8D194CBED4F10D0B99F7FE553269419 /* TimeFormatters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TimeFormatters.m; sourceTree = "<group>"; };
 		ACA6EBB8255D214B2F14CDA4E49D7BAC /* TBResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBResponseParser.h; path = TBURLRequestOptions/Classes/TBResponseParser.h; sourceTree = "<group>"; };
-		ADA2EBEBF21D9853C0D3E210DC6D0622 /* libAutoCoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAutoCoding.a; path = libAutoCoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA2EBEBF21D9853C0D3E210DC6D0622 /* libAutoCoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAutoCoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3E853D05ABE93ECC075F5C97F86E7F /* ObjectiveGumbo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectiveGumbo-dummy.m"; sourceTree = "<group>"; };
 		AF75745F1650DC5F52E6DFF519D4B77A /* Pods-BU EatsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BU EatsTests-dummy.m"; sourceTree = "<group>"; };
 		B27B2899564BAB4FDD3E93AABA0D492E /* MTLReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLReflection.h; path = Mantle/MTLReflection.h; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		B50B71CB9B5D42D9985B0AF48AB062AA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B55B9D8E408B8A77ABB7AFCD2D21B190 /* OGUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGUtility.m; path = ObjectiveGumbo/OGUtility.m; sourceTree = "<group>"; };
 		B6132715A41D32DE68A676A0D54DA41D /* OGDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OGDocument.m; path = ObjectiveGumbo/OGDocument.m; sourceTree = "<group>"; };
-		B64206EE8081292545408C56AB893FBC /* libMantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMantle.a; path = libMantle.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64206EE8081292545408C56AB893FBC /* libMantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMantle.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89EF13C02A0F538FE6D43F2F813F029 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ObjectiveGumbo/Gumbo/parser.h; sourceTree = "<group>"; };
 		BB37DE721F1E4BB1A0AAAD469E58FB66 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -374,12 +374,12 @@
 		C426CD673B4A26E328F45856B96CA68F /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		C520CA49D112E45ADF94345E3983B943 /* NSDictionary+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLManipulationAdditions.h"; path = "Mantle/NSDictionary+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
 		C580E46B82D7F9B59D4240FC62B8CCD2 /* Pods-BU Eats-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BU Eats-dummy.m"; sourceTree = "<group>"; };
-		CA6AA94297D7E94535E9B38F0ACD8C81 /* libNSDate-Extensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libNSDate-Extensions.a"; path = "libNSDate-Extensions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6AA94297D7E94535E9B38F0ACD8C81 /* libNSDate-Extensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSDate-Extensions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC37A85915ECDC4BBEF084934F3DB768 /* NSDictionary+MTLJSONKeyPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLJSONKeyPath.m"; path = "Mantle/NSDictionary+MTLJSONKeyPath.m"; sourceTree = "<group>"; };
 		CCA84A960A0EFE04C9EFA488E87EC776 /* Mantle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mantle-prefix.pch"; sourceTree = "<group>"; };
-		CCFBB1A39FF45DD5F1D0A631E6DB6E89 /* vector.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vector.c; path = ObjectiveGumbo/Gumbo/vector.c; sourceTree = "<group>"; };
+		CCFBB1A39FF45DD5F1D0A631E6DB6E89 /* vector.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = vector.c; path = ObjectiveGumbo/Gumbo/vector.c; sourceTree = "<group>"; };
 		CDE1F2926B814643DD90C0061C288DF6 /* TBAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBAlertController.m; path = Classes/TBAlertController.m; sourceTree = "<group>"; };
-		D4DB8FF9644FDD98138AF88302A8EC01 /* libPods-BU Eats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BU Eats.a"; path = "libPods-BU Eats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DB8FF9644FDD98138AF88302A8EC01 /* libPods-BU Eats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BU Eats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8771242D1A58C6DA0F779E460AAE141 /* Pods-BU EatsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BU EatsTests-frameworks.sh"; sourceTree = "<group>"; };
 		D88E6B5AFF131B1989D062F8224A8A68 /* ObjectiveGumbo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectiveGumbo-prefix.pch"; sourceTree = "<group>"; };
 		D938D38016FF6B1D0610DEA861A218FF /* MTLTransformerErrorHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLTransformerErrorHandling.m; path = Mantle/MTLTransformerErrorHandling.m; sourceTree = "<group>"; };
@@ -396,7 +396,7 @@
 		EE25C2BDB138FEA7796ABB8F578988F4 /* Pods-BU Eats-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BU Eats-acknowledgements.plist"; sourceTree = "<group>"; };
 		F037FFAB482E2F2207EC7C99EA1BE2FD /* DIDatepicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIDatepicker.xcconfig; sourceTree = "<group>"; };
 		F1432B23D0362C09D91F12C060428C74 /* TBAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TBAlertController.xcconfig; sourceTree = "<group>"; };
-		F2BFF28C51E76EB2BC3F7589D1DC4C7C /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2BFF28C51E76EB2BC3F7589D1DC4C7C /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48BA1D8181D0195337B989A0924B488 /* MTLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLValueTransformer.m; path = Mantle/MTLValueTransformer.m; sourceTree = "<group>"; };
 		F6AEBB218285A02FADC01861846CB8B9 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.h"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
 		F8C1D03FEF64F35504E8FA0634E121B5 /* Mantle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mantle.xcconfig; sourceTree = "<group>"; };
@@ -508,7 +508,6 @@
 				3F307455C5814011DDD8E662FD442DC2 /* Fabric.h */,
 				39E99AC0558895B52C9B9B4442BF1232 /* Frameworks */,
 			);
-			name = Fabric;
 			path = Fabric;
 			sourceTree = "<group>";
 		};
@@ -519,7 +518,6 @@
 				06E596C060CB203566BF8369087CD2FB /* AutoCoding.m */,
 				1A3F2D10C1E5B9BB2E0F6FAF7DC5BCBE /* Support Files */,
 			);
-			name = AutoCoding;
 			path = AutoCoding;
 			sourceTree = "<group>";
 		};
@@ -552,7 +550,6 @@
 				767766E3612E47C19C4237048C4D1E2E /* DIDatepickerDateView.m */,
 				825A19637216CC020BAB68898087907D /* Support Files */,
 			);
-			name = DIDatepicker;
 			path = DIDatepicker;
 			sourceTree = "<group>";
 		};
@@ -662,7 +659,6 @@
 				A8D194CBED4F10D0B99F7FE553269419 /* TimeFormatters.m */,
 				21F76A2F73ADBB10A19A2257932B9BB8 /* Support Files */,
 			);
-			name = "NSDate-Extensions";
 			path = "NSDate-Extensions";
 			sourceTree = "<group>";
 		};
@@ -675,7 +671,6 @@
 				CDE1F2926B814643DD90C0061C288DF6 /* TBAlertController.m */,
 				F9CC89EB61B2982DD645D2285A538FD7 /* Support Files */,
 			);
-			name = TBAlertController;
 			path = TBAlertController;
 			sourceTree = "<group>";
 		};
@@ -763,7 +758,6 @@
 				A76FB9B7DB74FE0F511D9B2A7504312C /* ViewController+MASAdditions.m */,
 				1E5E8C1C6B76D49199991CF048FAA7AD /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -802,7 +796,6 @@
 				3525EECB591103467653A2099E0ED10B /* extobjc */,
 				2CC8C4C86EF59618752F426160F022B0 /* Support Files */,
 			);
-			name = Mantle;
 			path = Mantle;
 			sourceTree = "<group>";
 		};
@@ -850,7 +843,6 @@
 				D9B97D258EE2641F2D75105656EAE37D /* vector.h */,
 				33C5B4ABB1ED861348501B89FA109734 /* Support Files */,
 			);
-			name = ObjectiveGumbo;
 			path = ObjectiveGumbo;
 			sourceTree = "<group>";
 		};
@@ -871,7 +863,6 @@
 				2D7B13E16F718CD444D5B88878E15A2E /* TBURLRequestBuilder.m */,
 				FBFFD14657859DA9BE785CE6346846E1 /* Support Files */,
 			);
-			name = TBURLRequestOptions;
 			path = TBURLRequestOptions;
 			sourceTree = "<group>";
 		};
@@ -887,7 +878,6 @@
 				A6670011021697074D078C79AB27C8E8 /* Crashlytics.h */,
 				F77AC39CBAE085EE843172CD40BEE2B0 /* Frameworks */,
 			);
-			name = Crashlytics;
 			path = Crashlytics;
 			sourceTree = "<group>";
 		};
@@ -1235,14 +1225,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 06A0A7D8B73D3B582D65186DF49452BA /* Products */;
@@ -1470,7 +1461,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TBURLRequestOptions/TBURLRequestOptions-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1489,6 +1480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1578,7 +1570,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectiveGumbo/ObjectiveGumbo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1601,7 +1593,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TBURLRequestOptions/TBURLRequestOptions-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1624,7 +1616,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectiveGumbo/ObjectiveGumbo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1648,7 +1640,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/DIDatepicker/DIDatepicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1671,7 +1663,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1694,7 +1686,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Mantle/Mantle-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1718,7 +1710,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TBAlertController/TBAlertController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1742,7 +1734,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1767,7 +1759,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AutoCoding/AutoCoding-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1792,7 +1784,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/NSDate-Extensions/NSDate-Extensions-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1858,7 +1850,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/DIDatepicker/DIDatepicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1904,7 +1896,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Mantle/Mantle-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1928,7 +1920,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/NSDate-Extensions/NSDate-Extensions-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1953,7 +1945,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AutoCoding/AutoCoding-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1976,7 +1968,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TBAlertController/TBAlertController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1994,6 +1986,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
