@@ -12,7 +12,10 @@
 
 + (UIStatusBarStyle)statusBarStyle;
 
+/// Gold, used for bar button items
 @property (nonatomic, readonly, class) UIColor *globalTint;
+/// Green, used for tab bar items and the date picekr underline
+@property (nonatomic, readonly, class) UIColor *greenTint;
 
 @property (nonatomic, readonly, class) UIColor *viewBackgroundColor;
 @property (nonatomic, readonly, class) UIColor *primaryTextColor;
@@ -20,6 +23,7 @@
 
 @property (nonatomic, readonly, class) UIColor *titleTextColor;
 @property (nonatomic, readonly, class) UIColor *barBackgroundColors;
+@property (nonatomic, readonly, class) UIColor *safariVCBarBackgroundColor;
 @property (nonatomic, readonly, class) UIColor *tabDeselectedColor;
 @property (nonatomic, readonly, class) UIColor *separatorLineColor;
 

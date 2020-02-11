@@ -81,11 +81,8 @@ NSInteger const kDiningHallsSection = 0;
 
 - (void)showAllHours {
     SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:self.allHoursURL];
-
-    if (@available(iOS 10, *)) {
-        safari.preferredBarTintColor = UIColor.barBackgroundColors;
-        safari.preferredControlTintColor = UIColor.globalTint;
-    }
+    safari.preferredBarTintColor = UIColor.safariVCBarBackgroundColor;
+    safari.preferredControlTintColor = UIColor.globalTint;
 
     [self presentViewController:safari animated:YES completion:nil];
 }

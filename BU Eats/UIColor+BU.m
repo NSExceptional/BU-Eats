@@ -18,6 +18,22 @@
     c; \
 });
 
+#define DynamicColorProvider(dark, light) ({ \
+    UIColor *c; \
+    if (@available(iOS 13, *)) { \
+        c = [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *traitCollection) { \
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) { \
+                return [UIColor dark]; \
+            } else { \
+                return [UIColor light]; \
+            } \
+        }]; \
+    } else { \
+        c = [UIColor light]; \
+    } \
+    c; \
+})
+
 @implementation UIColor (BU)
 
 + (UIStatusBarStyle)statusBarStyle {
@@ -26,6 +42,13 @@
 
 + (UIColor *)globalTint {
     return [UIColor colorWithRed:0.931 green:0.768 blue:0.000 alpha:1.000];
+}
+
++ (UIColor *)greenTint {
+    return DynamicColorProvider(
+        colorWithRed:0/255.f green: 135/255.f blue: 73/255.f alpha:1.0,
+        colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0
+    );
 }
 
 + (UIColor *)viewBackgroundColor {
@@ -45,16 +68,10 @@
 }
 
 + (UIColor *)barBackgroundColors {
-    if (@available(iOS 13, *)) {
-        return [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *traitCollection) {
-            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                return [UIColor colorWithRed:0.06 green:0.45 blue:0.2 alpha:1.0];
-            } else {
-                return [UIColor colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0];
-            }
-        }];
-    }
-    
+    return DynamicColorProvider(systemBackgroundColor, colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0);
+}
+
++ (UIColor *)safariVCBarBackgroundColor {
     return [UIColor colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0];
 }
 
