@@ -11,6 +11,7 @@
 #import "CDClient.h"
 #import "CDMenu.h"
 #import "ETTimeInterval.h"
+#import "UIColor+BU.h"
 
 @interface ETMealTabController () <UITabBarControllerDelegate>
 @property (nonatomic) CDEatery *eatery;
@@ -32,6 +33,22 @@
     return self;
 }
 
+- (void)loadView {
+    [super loadView];
+    
+    _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    _datePicker = [[DIDatepicker alloc]
+        initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 60.f)
+    ];
+    
+    self.spinner.color = UIColor.spinnerColor;
+    self.spinner.center = ({
+        CGPoint center = self.view.center;
+        center.y += 20;
+        center;
+    });
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -40,19 +57,10 @@
     self.tabBar.translucent = NO;
 
     self.delegate = self;
-
-    _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    self.spinner.color = [UIColor blackColor];
-    self.spinner.center = ({
-        CGPoint center = self.view.center;
-        center.y += 20;
-        center;
-    });
     
-    _datePicker = [[DIDatepicker alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 60.f)];
-    [_datePicker setDates:[NSDate daysForTheNextMonth]];
-    [_datePicker selectDateAtIndex:0];
-    [_datePicker addTarget:self action:@selector(loadMeals) forControlEvents:UIControlEventValueChanged];
+    self.datePicker.dates = NSDate.daysForTheNextMonth;
+    [self.datePicker selectDateAtIndex:0];
+    [self.datePicker addTarget:self action:@selector(loadMeals) forControlEvents:UIControlEventValueChanged];
 
     NSArray<ETMenuViewController *> *menuControllers = [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
         return [ETMenuViewController emptyMenuForLocation:self.eatery];
@@ -74,8 +82,7 @@
 }
 
 - (void)applyTheme {
-    self.tabBar.tintColor = [UIColor barBackgroundColors];
-    _datePicker.selectedDateBottomLineColor = [UIColor barBackgroundColors];
+    self.tabBar.tintColor = UIColor.barBackgroundColors;
 }
 
 #pragma mark UITabBar stuff

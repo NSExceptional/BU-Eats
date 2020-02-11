@@ -31,7 +31,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.tintColor = [UIColor globalTint];
+    self.window.tintColor = UIColor.globalTint;
     
     self.locationsVC = [ETLocationsViewController locations:CDClient.sharedClient.currentEateries];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.locationsVC];
@@ -79,13 +79,14 @@
 }
 
 - (void)applyTheme {
-    [UIApplication sharedApplication].statusBarStyle = [UIColor statusBarStyle];
-    [UINavigationBar appearance].barTintColor = [UIColor barBackgroundColors];
-    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
+    [UIApplication sharedApplication].statusBarStyle = UIColor.statusBarStyle;
+    [UINavigationBar appearance].barTintColor = UIColor.barBackgroundColors;
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : UIColor.titleTextColor};
+    [UINavigationBar appearance].translucent = NO;
     
     if (@available(iOS 11, *)) {
         [UINavigationBar appearance].prefersLargeTitles = !ETDeviceIsSmall();
-        [UINavigationBar appearance].largeTitleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
+        [UINavigationBar appearance].largeTitleTextAttributes = @{NSForegroundColorAttributeName : UIColor.titleTextColor};
     }
 }
 

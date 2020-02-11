@@ -14,7 +14,6 @@
 
 + (instancetype)emptyMenuForLocation:(CDEatery *)location;
 - (void)updateSections:(NSArray<CDFoodStation *> *)foodStations animated:(BOOL)animated;
-- (void)applyTheme;
 
 - (void)clear;
 

@@ -103,10 +103,21 @@
 }
 
 - (void)presentViewControllerModally:(UIViewController *)vc {
-    UINavigationController *nav    = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.navigationBar.barTintColor = [UIColor barBackgroundColors];
-    nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor titleTextColor]};
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : UIColor.titleTextColor };
     [self.navigationController presentViewController:nav animated:YES completion:nil];
+    
+    if (@available(iOS 13, *)) {
+        nav.navigationBar.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return UIColor.systemBackgroundColor;
+            } else {
+                return UIColor.barBackgroundColors;
+            }
+        }];
+    } else {
+        nav.navigationBar.backgroundColor = UIColor.barBackgroundColors;
+    }
 }
 
 #pragma mark UITableViewDataSource
@@ -121,7 +132,6 @@
     cell.locationNameLabel.text = location.name;
     cell.statusLabel.text       = location.hours;
     cell.locationIcon.image     = [UIImage imageNamed:location.name];
-    cell.statusLabel.textColor  = [UIColor darkGrayColor];
     return cell;
 }
 

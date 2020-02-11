@@ -61,20 +61,11 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self applyTheme];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (self.placeholderLabel) {
         self.placeholderLabel.center = self.view.center;
     }
-}
-
-- (void)applyTheme {
-    self.tableView.backgroundColor = [UIColor viewBackgroundColor];
 }
 
 - (void)setPlaceholderText:(NSString *)placeholderText {

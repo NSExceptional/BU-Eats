@@ -34,8 +34,6 @@ NSInteger const kDiningHallsSection = 0;
     // Title, hours URL
     self.title = @"Hours of Operation";
     self.allHoursURL = [NSURL URLWithString:kDefaultAllHoursURL];
-    #warning TODO Not sure why I have to do this... I'm not setting it anywhere else
-    self.navigationController.navigationBar.translucent = YES;
 
     // Get location objects
     _locations = ETEateries();
@@ -85,8 +83,8 @@ NSInteger const kDiningHallsSection = 0;
     SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:self.allHoursURL];
 
     if (@available(iOS 10, *)) {
-        safari.preferredBarTintColor = [UIColor barBackgroundColors];
-        safari.preferredControlTintColor = [UIColor globalTint];
+        safari.preferredBarTintColor = UIColor.barBackgroundColors;
+        safari.preferredControlTintColor = UIColor.globalTint;
     }
 
     [self presentViewController:safari animated:YES completion:nil];

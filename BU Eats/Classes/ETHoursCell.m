@@ -18,7 +18,7 @@ NSString * const kETHoursCellReuse = @"kETHoursCellReuse";
 }
 
 - (id)initWithFrame:(CGRect)frame {
-    return [self initWithStyle:0 reuseIdentifier:nil];
+    return [self initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -32,7 +32,6 @@ NSString * const kETHoursCellReuse = @"kETHoursCellReuse";
 
 - (void)initialize {
     self.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    self.detailTextLabel.textColor = [UIColor blackColor];
     self.detailTextLabel.numberOfLines = 0;
 
     if (!ETDeviceIsSmall()) {

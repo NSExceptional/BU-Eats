@@ -16,9 +16,7 @@
         self.detailTextLabel.numberOfLines = 0;
         
         // Apply theme
-        self.backgroundColor = [UIColor cellBackgroundColor];
-        self.textLabel.textColor = [UIColor cellTextColor];
-        self.detailTextLabel.textColor = [UIColor cellDetailTextColor];
+        self.detailTextLabel.textColor = UIColor.secondaryTextColor;
     }
 
     return self;

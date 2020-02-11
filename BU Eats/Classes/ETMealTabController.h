@@ -15,6 +15,6 @@
 + (instancetype)mealsForLocation:(CDEatery *)location;
 - (void)applyTheme;
 
-@property (nonatomic) DIDatepicker *datePicker;
+@property (nonatomic, readonly) DIDatepicker *datePicker;
 
 @end
