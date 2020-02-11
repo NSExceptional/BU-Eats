@@ -12,8 +12,6 @@
 #import "BUDiningMenu.h"
 #import "CDClient.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 @import StoreKit;
 
 @interface AppDelegate ()
@@ -23,8 +21,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Crashlytics startWithAPIKey:@"f5649e3f1b043e69f3fc32b03f4f06c80277c955"];
-
     [self applyTheme];
     
     CDClient.sharedClient.currentSchool = CDSchool.baylor;

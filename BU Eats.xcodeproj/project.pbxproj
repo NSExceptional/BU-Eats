@@ -16,6 +16,8 @@
 		B4C0B11C1AEB2F5C001F2B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C0B11A1AEB2F5C001F2B96 /* LaunchScreen.xib */; };
 		B4C0B1281AEB2F5C001F2B96 /* BU_EatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */; };
 		B4C4DD251B89313900A9AFB5 /* NSDate+TBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */; };
+		C305D05423F228BE0054CACB /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C305D05023F228BE0054CACB /* DIDatepickerDateView.m */; };
+		C305D05523F228BE0054CACB /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C305D05123F228BE0054CACB /* DIDatepicker.m */; };
 		C30DBAD9232858FF008B0CA8 /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DBAD8232858FF008B0CA8 /* NSArray+Functional.m */; };
 		C3374A4D2141BFB500C3286D /* OGElement+Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C3374A4C2141BFB500C3286D /* OGElement+Wrapper.m */; };
 		C349B7F61FAEA50700D09043 /* ETLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C349B7F01FAEA50600D09043 /* ETLocationCell.m */; };
@@ -81,6 +83,10 @@
 		B4C0B1271AEB2F5C001F2B96 /* BU_EatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BU_EatsTests.m; sourceTree = "<group>"; };
 		B4C4DD231B89313900A9AFB5 /* NSDate+TBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TBExtensions.h"; sourceTree = "<group>"; };
 		B4C4DD241B89313900A9AFB5 /* NSDate+TBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TBExtensions.m"; sourceTree = "<group>"; };
+		C305D04C23F228BE0054CACB /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		C305D04D23F228BE0054CACB /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		C305D05023F228BE0054CACB /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		C305D05123F228BE0054CACB /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
 		C30DBAD7232858FF008B0CA8 /* NSArray+Functional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
 		C30DBAD8232858FF008B0CA8 /* NSArray+Functional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 		C3374A4B2141BFB500C3286D /* OGElement+Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OGElement+Wrapper.h"; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 				C349B8071FAEA75500D09043 /* Categories */,
 				B4C0B1381AEB38B0001F2B96 /* Model */,
 				B4C0B1341AEB3149001F2B96 /* Classes */,
+				C305D04B23F228BE0054CACB /* DIDatepicker */,
 				B4C0B1081AEB2F5C001F2B96 /* Supporting Files */,
 			);
 			path = "BU Eats";
@@ -292,6 +299,17 @@
 				C349B8021FAEA51900D09043 /* ETTimeInterval.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C305D04B23F228BE0054CACB /* DIDatepicker */ = {
+			isa = PBXGroup;
+			children = (
+				C305D04D23F228BE0054CACB /* DIDatepicker.h */,
+				C305D05123F228BE0054CACB /* DIDatepicker.m */,
+				C305D04C23F228BE0054CACB /* DIDatepickerDateView.h */,
+				C305D05023F228BE0054CACB /* DIDatepickerDateView.m */,
+			);
+			path = DIDatepicker;
 			sourceTree = "<group>";
 		};
 		C349B8071FAEA75500D09043 /* Categories */ = {
@@ -508,8 +526,10 @@
 				C34CA91C213F6A1500C7A1A0 /* ETFoodItemCell.m in Sources */,
 				C3ECABFC214DC36500B16113 /* CDEatery.m in Sources */,
 				C3ECABF6214DBF5700B16113 /* CDMenu.m in Sources */,
+				C305D05523F228BE0054CACB /* DIDatepicker.m in Sources */,
 				C349B8051FAEA51900D09043 /* ETHOOP.m in Sources */,
 				C349B8101FAEA80100D09043 /* ETMenuViewController.m in Sources */,
+				C305D05423F228BE0054CACB /* DIDatepickerDateView.m in Sources */,
 				C378418B20245D4900D546B9 /* ETHoursViewController.m in Sources */,
 				B4C0B10B1AEB2F5C001F2B96 /* main.m in Sources */,
 			);
@@ -667,10 +687,6 @@
 					"-l\"c++\"",
 					"-l\"z\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
-					"-framework",
 					"\"Foundation\"",
 					"-framework",
 					"\"Security\"",
@@ -709,10 +725,6 @@
 					"-l\"TBAlertController\"",
 					"-l\"c++\"",
 					"-l\"z\"",
-					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"Foundation\"",
 					"-framework",
