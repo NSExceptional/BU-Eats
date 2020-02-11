@@ -9,9 +9,11 @@
 #import "ETMenuViewController.h"
 #import "ETFoodItemCell.h"
 #import "CDFoodStation.h"
+#import "CDMealPeriod.h"
 
 @interface ETMenuViewController ()
-@property (nonatomic) CDEatery *location;
+@property (nonatomic, readonly) CDMeal *meal;
+@property (nonatomic, readonly) CDEatery *location;
 @property (nonatomic) NSArray<CDFoodStation *> *foodStations;
 
 @property (nonatomic) NSString *placeholderText;
@@ -20,49 +22,60 @@
 
 @implementation ETMenuViewController
 
-+ (instancetype)emptyMenuForLocation:(CDEatery *)location {
-    return [[ETMenuViewController alloc] initWithLocation:location sections:nil];
++ (instancetype)emptyMenuForLocation:(CDEatery *)location meal:(CDMeal *)meal {
+    return [[ETMenuViewController alloc] initWithLocation:location meal:meal sections:nil];
 }
 
-- (id)initWithLocation:(CDEatery *)location sections:(NSArray<CDFoodStation *> *)foodStations {
+- (id)initWithLocation:(CDEatery *)location meal:(CDMeal *)meal sections:(NSArray<CDFoodStation *> *)foodStations {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        _meal = meal;
         _location = location;
         _foodStations = foodStations;
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.title = location.name;
-        [self.tableView registerClass:[ETFoodItemCell class] forCellReuseIdentifier:@"MenuItemCell"];
     }
     
     return self;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = self.location.name;
+    self.tabBarItem.title = self.meal.name;
+    self.tabBarItem.image = [CDMealPeriod iconForMeal:self.meal];
+    
+    [self.tableView registerClass:[ETFoodItemCell class] forCellReuseIdentifier:@"MenuItemCell"];
+}
 
 - (void)updateSections:(NSArray<CDFoodStation *> *)foodStations animated:(BOOL)animated {
+    NSUInteger previousSections = _foodStations.count;
+    _foodStations = foodStations;
+    
     if (foodStations.count == 0) {
         self.placeholderText = @"This meal is not being served right now.";
     } else {
         self.placeholderText = nil;
-
-        if (animated) {
-            [self.tableView beginUpdates];
-            NSUInteger previousSections = _foodStations.count;
-            _foodStations = foodStations;
-            NSUInteger numSectionsToInsert = foodStations.count > previousSections ? foodStations.count - previousSections : 0;
-            NSUInteger numSectionsToRemove = previousSections > foodStations.count ? previousSections - foodStations.count : 0;
-            [self.tableView reloadSections:NSIndexSetRanged(0, previousSections) withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView insertSections:NSIndexSetRanged(previousSections, numSectionsToInsert) withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView deleteSections:NSIndexSetRanged(previousSections - numSectionsToRemove, numSectionsToRemove) withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView endUpdates];
-        } else {
-            foodStations = foodStations;
-            [self.tableView reloadData];
+        
+        if (self.viewIfLoaded.window) {
+            if (animated) {
+                [self.tableView beginUpdates];
+                NSUInteger numSectionsToInsert = foodStations.count > previousSections ? foodStations.count - previousSections : 0;
+                NSUInteger numSectionsToRemove = previousSections > foodStations.count ? previousSections - foodStations.count : 0;
+                [self.tableView reloadSections:NSIndexSetRanged(0, previousSections) withRowAnimation:UITableViewRowAnimationFade];
+                [self.tableView insertSections:NSIndexSetRanged(previousSections, numSectionsToInsert) withRowAnimation:UITableViewRowAnimationFade];
+                [self.tableView deleteSections:NSIndexSetRanged(previousSections - numSectionsToRemove, numSectionsToRemove) withRowAnimation:UITableViewRowAnimationFade];
+                [self.tableView endUpdates];
+            } else {
+                [self.tableView reloadData];
+            }
         }
     }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
     if (self.placeholderLabel) {
         self.placeholderLabel.center = self.view.center;
     }

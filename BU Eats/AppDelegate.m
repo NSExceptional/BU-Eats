@@ -67,7 +67,7 @@
     }
 
     // Review 2 days after first launch, then again a week later
-    if (@available(iOS 10.3, *)) if ([firstLaunch daysBeforeDate:today] > 2) {
+    if ([firstLaunch daysBeforeDate:today] > 2) {
         if ([lastReviewDate daysBeforeDate:today] > 7) {
             [SKStoreReviewController requestReview];
             [[NSUserDefaults standardUserDefaults] setObject:today forKey:kETDefaultsLastReviewDate];
@@ -79,14 +79,24 @@
 }
 
 - (void)applyTheme {
-    [UIApplication sharedApplication].statusBarStyle = UIColor.statusBarStyle;
-    [UINavigationBar appearance].barTintColor = UIColor.barBackgroundColors;
-    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : UIColor.titleTextColor};
-    [UINavigationBar appearance].translucent = NO;
+    NSDictionary *titleTextAttributes = @{ NSForegroundColorAttributeName : UIColor.titleTextColor };
+    UINavigationBar *appearance = [UINavigationBar appearance];
     
-    if (@available(iOS 11, *)) {
-        [UINavigationBar appearance].prefersLargeTitles = !ETDeviceIsSmall();
-        [UINavigationBar appearance].largeTitleTextAttributes = @{NSForegroundColorAttributeName : UIColor.titleTextColor};
+    [UIApplication sharedApplication].statusBarStyle = UIColor.statusBarStyle;
+    appearance.barTintColor = UIColor.barBackgroundColors;
+    appearance.titleTextAttributes = titleTextAttributes;
+    appearance.prefersLargeTitles = !ETDeviceIsSmall();
+    appearance.largeTitleTextAttributes = titleTextAttributes;
+    appearance.translucent = NO;
+    
+    if (@available(iOS 13, *)) {
+        UINavigationBarAppearance *defaults = [UINavigationBarAppearance new];
+        [defaults configureWithOpaqueBackground];
+        defaults.backgroundColor = UIColor.barBackgroundColors;
+        defaults.titleTextAttributes = titleTextAttributes;
+        defaults.largeTitleTextAttributes = titleTextAttributes;
+        appearance.scrollEdgeAppearance = defaults;
+        appearance.standardAppearance = defaults;
     }
 }
 

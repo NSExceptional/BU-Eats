@@ -22,7 +22,7 @@
 }
 
 + (NSString *)shortNameForLocationID:(NSString *)identifier {
-    #warning TODO fill out some short names
+    // TODO fill out some short names
     return nil;
 }
 

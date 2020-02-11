@@ -125,7 +125,7 @@ static NSDateFormatter *formatter = nil;
 
 + (CDMenu *)cachedMenuFor:(NSString *)locationID onDate:(NSDate *)date {
     // Check last cached
-#warning This won't fly with multiple school support
+    // TODO This won't fly with multiple school support
     static CDMenu *lastCached         = nil;
     static NSString *lastCachedEatery = nil;
     static NSDate *lastCachedDate     = nil;
@@ -193,7 +193,7 @@ static NSDateFormatter *formatter = nil;
     } callback:^(TBResponseParser *parser) {
         //            data         document selector       model class
         ParseDocument(parser.data, toJSONArrayOfLocations, CDEatery, ^(id locations, NSError *error) {
-            _currentEateries = locations;
+            self.currentEateries = locations;
             completion(parser.error ?: error);
         });
     }];

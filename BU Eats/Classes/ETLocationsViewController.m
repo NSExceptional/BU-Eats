@@ -46,6 +46,9 @@
     self.tableView.rowHeight = 112.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"ETLocationCell" bundle:nil] forCellReuseIdentifier:@"LocationCell"];
     
+    // Without this, scrolling the table view makes the large title "snap" away
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    
     // Refresh control
     //    self.refreshControl = [UIRefreshControl new];
     //    [self.refreshControl addTarget:self action:@selector(loadHOOP) forControlEvents:UIControlEventValueChanged];
@@ -104,20 +107,7 @@
 
 - (void)presentViewControllerModally:(UIViewController *)vc {
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : UIColor.titleTextColor };
     [self.navigationController presentViewController:nav animated:YES completion:nil];
-    
-    if (@available(iOS 13, *)) {
-        nav.navigationBar.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *traitCollection) {
-            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                return UIColor.systemBackgroundColor;
-            } else {
-                return UIColor.barBackgroundColors;
-            }
-        }];
-    } else {
-        nav.navigationBar.backgroundColor = UIColor.barBackgroundColors;
-    }
 }
 
 #pragma mark UITableViewDataSource

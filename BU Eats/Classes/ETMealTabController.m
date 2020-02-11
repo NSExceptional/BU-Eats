@@ -27,10 +27,8 @@
 
 - (id)initWithLocation:(CDEatery *)eatery {
     _eatery = eatery;
-    // Calls viewDidLoad for some reason,
-    // so we need to assign location first
-    self = [super init];
-    return self;
+    // Calls viewDidLoad for some reason, so we need to assign location first
+    return [super init];
 }
 
 - (void)loadView {
@@ -53,28 +51,17 @@
     [super viewDidLoad];
 
     self.title = self.eatery.name;
-//    self.edgesForExtendedLayout = UIRectEdgeNone; // keeps views from going under nav bar
-    self.tabBar.translucent = NO;
-
     self.delegate = self;
+    
+    // Without this, scrolling the table views makes the large title "snap" away
+    self.extendedLayoutIncludesOpaqueBars = YES;
     
     self.datePicker.dates = NSDate.daysForTheNextMonth;
     [self.datePicker selectDateAtIndex:0];
     [self.datePicker addTarget:self action:@selector(loadMeals) forControlEvents:UIControlEventValueChanged];
 
-    NSArray<ETMenuViewController *> *menuControllers = [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
-        return [ETMenuViewController emptyMenuForLocation:self.eatery];
-    }];
-    
-    [self setViewControllers:menuControllers];
-    self.selectedIndex = 0;
-
-    // Just a for loop with an index
-    [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
-        UITabBarItem *item = self.tabBar.items[idx];
-        item.title = meal.name;
-        item.image = [CDMealPeriod iconForMeal:meal];
-        return nil;
+    self.viewControllers = [self.eatery.meals mapped:^id(CDMeal *meal, NSUInteger idx) {
+        return [ETMenuViewController emptyMenuForLocation:self.eatery meal:meal];
     }];
     
     [self applyTheme];
@@ -82,7 +69,7 @@
 }
 
 - (void)applyTheme {
-    self.tabBar.tintColor = UIColor.barBackgroundColors;
+    self.tabBar.tintColor = UIColor.greenTint;
 }
 
 #pragma mark UITabBar stuff
@@ -182,7 +169,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     }];
     
-    //    [alert showFromViewController:self];
+    [alert showFromViewController:self];
 }
 
 - (void)failedToLoadMeal:(NSString *)meal {

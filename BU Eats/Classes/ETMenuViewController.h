@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDMeal.h"
 #import "CDEatery.h"
 #import "CDFoodStation.h"
 
 @interface ETMenuViewController : UITableViewController
 
-+ (instancetype)emptyMenuForLocation:(CDEatery *)location;
++ (instancetype)emptyMenuForLocation:(CDEatery *)location meal:(CDMeal *)meal;
 - (void)updateSections:(NSArray<CDFoodStation *> *)foodStations animated:(BOOL)animated;
 
 - (void)clear;

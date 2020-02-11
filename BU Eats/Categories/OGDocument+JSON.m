@@ -96,4 +96,9 @@
     return locations;
 }
 
+- (NSArray *)toJSONArrayOfMeals {
+    @throw NSGenericException;
+    return nil;
+}
+
 @end

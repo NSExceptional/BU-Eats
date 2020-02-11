@@ -15,7 +15,7 @@
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *identifier;
-#warning TODO check if this requires a transformer
+// TODO check if this requires a transformer
 //@property (nonatomic, readonly) BOOL openNow;
 @property (nonatomic, readonly) NSString *hours;
 @property (nonatomic, readonly) NSString *endpoint;

@@ -16,10 +16,6 @@ const CGFloat kDIDatepickerSpaceBetweenItems = 15.;
 
 @implementation DIDatepicker
 
-- (void)awakeFromNib {
-    [self setupViews];
-}
-
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (!self) return self;
@@ -34,7 +30,7 @@ const CGFloat kDIDatepickerSpaceBetweenItems = 15.;
     self.tintColor = UIColor.datePickerTintColor;
     self.backgroundColor = UIColor.datePickerBackgroundColor;
     self.bottomLineColor = UIColor.separatorLineColor;
-    self.selectedDateBottomLineColor = UIColor.barBackgroundColors;
+    self.selectedDateBottomLineColor = UIColor.greenTint;
 }
 
 
