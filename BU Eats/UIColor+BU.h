@@ -12,19 +12,20 @@
 
 + (UIStatusBarStyle)statusBarStyle;
 
-+ (instancetype)globalTint;
+@property (nonatomic, readonly, class) UIColor *globalTint;
 
-+ (instancetype)viewBackgroundColor;
+@property (nonatomic, readonly, class) UIColor *viewBackgroundColor;
+@property (nonatomic, readonly, class) UIColor *primaryTextColor;
+@property (nonatomic, readonly, class) UIColor *secondaryTextColor;
 
-+ (instancetype)cellBackgroundColor;
-+ (instancetype)cellTextColor;
-+ (instancetype)cellDetailTextColor;
-+ (instancetype)separatorLineColor;
+@property (nonatomic, readonly, class) UIColor *titleTextColor;
+@property (nonatomic, readonly, class) UIColor *barBackgroundColors;
+@property (nonatomic, readonly, class) UIColor *tabDeselectedColor;
+@property (nonatomic, readonly, class) UIColor *separatorLineColor;
 
-+ (instancetype)titleTextColor;
-+ (instancetype)barBackgroundColors;
-+ (instancetype)tabDeselectedColor;
+@property (nonatomic, readonly, class) UIColor *datePickerTintColor;
+@property (nonatomic, readonly, class) UIColor *datePickerBackgroundColor;
 
-+ (instancetype)datePickerTintColor;
+@property (nonatomic, readonly, class) UIColor *spinnerColor;
 
 @end

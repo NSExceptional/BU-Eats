@@ -8,52 +8,74 @@
 
 #import "UIColor+BU.h"
 
+#define DynamicColor(dynamic, static) ({ \
+    UIColor *c; \
+    if (@available(iOS 13.0, *)) { \
+        c = [UIColor dynamic]; \
+    } else { \
+        c = [UIColor static]; \
+    } \
+    c; \
+});
+
 @implementation UIColor (BU)
 
 + (UIStatusBarStyle)statusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 
-+ (instancetype)globalTint {
++ (UIColor *)globalTint {
     return [UIColor colorWithRed:0.931 green:0.768 blue:0.000 alpha:1.000];
 }
 
-+ (instancetype)viewBackgroundColor {
-    return [UIColor colorWithWhite:0.955 alpha:1.000];
++ (UIColor *)viewBackgroundColor {
+    return DynamicColor(groupTableViewBackgroundColor, colorWithWhite:0.955 alpha:1.000);
 }
 
-+ (instancetype)cellBackgroundColor {
-    return [UIColor whiteColor];
++ (UIColor *)primaryTextColor {
+    return DynamicColor(labelColor, blackColor);
 }
 
-+ (instancetype)cellTextColor {
-    return [UIColor blackColor];
++ (UIColor *)secondaryTextColor {
+    return DynamicColor(secondaryLabelColor, lightGrayColor);
 }
 
-+ (instancetype)cellDetailTextColor {
-    return [UIColor colorWithWhite:0.000 alpha:0.500];
++ (UIColor *)titleTextColor {
+    return UIColor.whiteColor;
 }
 
-+ (instancetype)separatorLineColor {
-    return [UIColor colorWithWhite:0.000 alpha:0.500];
-}
-
-+ (instancetype)titleTextColor {
-    return [UIColor whiteColor];
-}
-
-+ (instancetype)barBackgroundColors {
-//    return [UIColor colorWithRed:0.07 green:0.27 blue:0.19 alpha:1.000];
++ (UIColor *)barBackgroundColors {
+    if (@available(iOS 13, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return [UIColor colorWithRed:0.06 green:0.45 blue:0.2 alpha:1.0];
+            } else {
+                return [UIColor colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0];
+            }
+        }];
+    }
+    
     return [UIColor colorWithRed:0.06 green:0.23 blue:0.16 alpha:1.0];
 }
 
-+ (instancetype)tabDeselectedColor {
-    return [UIColor greenColor];
++ (UIColor *)tabDeselectedColor {
+    return UIColor.greenColor;
 }
 
-+ (instancetype)datePickerTintColor {
-    return [UIColor globalTint];
++ (UIColor *)separatorLineColor {
+    return DynamicColor(separatorColor, colorWithWhite:0.816 alpha:1.000);
 }
 
++ (UIColor *)datePickerTintColor {
+    return UIColor.globalTint;
+}
+
++ (UIColor *)datePickerBackgroundColor {
+    return DynamicColor(systemBackgroundColor, whiteColor);
+}
+
++ (UIColor *)spinnerColor {
+    return DynamicColor(labelColor, blackColor);
+}
 
 @end
