@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>addonItemClass</key>
+	<string>menu__item</string>
+	<key>addonItemContainerClass</key>
+	<string>menu__addOns</string>
+	<key>addonItemNameClass</key>
+	<string>viewItem</string>
+	<key>itemAllergensClass</key>
+	<string>item__allergens</string>
+	<key>itemCaloriesClass</key>
+	<string>item__calories</string>
+	<key>itemClass</key>
+	<string>menu__item</string>
+	<key>itemContainerClass</key>
+	<string>menu__category</string>
+	<key>itemDescriptionClass</key>
+	<string>item__content</string>
+	<key>itemNameClass</key>
+	<string>viewItem</string>
+	<key>itemNameClassPlain</key>
+	<string>item__name</string>
+	<key>locationAddressClass</key>
+	<string>location__address</string>
+	<key>locationClass</key>
+	<string>location</string>
+	<key>locationClassClosed</key>
+	<string>cl</string>
+	<key>locationClassOpen</key>
+	<string>op</string>
+	<key>locationNameClass</key>
+	<string>card-title</string>
+	<key>locationTimesClass</key>
+	<string>location__times</string>
+	<key>rootErrorClass</key>
+	<string>text-center</string>
+	<key>stationClass</key>
+	<string>menu__station</string>
+	<key>stationNameClass</key>
+	<string>station-header</string>
+</dict>
+</plist>
