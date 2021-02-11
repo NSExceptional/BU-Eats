@@ -362,14 +362,37 @@ static NSDateFormatter *formatter = nil;
 
 /// Always give you back a valid CDMealObject, populated with an error, if any
 - (void)parseDocument:(NSData *)HTMLData toMeal:(CDMeal *)meal completion:(ObjectBlock)completion {
-    OGDocument *doc = [self parseDocument:HTMLData];
-    id json = [doc toMealPeriodJSONWithMeal:meal];
+    @try {
+        OGDocument *doc = [self parseDocument:HTMLData];
+        id json = [doc toMealPeriodJSONWithMeal:meal];
+        
+        NSError *error = nil;
+        id model = [MTLJSONAdapter modelOfClass:[CDMealPeriod class] fromJSONDictionary:json error:&error];
 
-    NSError *error = nil;
-    id model = [MTLJSONAdapter modelOfClass:[CDMealPeriod class] fromJSONDictionary:json error:&error];
+        if (error) {
+            model = [CDMealPeriod meal:meal error:error.localizedDescription];
+        }
 
-    if (error) {
-        model = [CDMealPeriod meal:meal error:error.localizedDescription];
+        completion(model, nil);
+    }
+    
+    // Catch KVC errors above and try to update the schema.
+    // If we already updated the schema recently, throw an error instead of crashing.
+    // Once we update the schema, try again. The same error will be thrown this time.
+    @catch (NSException *exception) {
+        if (self.recentlyUpdatedSchema) {
+            completion(nil, [TBResponseParser
+                error:exception.reason domain:exception.name code:1
+            ]);
+        } else {
+            [self checkForSchemaUpdates:^(NSError *error) {
+                if (!error) {
+                    [self parseDocument:HTMLData toMeal:meal completion:completion];
+                } else {
+                    completion(nil, error);
+                }
+            }];
+        }
     }
 }
 
