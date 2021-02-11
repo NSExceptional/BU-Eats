@@ -6,7 +6,7 @@
 #import "DIDatepickerDateView.h"
 #import "UIColor+BU.h"
 
-const CGFloat kDIDatepickerItemWidth = 46.;
+const CGFloat kDIDatepickerItemWidth = 48.;
 const CGFloat kDIDatepickerSelectionLineWidth = 51.;
 
 @interface DIDatepickerDateView ()
