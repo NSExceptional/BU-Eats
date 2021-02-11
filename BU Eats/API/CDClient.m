@@ -12,11 +12,16 @@
 #import <ObjectiveGumbo.h>
 #import <TBURLRequestBuilder.h>
 #import "OGDocument+JSON.h"
+#import "OGElement+Wrapper.h"
 
+#define DocumentsDirectory() (NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0])
 #define ParseDocument(data, sel, cls, block) [self parseDocument: data keyPath: @selector(sel) class: [cls class] completion: block]
 #define kDayYearMonth (NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear)
 
 @interface CDClient ()
+@property (nonatomic, readonly, class) NSString *cacheDirectory;
+@property (nonatomic, readonly, class) NSString *schemaCacheLocation;
+@property (nonatomic) BOOL recentlyUpdatedSchema;
 @end
 
 @implementation CDClient
@@ -40,6 +45,7 @@ static NSDateFormatter *formatter = nil;
         formatter.dateFormat = @"yyyy-MM-dd";
         [self clearOldCacheEntries];
         [self loadTodaysCache];
+        [self loadCachedSchema];
     }
 }
 
@@ -114,7 +120,7 @@ static NSDateFormatter *formatter = nil;
     static NSString *cacheDirectory = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        cacheDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+        cacheDirectory = DocumentsDirectory();
         cacheDirectory = [cacheDirectory stringByAppendingPathComponent:@"MenuCache"];
         [[NSFileManager defaultManager] createDirectoryAtPath:cacheDirectory
                                   withIntermediateDirectories:YES attributes:nil error:nil];
@@ -365,8 +371,70 @@ static NSDateFormatter *formatter = nil;
     if (error) {
         model = [CDMealPeriod meal:meal error:error.localizedDescription];
     }
+}
 
-    completion(model, nil);
+#pragma mark Schema
+
+- (void)checkForSchemaUpdates:(ErrorBlock)completion {
+    [self get:^(TBURLRequestBuilder *make) {
+        make.baseURL(nil).URL(kSchemaURL);
+    } callback:^(TBResponseParser *parser) {
+        // So we don't check it again within the same timeframe
+        self.recentlyUpdatedSchema = YES;
+        
+        if (!parser.error && parser.data.length) {
+            // Parse schema
+            NSError *error = nil;
+            NSDictionary *schema = [NSPropertyListSerialization
+                propertyListWithData:parser.data options:0 format:nil error:&error
+            ];
+            
+            // Actually update schema
+            if (schema) {
+                OGElement.keyPathMapping = schema;
+                [CDClient cacheUpdatedSchema:schema];
+                if (completion) completion(nil);
+            } else {
+                if (completion) completion(error ?: [TBResponseParser
+                    error:@"Error parsing schema" domain:nil code:1
+                ]);
+            }
+        } else {
+            if (completion) completion(parser.error ?: [TBResponseParser
+                error:@"Remote schema returned no data" domain:nil code:1
+            ]);
+        }
+    }];
+}
+
+- (void)setRecentlyUpdatedSchema:(BOOL)updated {
+    _recentlyUpdatedSchema = updated;
+    
+    // Clear this flag every 4 hours to allow re-fetching if the app stays open a long time
+    static const NSInteger kFourHours = 60 * 60 * 4;
+    NSTimer *timer = [NSTimer timerWithTimeInterval:kFourHours repeats:NO block:^(NSTimer *timer) {
+        self->_recentlyUpdatedSchema = NO;
+    }];
+    
+    [NSRunLoop.mainRunLoop addTimer:timer forMode:NSRunLoopCommonModes];
+}
+
++ (void)cacheUpdatedSchema:(NSDictionary *)schema {
+    [schema writeToFile:CDClient.schemaCacheLocation atomically:YES];
+}
+
++ (void)loadCachedSchema {
+    OGElement.keyPathMapping = [NSDictionary dictionaryWithContentsOfFile:CDClient.schemaCacheLocation];
+}
+
++ (NSString *)schemaCacheLocation {
+    static NSString *location = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        location = [DocumentsDirectory() stringByAppendingPathComponent:@"DOM-Schema-latest.plist"];
+    });
+    
+    return location;
 }
 
 @end

@@ -15,6 +15,7 @@ vc.navigationController.navigationBar.prefersLargeTitles = !ETDeviceIsSmall(); \
 #define NSIndexSetRanged(loc, len) [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(loc, len)]
 
 extern NSString * const kHOOPURL;
+extern NSString * const kSchemaURL;
 extern NSString * const kDefaultAllHoursURL;
 
 extern NSString * const kHOOPWeekday;

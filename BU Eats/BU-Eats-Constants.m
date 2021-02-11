@@ -8,7 +8,8 @@
 
 #import "BU-Eats-Constants.h"
 
-NSString * const kHOOPURL = @"https://cdn.rawgit.com/ThePantsThief/BU-Eats/master/BUEats-HOOP.plist";
+NSString * const kHOOPURL = @"https://raw.githubusercontent.com/NSExceptional/BU-Eats/master/BUEats-HOOP.plist";
+NSString * const kSchemaURL = @"https://raw.githubusercontent.com/NSExceptional/BU-Eats/master/BUEats-DOM-Schema.plist";
 NSString * const kDefaultAllHoursURL = @"https://www.baylor.edu/hr/doc.php/151352.pdf";
 
 NSString * const kHOOPWeekday  = @"weekday";

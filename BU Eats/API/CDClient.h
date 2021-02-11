@@ -17,6 +17,7 @@ typedef void (^ObjectBlock)(id obj, NSError *error);
 typedef void (^ArrayBlock)(NSArray *response, NSError *error);
 typedef void (^DictionaryBlock)(NSDictionary *response, NSError *error);
 typedef void (^ErrorBlock)(NSError *error);
+typedef void (^MessageBlock)(NSString *message);
 
 /// An API client for Campus Dish.
 @interface CDClient : NSObject
@@ -32,5 +33,8 @@ typedef void (^ErrorBlock)(NSError *error);
 /// @param completion May be called more than once if there are multiple errors
 - (void)setCurrentSchool:(CDSchool *)location completion:(ErrorBlock)completion;
 - (void)menuFor:(CDEatery *)location onDate:(NSDate *)date completion:(MenuBlock)completion;
+
+/// Update OGElement.keyPathMapping if possible
+- (void)checkForSchemaUpdates:(ErrorBlock)completion;
 
 @end
