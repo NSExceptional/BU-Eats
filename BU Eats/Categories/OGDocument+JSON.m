@@ -22,10 +22,16 @@
     if (error) {
         return @{@"period": meal.dictionaryValue, @"error": error};
     }
+    
+    // Descriptive error
+    NSParameterAssert(self[OGElement.stationClass].count);
 
     // Gather stations
     NSArray *stations = [self[OGElement.stationClass] mapped:^id(OGElement *station, NSUInteger idx) {
-        NSString *title = station[OGElement.stationNameClass].firstObject.text;
+        // Descriptive error
+        NSParameterAssert(station[OGElement.stationNameClass].firstObject);
+        
+        NSString *menuTitle = station[OGElement.stationNameClass].firstObject.text;
         OGElement *itemContainer = station[OGElement.itemContainerClass].firstObject;
         OGElement *addonItemContainer = station[OGElement.addonItemContainerClass].firstObject;
         
@@ -61,7 +67,10 @@
             return addon[OGElement.itemNameClass].firstObject.text;
         }];
 
-        return @{@"name": title, @"foodItems": items ?: @[], @"additionalItems": addons ?: @[]};
+        // This creates a more descriptive error than
+        // trying to insert a nil value into a dictionary
+        NSParameterAssert(menuTitle);
+        return @{@"name": menuTitle, @"foodItems": items ?: @[], @"additionalItems": addons ?: @[]};
     }];
 
 
