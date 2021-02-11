@@ -12,6 +12,7 @@
 #import "CDMenu.h"
 #import "ETTimeInterval.h"
 #import "UIColor+BU.h"
+#import <MessageUI/MessageUI.h>
 
 @interface ETMealTabController () <UITabBarControllerDelegate>
 @property (nonatomic) CDEatery *eatery;
@@ -116,7 +117,7 @@
             [self setMenu:menu animated:!cacheHit];
             self.datePicker.enabled = YES;
         } else {
-            [self failedToLoadMenu:error.localizedDescription];
+            [self failedToLoadMenu:self.eatery reason:error.localizedDescription];
         }
     }];
 }
@@ -182,10 +183,36 @@
     [alert showFromViewController:self];
 }
 
-- (void)failedToLoadMenu:(NSString *)error {
-    NSString *message = @"We couldn't load the menu.\nPlease send a screenshot of this to the developer:\n\n";
+- (void)failedToLoadMenu:(CDEatery *)eatery reason:(NSString *)error {
+    NSString *message = @"We couldn't load the menu.\nPlease email the developer\nand let him know! Error:\n\n";
     message = [message stringByAppendingString:error];
-    TBAlertController *alert = [TBAlertController simpleOKAlertWithTitle:@"Uh-oh :(" message:message];
+    TBAlertController *alert = [TBAlertController alertViewWithTitle:@"Uh-oh :(" message:message];
+    [alert addOtherButtonWithTitle:@"Email Developer" buttonAction:^(NSArray *_) {
+        if (MFMailComposeViewController.canSendMail) {
+            [self composeBugReportEmail:error location:eatery];
+        } else {
+            [self cannotSendEmail];
+        }
+    }];
+    [alert setCancelButtonWithTitle:@"Dismiss"];
+    [alert showFromViewController:self];
+}
+
+- (void)composeBugReportEmail:(NSString *)error location:(CDEatery *)eatery {
+    NSString *body = [NSString stringWithFormat:
+        @"My app couldn't load the menu for this location:\n\n%@ %@\n\nAnd here's why:\n\n%@",
+        eatery.name, eatery.identifier, error
+    ];
+    MFMailComposeViewController *email = [MFMailComposeViewController new];
+    [email setToRecipients:@[@"tannerbennett@me.com"]];
+    [email setSubject:@"Baylor Eats Bug Report"];
+    [email setMessageBody:body isHTML:NO];
+    [self presentViewController:email animated:YES completion:nil];
+}
+
+- (void)cannotSendEmail {
+    NSString *message = @"Open the Mail app and add an email account to send email.";
+    TBAlertController *alert = [TBAlertController simpleOKAlertWithTitle:@"Email Not Setup" message:message];
     [alert showFromViewController:self];
 }
 
