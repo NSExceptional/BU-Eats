@@ -253,6 +253,11 @@ static NSDateFormatter *formatter = nil;
 
     void (^loadMenus)(CDMeal *meal) = ^(CDMeal *meal) {
         [self menuFor:locationID onDate:date forMeal:meal completion:^(CDMealPeriod *period, NSError *error) {
+            if (error) {
+                completion(nil, NO, error);
+                return;
+            }
+            
             [mealPeriods addObject:period];
 
             if (mealPeriods.count == mealsToFetch) {

@@ -112,8 +112,12 @@
                               onDate:self.datePicker.selectedDate
                           completion:^(CDMenu *menu, BOOL cacheHit, NSError *error) {
         self.loadingMeals = NO;
-        [self setMenu:menu animated:!cacheHit];
-        self.datePicker.enabled = YES;
+        if (!error) {
+            [self setMenu:menu animated:!cacheHit];
+            self.datePicker.enabled = YES;
+        } else {
+            [self failedToLoadMenu:error.localizedDescription];
+        }
     }];
 }
 
@@ -175,6 +179,13 @@
 - (void)failedToLoadMeal:(NSString *)meal {
     NSString *message = [NSString stringWithFormat:@"We couldn't load the menu for %@.", meal];
     TBAlertController *alert = [TBAlertController simpleOKAlertWithTitle:@"Uh-oh!" message:message];
+    [alert showFromViewController:self];
+}
+
+- (void)failedToLoadMenu:(NSString *)error {
+    NSString *message = @"We couldn't load the menu.\nPlease send a screenshot of this to the developer:\n\n";
+    message = [message stringByAppendingString:error];
+    TBAlertController *alert = [TBAlertController simpleOKAlertWithTitle:@"Uh-oh :(" message:message];
     [alert showFromViewController:self];
 }
 
