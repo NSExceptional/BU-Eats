@@ -27,8 +27,11 @@ static NSDictionary *_keyPathMapping;
 + (void)setKeyPathMapping:(NSDictionary *)mapping {
     _keyPathMapping = mapping;
     [mapping enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-        // Should call the setters for any of the static properties listed as keys in `mapping`
-        [self setValue:value forKey:key];
+        SEL method = NSSelectorFromString(key);
+        if (method && [self respondsToSelector:method]) {
+            // Should call the setters for any of the static properties listed as keys in `mapping`
+            [self setValue:value forKey:key];
+        }
     }];
 }
 
